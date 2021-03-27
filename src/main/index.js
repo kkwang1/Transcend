@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Cover from "../images/cover.png";
 import { Button } from "react-bootstrap";
 import "./style.css";
-import Sidebar from "../components/SideBar/Sidebar";
+import Sidebar from "../components/sideBar/Sidebar";
 import NavBar from "../components/NavBar";
 import { btnInfo } from "./config";
 import ButtonsGroup from "../components/ButtonsGroup";
