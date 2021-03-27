@@ -1,16 +1,25 @@
 import "./App.css";
 import Main from "./main/index";
-import TransitionalPlanning from "./transitional-planning";
-import AlternativePath from "./alternative-paths";
-import Community from "./community"
+import TransitionPlanning from "./transition-planning";
+import AlternativePathways from "./alternative-pathways";
+import Community from "./community";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Main />
-      {/* <TransitionalPlanning />
-      <Community />
-      <AlternativePath /> */}
+      <Router>
+        <Switch>
+          <Route
+            path="transition-planning"
+            exact
+            component={TransitionPlanning}
+          />
+          <Route exact path="/" component={Main} />
+          <Route path="community" exact component={Community} />
+          <Route path="alternative-pathways" exact component={AlternativePathways} />
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import * as AiIcons from 'react-icons/ai';
-import { SidebarData } from './SidebarData';
+import { ServiceData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
@@ -41,16 +40,12 @@ const SidebarWrap = styled.div`
 
 const Sidebar = ({sidebar, setSidebar}) => {
 
-  const showSidebar = () => setSidebar(!sidebar);
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
-            <NavIcon to='#'> 
-              <AiIcons.AiOutlineClose onClick={showSidebar} style={{color:"#000"}}/>
-            </NavIcon>
-            {SidebarData.map((item, index) => {
+            {ServiceData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
           </SidebarWrap>

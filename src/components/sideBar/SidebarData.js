@@ -1,91 +1,89 @@
-import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
-import * as RiIcons from 'react-icons/ri';
+import React from "react";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
+import * as IoIcons from "react-icons/io";
+import * as RiIcons from "react-icons/ri";
 
-export const SidebarData = [
+const ServiceData = [
   {
-    title: 'Overview',
-    path: '/overview',
-    icon: <AiIcons.AiFillHome style={{backgroundColor:"#000000"}}/>,
-    iconClosed: <RiIcons.RiArrowDownSFill style={{backgroundColor:"#000000"}}/>,
-    iconOpened: <RiIcons.RiArrowUpSFill style={{backgroundColor:"#000000"}}/>,
-
+    title: "Transition Planning",
+    path: "/transition-planning",
+    iconClosed: (
+      <RiIcons.RiArrowDownSFill style={{ backgroundColor: "#000000" }} />
+    ),
+    iconOpened: (
+      <RiIcons.RiArrowUpSFill style={{ backgroundColor: "#000000" }} />
+    ),
     subNav: [
       {
-        title: 'Users',
-        path: '/overview/users',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>
+        title: "Education",
+        path: "/transition-planning/education",
       },
       {
-        title: 'Revenue',
-        path: '/overview/revenue',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>
-      }
-    ]
+        title: "Employment",
+        path: "/transition-planning/employment",
+      },
+      {
+        title: "Independent Living",
+        path: "/transition-planning/independent-living",
+      },
+      {
+        title: "Integrated Communities",
+        path: "/transition-planning/employment",
+      },
+      {
+        title: "Know Your Rights",
+        path: "/transition-planning/know-your-rights",
+      },
+    ],
   },
   {
-    title: 'Reports',
-    path: '/reports',
-    icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>,
-    iconClosed: <RiIcons.RiArrowDownSFill style={{backgroundColor:"#000000"}}/>,
-    iconOpened: <RiIcons.RiArrowUpSFill style={{backgroundColor:"#000000"}}/>,
-
+    title: "Community",
+    path: "/community",
+    iconClosed: (
+      <RiIcons.RiArrowDownSFill style={{ backgroundColor: "#000000" }} />
+    ),
+    iconOpened: (
+      <RiIcons.RiArrowUpSFill style={{ backgroundColor: "#000000" }} />
+    ),
     subNav: [
       {
-        title: 'Reports',
-        path: '/reports/reports1',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>,
-        cName: 'sub-nav'
+        title: "Virtual Communities",
+        path: "/community/virtual-communities",
+        cName: "sub-nav",
       },
       {
-        title: 'Reports 2',
-        path: '/reports/reports2',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>,
-        cName: 'sub-nav'
+        title: "Your Community",
+        path: "/community/your-community",
+        cName: "sub-nav",
       },
       {
-        title: 'Reports 3',
-        path: '/reports/reports3',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>
-      }
-    ]
-  },
-  {
-    title: 'Products',
-    path: '/products',
-    icon: <FaIcons.FaCartPlus style={{backgroundColor:"#000000"}}/>
-  },
-  {
-    title: 'Team',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople style={{backgroundColor:"#000000"}}/>
-  },
-  {
-    title: 'Messages',
-    path: '/messages',
-    icon: <FaIcons.FaEnvelopeOpenText style={{backgroundColor:"#000000"}}/>,
-
-    iconClosed: <RiIcons.RiArrowDownSFill style={{backgroundColor:"#000000"}}/>,
-    iconOpened: <RiIcons.RiArrowUpSFill style={{backgroundColor:"#000000"}}/>,
-
-    subNav: [
-      {
-        title: 'Message 1',
-        path: '/messages/message1',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>
+        title: "Mentorship",
+        path: "/community/mentorship",
+        cName: "sub-nav",
       },
       {
-        title: 'Message 2',
-        path: '/messages/message2',
-        icon: <IoIcons.IoIosPaper style={{backgroundColor:"#000000"}}/>
-      }
-    ]
+        title: "Start Your Own Community",
+        path: "/community/start-your-own-community",
+        cName: "sub-nav",
+      },
+    ],
   },
-  {
-    title: 'Support',
-    path: '/support',
-    icon: <IoIcons.IoMdHelpCircle style={{backgroundColor:"#000000"}}/>
-  }
 ];
+
+const ProfileData = [
+  {
+    title: "View Profile",
+    path: "/profile",
+  },
+  {
+    title: "Saved Items",
+    path: "/saved-items",
+  },
+  {
+    title: "Recommendations",
+    path: "/recommendations",
+  },
+];
+
+export { ServiceData, ProfileData };
