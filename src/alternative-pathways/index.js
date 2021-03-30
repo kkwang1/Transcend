@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
 
-export default function AlternativePaths(){
+export default function AlternativePathways(){
     return <></>
 }

@@ -11,13 +11,13 @@ function App() {
       <Router>
         <Switch>
           <Route
-            path="transition-planning"
+            path="transitionplanning"
             exact
             component={TransitionPlanning}
           />
           <Route exact path="/" component={Main} />
           <Route path="community" exact component={Community} />
-          <Route path="alternative-pathways" exact component={AlternativePathways} />
+          <Route path="alternativepathways" exact component={AlternativePathways} />
         </Switch>
       </Router>
     </div>
