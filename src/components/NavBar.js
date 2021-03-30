@@ -8,15 +8,15 @@ import {
 import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/logo.png";
 
-export default function NavBar({setOpenSideBar}) {
+export default function NavBar({openSideBar, setOpenSideBar}) {
   return (
     <Navbar bg="light" variant="light">
       <Navbar.Brand href="home">
         <img src={Logo} width="200px"></img>
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="transitionplanning">Transition Planning</Nav.Link>
-        <Nav.Link href="alternativepaths">Alternative Paths</Nav.Link>
+        <Nav.Link href="transitionalplanning">Transitional Planning</Nav.Link>
+        <Nav.Link href="alternativepathways">Alternative Pathways</Nav.Link>
         <Nav.Link href="community">Community</Nav.Link>
       </Nav>
       <FontAwesomeIcon
@@ -33,7 +33,7 @@ export default function NavBar({setOpenSideBar}) {
         icon={faBars}
         style={{ fontSize: "2em", margin: "10px" }}
         color="#DEDEDE"
-        onClick={() => setOpenSideBar(true)}
+        onClick={() => setOpenSideBar(!openSideBar)}
       />
     </Navbar>
   );
