@@ -6,6 +6,7 @@ import Sidebar from "../components/sideBar/Sidebar";
 import NavBar from "../components/NavBar";
 import { btnInfo } from "./config";
 import ButtonsGroup from "../components/ButtonsGroup";
+import Drawer from "../components/Drawer";
 
 export default function Main() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -50,6 +51,11 @@ export default function Main() {
       <div style={{ margin: "3em" }}>
         <ButtonsGroup info={btnInfo} />
       </div>
+      <Drawer title="SKILLS & TIPS">
+        <p href="https://www.google.com">Application<br />tips & tricks</p>
+	<p href="https://www.cmu.edu">Interview Skills</p>
+	<p href="https://www.facebook.com">In the Workplace</p>
+      </Drawer>
     </>
   );
 }

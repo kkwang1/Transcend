@@ -1,10 +1,16 @@
+:root {
+  --darkblue: #203e45;
+  --lightgray: rgb(240, 240, 240);
+  --darkgray: rgb(180, 180, 180);
+}
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 10vh;
-  background: rgb(255, 255, 255);
-  color: #203e45;
+  background: white;
+  color: var(--darkblue);
 }
 
 .nav-links {
@@ -20,4 +26,56 @@ nav {
   z-index: 50;
   bottom: 20%;
   right: 20%;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: var(--lightgray);
+  align: right;
+  text-align: center;
+  color: black;
+  margin: 12px;
+  border-radius: 12px;
+}
+
+.drawer-title {
+  padding: 12px;
+  padding-bottom: 0px;
+}
+
+.drawer-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align: center;
+  align-items: center;
+  padding: 24px;
+  padding-top: 0px;
+  padding-bottom: 12px;
+}
+
+.drawer-button {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 24px;
+  margin: 12px;
+  border-radius: 12px;
+  vertical-align: middle;
+}
+
+.drawer-button:hover {
+  color: black;
+  text-shadow: 0px 1px;
+  text-decoration: none;
+}
+
+.drawer-arrow {
+  height: 40px;
 }
