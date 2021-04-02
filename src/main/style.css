@@ -67,15 +67,25 @@ nav {
   padding: 24px;
   margin: 12px;
   border-radius: 12px;
-  vertical-align: middle;
 }
 
-.drawer-button:hover {
-  color: black;
-  text-shadow: 0px 1px;
-  text-decoration: none;
+.drawer-text {
+  width: 90%;
+  height: 100%;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .drawer-arrow {
   height: 40px;
+  position: relative;
+}
+
+.drawer-button:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.drawer-button:hover .drawer-arrow {
+  left: 5%;
 }

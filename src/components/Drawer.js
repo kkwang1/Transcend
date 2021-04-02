@@ -11,10 +11,13 @@ export default function Drawer(props) {
 		        <a
 		            href={child.props.href}
 			    target="_blank"
+			    rel="noreferrer"
 			    className="drawer-button"
 			>
-		            {child}
-			    <img className="drawer-arrow" src={arrow} />
+			    <div className="drawer-text">
+		                {child}
+			    </div>
+			    <img className="drawer-arrow" src={arrow} alt=""/>
 	                </a>
 		    );
 	        })}
