@@ -14,7 +14,7 @@ const Butt = styled.button`
   font-family: "Open Sans", sans-serif;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   text-transform: uppercase
   `;
 
