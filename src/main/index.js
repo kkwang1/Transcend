@@ -6,7 +6,6 @@ import Sidebar from "../components/sideBar/Sidebar";
 import NavBar from "../components/NavBar";
 import { btnInfo } from "./config";
 import ButtonsGroup from "../components/ButtonsGroup";
-import Drawer from "../components/Drawer";
 import "./style.scss";
 
 export default function Main() {
@@ -52,6 +51,7 @@ export default function Main() {
         <div style={{ margin: "3em" }}>
           <ButtonsGroup info={btnInfo} />
         </div>
+
       </div>
     </div>
   );
