@@ -11,10 +11,9 @@ import "./style.scss";
 
 export default function Main() {
   const [openSideBar, setOpenSideBar] = useState(false);
-
   return (
     <div className="app">
-      {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar}/>}
+      {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar} />}
       <div>
         <NavBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
         <div style={{ position: "relative" }}>
@@ -53,12 +52,7 @@ export default function Main() {
         <div style={{ margin: "3em" }}>
           <ButtonsGroup info={btnInfo} />
         </div>
-      <Drawer title="SKILLS & TIPS">
-        <p href="https://www.google.com">Application<br />tips & tricks</p>
-	<p href="https://www.cmu.edu">Interview Skills</p>
-	<p href="https://www.facebook.com">In the Workplace</p>
-      </Drawer>
+      </div>
     </div>
-  </div>  
   );
 }
