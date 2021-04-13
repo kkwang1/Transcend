@@ -2,7 +2,7 @@ import React from "react";
 import { CardDeck } from "react-bootstrap";
 import Button from "./Button";
 
-export default function ButtonDeck({info}) {
+export default function ButtonsGroup({info}) {
   return (
     <CardDeck>
       {info.map((s) => (
