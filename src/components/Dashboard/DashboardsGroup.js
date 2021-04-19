@@ -1,14 +1,15 @@
 import React from "react";
 import { CardDeck } from "react-bootstrap";
 import Dashboard from "./Dashboard";
+import {dashboardInfo} from './data';
 
 export default function DashboardGroups({
-  info,
+  info = dashboardInfo, //mock data, remember to remove  
   backgroundColor = "",
   color = "#1B7B89",
 }) {
   return (
-    <CardDeck>
+    <CardDeck style={{"margin": "10px"}}>
       {info.map((s) => (
         <Dashboard
           title={s.title}

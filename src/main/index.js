@@ -4,10 +4,9 @@ import { Button } from "react-bootstrap";
 import "./style.css";
 import Sidebar from "../components/sideBar/Sidebar";
 import NavBar from "../components/NavBar";
-import { btnInfo, dashboardInfo } from "./config";
+import { btnInfo } from "./config";
 import ButtonsGroup from "../components/ButtonsGroup";
 import "./style.scss";
-import DashboardGroups from "../components/DashboardsGroup";
 
 export default function Main() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -52,7 +51,6 @@ export default function Main() {
         <div style={{ margin: "3em" }}>
           <ButtonsGroup info={btnInfo} />
         </div>
-        <DashboardGroups info={dashboardInfo} />
       </div>
     </div>
   );
