@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Drawer from "../components/Drawer";
+import "./style.css";
 
 export default function TransitionPlanning() {
-  console.log("here");
   return (
     <div>
       <Drawer title="SKILLS & TIPS">
