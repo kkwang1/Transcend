@@ -1,5 +1,7 @@
 import React from "react";
-import arrow from "../images/arrow.png";
+import arrow from "../images/right_arrow.png";
+
+// inputs: props.title is the title; should have children with href props
 
 export default function Drawer(props) {
   return (
@@ -13,7 +15,7 @@ export default function Drawer(props) {
               target="_blank"
               rel="noreferrer"
               className="drawer-button"
-			  key={`drawerId_${index}`}
+              key={`drawerId_${index}`}
             >
               <div className="drawer-text">{child}</div>
               <img className="drawer-arrow" src={arrow} alt="" />

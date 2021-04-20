@@ -1,3 +1,9 @@
+:root {
+  --darkblue: #203e45;
+  --lightgray: rgb(240, 240, 240);
+  --darkgray: rgb(180, 180, 180);
+}
+
 .drawer {
   display: flex;
   flex-direction: column;
