@@ -5,7 +5,7 @@ import TransitionPlanning from "./transition-planning";
 import AlternativePathways from "./alternative-pathways";
 import Community from "./community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "./components/sideBar/Sidebar";
 import NavBar from "./components/NavBar";
 
 function App() {

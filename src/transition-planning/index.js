@@ -2,6 +2,24 @@ import React from "react";
 import "../App.scss";
 import ButtonsGroup from "../components/ButtonsGroup";
 
+/* example usage of graphql:
+
+async function loadGreeting() {
+  const response = await fetch('http://localhost:9000/graphql', {
+    method: 'POST',
+    headers: { 'content-type':'application/json'},
+    body: JSON.stringify(query: '{ greeting }') // we have an item "greeting"
+  })
+  const responseBody = await response.json();
+  return responseBody.data.greeting;
+}
+
+state = "";
+showGreeting() {
+  loadGreeting().then(text => state = text)
+}
+
+*/
 export default function TransitionPlanning() {
   const info = [
     {
