@@ -6,16 +6,14 @@ import Sidebar from "../components/sideBar/Sidebar";
 import NavBar from "../components/NavBar";
 import { btnInfo } from "./config";
 import ButtonsGroup from "../components/ButtonsGroup";
-import "./style.scss";
-import SideMenu from "../components/SideMenu/SideMenu";
+import "../style.scss";
+import Menu from "../components/SideMenu/SideMenu";
 
 export default function Main() {
   const [openSideBar, setOpenSideBar] = useState(false);
   return (
-    <div className="app">
+    <>
       {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar} />}
-      <SideMenu>
-        <NavBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
         <div style={{ position: "relative" }}>
           <img src={TitleBanner} style={{ width: "100%" }} />
           <div className="homeButton">
@@ -52,7 +50,6 @@ export default function Main() {
         <div style={{ margin: "3em" }}>
           <ButtonsGroup info={btnInfo} />
         </div>
-      </SideMenu>
-    </div>
+    </>
   );
 }
