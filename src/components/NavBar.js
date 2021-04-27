@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/logo.png";
-import "../style.scss";
+import "../App.scss";
 
 export default function NavBar({openSidebar, setOpenSidebar}) {
   return (
@@ -16,9 +16,9 @@ export default function NavBar({openSidebar, setOpenSidebar}) {
         <img src={Logo} width="200px"></img>
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="transitionalplanning">Transitional Planning</Nav.Link>
-        <Nav.Link href="alternativepathways">Alternative Pathways</Nav.Link>
-        <Nav.Link href="community">Community</Nav.Link>
+        <Nav.Link style={{margin: "auto"}} href="transitionalplanning">Transitional Planning</Nav.Link>
+        <Nav.Link style={{margin: "auto"}} href="alternativepathways">Alternative Pathways</Nav.Link>
+        <Nav.Link style={{margin: "auto"}} href="community">Community</Nav.Link>
       </Nav>
       <FontAwesomeIcon
         icon={faSearch}

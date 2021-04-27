@@ -1,11 +1,30 @@
-import React, { useState } from "react";
-import Drawer from "../components/Drawer";
-import "../style.scss";
-import SearchBar from "../components/SearchBar";
-import Filter from "../components/Filter";
-import Menu from "../components/SideMenu/SideMenu";
+import React from "react";
+import "../App.scss";
+import ButtonsGroup from "../components/ButtonsGroup";
 
 export default function TransitionPlanning() {
+  const info = [
+    {
+      title: "Education",
+      backgroundColor: "#F1F1F1",
+      color: "#203E45",
+    },
+    {
+      title: "Employment",
+      backgroundColor: "#F1F1F1",
+      color: "#203E45",
+    },
+    {
+      title: "Independent Living",
+      backgroundColor: "#F1F1F1",
+      color: "#203E45",
+    },
+    {
+      title: "Day Programs",
+      backgroundColor: "#F1F1F1",
+      color: "#203E45",
+    },
+  ];
   return (
     <div>
       {/* <Drawer title="SKILLS & TIPS">
@@ -22,7 +41,13 @@ export default function TransitionPlanning() {
       <SideMenu>
         <NavBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
       </SideMenu>  */}
-      
+      <h1 className="layout-header">Transitional Planning</h1>
+      <h3 className="layout-header" style={{ textAlign: "center" }}>
+        Explore the following sections:{" "}
+      </h3>
+      <div className="layout-btn">
+        <ButtonsGroup info={info} />
+      </div>
     </div>
   );
 }

@@ -1,11 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Butt = styled.button`
-
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   border: none;
-  color: #1B7B89;
+  color: #1b7b89;
   padding: 33px 30px;
   text-align: center;
   text-decoration: none;
@@ -15,13 +14,11 @@ const Butt = styled.button`
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 10px;
-  text-transform: uppercase
-  `;
+  text-transform: uppercase;
+`;
 
-const Button = text => {
-  return (
-    <Butt> text </Butt>
-  )
-}
+const Button = (text) => {
+  return <Butt> text </Butt>;
+};
 
 export default Button;

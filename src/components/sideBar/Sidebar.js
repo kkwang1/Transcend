@@ -6,12 +6,12 @@ import {
   SubMenu,
   SidebarContent,
 } from "react-pro-sidebar";
-// import "./style.css";
+import "./style.css";
 import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-// import "../../style.scss";
+import "../../App.scss";
 
 export default function Sidebar({setOpenSidebar}) {
   return (

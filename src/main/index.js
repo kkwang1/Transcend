@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import TitleBanner from "../images/title_banner.jpg";
 import { Button } from "react-bootstrap";
 import "./style.css";
-import Sidebar from "../components/sideBar/Sidebar";
-import NavBar from "../components/sideBar/NavBar";
 import { btnInfo } from "./config";
 import ButtonsGroup from "../components/ButtonsGroup";
-import "../style.scss";
-import SubMenu from "../components/SideMenu/SideMenu";
+import "../App.scss";
 
 export default function Main() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   return (
     <>
       <div style={{ position: "relative" }}>
