@@ -4,23 +4,6 @@
   --darkgray: rgb(180, 180, 180);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10vh;
-  background: white;
-  color: var(--darkblue);
-}
-
-.nav-links {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
 .homeButton {
   position: absolute;
   z-index: 50;

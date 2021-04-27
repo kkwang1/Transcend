@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   ProSidebar,
   Menu,
@@ -6,13 +6,14 @@ import {
   SubMenu,
   SidebarContent,
 } from "react-pro-sidebar";
-import "./style.css";
+// import "./style.css";
 import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+// import "../../style.scss";
 
-export default function Sidebar({ setOpenSideBar }) {
+export default function Sidebar({setOpenSidebar}) {
   return (
     <ProSidebar>
       <div>
@@ -22,7 +23,7 @@ export default function Sidebar({ setOpenSideBar }) {
             icon={faTimes}
             style={{ fontSize: "1.5em", verticalAlign: "middle" }}
             color="#DEDEDE"
-            onClick={() => setOpenSideBar(false)}
+            onClick={() => setOpenSidebar(false)}
           />
         </div>
       </div>

@@ -7,8 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/logo.png";
+import "../style.scss";
 
-export default function NavBar({openSideBar, setOpenSideBar}) {
+export default function NavBar({openSidebar, setOpenSidebar}) {
   return (
     <Navbar bg="light" variant="light">
       <Navbar.Brand href="home">
@@ -33,7 +34,7 @@ export default function NavBar({openSideBar, setOpenSideBar}) {
         icon={faBars}
         style={{ fontSize: "2em", margin: "10px" }}
         color="#DEDEDE"
-        onClick={() => setOpenSideBar(!openSideBar)}
+        onClick={() => setOpenSidebar(!openSidebar)}
       />
     </Navbar>
   );
