@@ -12,6 +12,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.0",
     "font-awesome": "^4.7.0",
+    "multiselect-react-dropdown": "^1.6.11",
     "react": "^16.7.0",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^16.7.0",

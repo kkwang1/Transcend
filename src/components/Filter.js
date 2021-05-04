@@ -1,31 +1,26 @@
 import React from "react";
-import mobiscroll from "@mobiscroll/react";
-import "@mobiscroll/react/dist/css/mobiscroll.min.css";
-
-mobiscroll.settings = {
-  theme: "mobiscroll",
-  themeVariant: "light"
-};
+import { Multiselect } from "multiselect-react-dropdown";
 
 /*
 input: props.title is the title; props.items should be a list of objects with a
-value field (for indexing) and a text field (name of the filter option)
+id field and a text field (name of the filter option)
 
-ex. [{value: 0, text: "option 1"}, {value: 1, text: "option 2"}]
+ex. [{id: 0, text: "option 1"}, {id: 1, text: "option 2"}]
 
-finally, props.prompt should be a list of indices to initialize with.
+finally, props.prompt should be a list of filters to initialize with.
+
+ex. [{id: 1, text: "option 2"}]
 */
 
 export default function Filter(props) {
   return (
-    <label className="filter">
-      { props.title }
-      <mobiscroll.Select
-        select="multiple"
-	touchUi={ false }
-	value={ props.prompt }
-	data={ props.items }
-      />
-    </label>
+    <Multiselect
+      className="filter"
+      options={ props.items }
+      displayValue="text"
+      selectedValues={ props.prompt }
+      showCheckbox={ true }
+      placeholder={ props.title }
+    />
   );
 }
