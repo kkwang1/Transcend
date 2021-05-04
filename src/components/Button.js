@@ -19,7 +19,7 @@ const Butt = styled.button`
 
 const Button = props => {
   return (
-    <Butt> {props.text} </Butt>
+    <Butt> {props.title} </Butt>
   )
 }
 

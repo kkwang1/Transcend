@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.scss";
 import ButtonsGroup from "../components/ButtonsGroup";
+import Filter from "../components/Filter";
+import SearchBar from "../components/SearchBar";
 
 /* example usage of graphql:
 
@@ -63,6 +65,10 @@ export default function TransitionPlanning() {
       <h3 className="layout-header" style={{ textAlign: "center" }}>
         Explore the following sections:{" "}
       </h3>
+      <div>
+        <SearchBar />
+        <Filter />
+      </div>
       <div className="layout-btn">
         <ButtonsGroup info={info} />
       </div>
