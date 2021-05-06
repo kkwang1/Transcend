@@ -6,7 +6,7 @@ const btnInfo = [
         you create an appropriate, feasible, and individualized
         transition plan.`,
     backgroundColor: "#F1F1F1",
-    color: "#203E45",
+    color: "#1B7B89",
   },
   {
     title: "BUILD A COMMUNITY",
@@ -14,7 +14,7 @@ const btnInfo = [
         service providers to educators to parents and students. Can’t
         find the group you’re looking for? Create your own!`,
     backgroundColor: "#F1F1F1",
-    color: "#203E45",
+    color: "#1B7B89",
   },
   {
     title: "ALTERNATIVE PATHWAYS",
@@ -23,7 +23,7 @@ const btnInfo = [
             assessment) for continued life skills learning and/or
             alternative forms of employment or fulfillment.`,
     backgroundColor: "#F1F1F1",
-    color: "#203E45",
+    color: "#1B7B89",
   },
 ];
 

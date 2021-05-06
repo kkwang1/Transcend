@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function Education() {
   const info = [
@@ -8,14 +9,14 @@ export default function Education() {
       text: `Traditional higher education resources, ranging from vocational and 
       trade school to community college to four year universities.`,
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
     {
       title: "Transitional Programs",
       text: `Short term educational programs geared towards developing and expanding 
       upon life skills for young adults transitioning out of secondary education.`,
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
   ];
   return (

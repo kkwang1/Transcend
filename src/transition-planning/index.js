@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.scss";
-import ButtonsGroup from "../components/ButtonsGroup";
+import ButtonsGroup from "../components/Button/ButtonsGroup";
 import Filter from "../components/Filter";
 import SearchBar from "../components/SearchBar";
 
@@ -25,26 +25,27 @@ showGreeting() {
 export default function TransitionPlanning() {
   const info = [
     {
-      title: "Education",
+      title: "EDUCATION",
       backgroundColor: "#F1F1F1",
       color: "#203E45",
     },
     {
-      title: "Employment",
+      title: "EMPLOYMENT",
       backgroundColor: "#F1F1F1",
       color: "#203E45",
     },
     {
-      title: "Independent Living",
+      title: "INDEPENDENT LIVING",
       backgroundColor: "#F1F1F1",
       color: "#203E45",
     },
     {
-      title: "Day Programs",
+      title: "DAY PROGRAMS",
       backgroundColor: "#F1F1F1",
       color: "#203E45",
     },
   ];
+
   return (
     <div>
       {/* <Drawer title="SKILLS & TIPS">
@@ -69,7 +70,7 @@ export default function TransitionPlanning() {
         <SearchBar />
         <Filter />
       </div>
-      <div className="layout-btn">
+      <div className="layout-btn" style={{ margin: "1rem 5rem" }}>
         <ButtonsGroup info={info} />
       </div>
     </div>

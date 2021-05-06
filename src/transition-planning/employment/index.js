@@ -6,17 +6,17 @@ export default function Employment() {
     {
       title: "Vocational Training",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
     {
       title: "Job Postings",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
     {
       title: "Career Aptitude",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
   ];
   return (

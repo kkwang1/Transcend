@@ -3,7 +3,7 @@ import TitleBanner from "../images/title_banner.jpg";
 import { Button } from "react-bootstrap";
 import "./style.css";
 import { btnInfo } from "./config";
-import ButtonsGroup from "../components/ButtonsGroup";
+import ButtonsGroup from "../components/Button/ButtonsGroup";
 import "../App.scss";
 
 export default function Main() {

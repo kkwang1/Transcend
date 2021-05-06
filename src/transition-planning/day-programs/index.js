@@ -6,22 +6,22 @@ export default function DayPrograms() {
     {
       title: "Living at Home",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
     {
       title: "Assisted Living",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
     {
       title: "Group Homes",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     },
     {
       title: "Residential Programs",
       backgroundColor: "#F1F1F1",
-      color: "#203E45",
+      color: "#1B7B89",
     }
   ];
   return (
