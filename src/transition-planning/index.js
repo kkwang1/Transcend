@@ -2,7 +2,7 @@ import React from "react";
 import "../App.scss";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
 import Filter from "../components/Filter";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/SearchBar/SearchBar";
 
 /* example usage of graphql:
 
@@ -68,7 +68,7 @@ export default function TransitionPlanning() {
       </h3>
       <div>
         <SearchBar />
-        <Filter />
+        <Filter/>
       </div>
       <div className="layout-btn" style={{ margin: "1rem 5rem" }}>
         <ButtonsGroup info={info} />
