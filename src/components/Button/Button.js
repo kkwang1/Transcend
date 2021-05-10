@@ -1,29 +1,32 @@
 import React from "react";
-import styled from "styled-components";
+import { Card } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
-const Butt = styled.button`
-  background-color: #f1f1f1;
-  border: none;
-  color: #1b7b89;
-  padding: 33px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-  margin: 4px 10px;
-  cursor: pointer;
-  border-radius: 10px;
-  text-transform: uppercase;
-  width: 200px
-`;
-
-const Button = (props) => {
+export default function Button({
+  title,
+  text,
+  linkPath,
+  backgroundColor = "",
+  color = "",
+}) {
+  console.log(color);
+  let history = useHistory();
   return (
-    <Butt>
-      {props.title} 
-    </Butt>
+    <Card
+      style={{
+        backgroundColor: backgroundColor,
+        color: color,
+        border: "none",
+        borderRadius: "15px",
+      }}
+      onClick={() => history.push(linkPath)}
+    >
+      <Card.Body>
+        <div className="button-text">
+          {title && <Card.Title>{title}</Card.Title>}
+          {text && <Card.Text>{text}</Card.Text>}
+        </div>
+      </Card.Body>
+    </Card>
   );
-};
-
-export default Button;
+}
