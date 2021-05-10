@@ -1,16 +1,23 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-
+/* 
+Usage: create buttons
+Description:
+    - title: string
+    - text: string
+    - backgroundColor: string 
+    - color: string
+    - action: callback function 
+*/
 export default function Button({
   title,
   text,
-  linkPath,
+  action,
   backgroundColor = "",
   color = "",
 }) {
-  console.log(color);
-  let history = useHistory();
+  console.log(action);
   return (
     <Card
       style={{
@@ -19,7 +26,7 @@ export default function Button({
         border: "none",
         borderRadius: "15px",
       }}
-      onClick={() => history.push(linkPath)}
+      onClick={() => action()}
     >
       <Card.Body>
         <div className="button-text">
