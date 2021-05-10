@@ -17,7 +17,6 @@ export default function Button({
   backgroundColor = "",
   color = "",
 }) {
-  console.log(action);
   return (
     <Card
       style={{

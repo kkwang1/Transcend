@@ -7,7 +7,6 @@ import "./style.css";
 
 export default function SearchBar(props) {
   const [textState, changeText] = useState(props.prompt);
-  console.log(textState);
   return (
     // <div className="search-bar">
     //   <img className="search-icon" src={ searchIcon } alt="" />

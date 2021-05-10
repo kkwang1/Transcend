@@ -9,7 +9,6 @@ Description:
     - options: string array
 */
 export default function Select({ title, options }) {
-  console.log(title, options);
   return (
     <DropdownButton
       id={`dropdown-variants-${title}`}
