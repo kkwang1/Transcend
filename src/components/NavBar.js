@@ -12,7 +12,7 @@ import "../App.scss";
 export default function NavBar({openSidebar, setOpenSidebar}) {
   return (
     <Navbar bg="light" variant="light">
-      <Navbar.Brand href="home">
+      <Navbar.Brand href="/">
         <img src={Logo} width="200px"></img>
       </Navbar.Brand>
       <Nav className="mr-auto">

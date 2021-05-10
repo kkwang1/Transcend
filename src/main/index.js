@@ -43,6 +43,9 @@ export default function Main() {
         </div>
       </div>
       <div style={{ margin: "3em" }}>
+        <h3 className="layout-header" style={{ textAlign: "center", color: "#000" }}>
+          Explore the following sections:{" "}
+        </h3>
         <ButtonsGroup info={btnInfo} />
       </div>
     </>
