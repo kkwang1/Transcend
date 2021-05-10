@@ -5,6 +5,7 @@ import ButtonsGroup from "../components/Button/ButtonsGroup";
 import Filter from "../components/Filter";
 import SearchBar from "../components/SearchBar/SearchBar";
 import SelectGroups from "../components/Select/SelectGroup";
+import Education from "./education";
 
 /* example usage of graphql:
 
@@ -44,13 +45,13 @@ export default function TransitionPlanning() {
       title: "INDEPENDENT LIVING",
       backgroundColor: "#F1F1F1",
       color: "#203E45",
-      action: () => history.push(`${location.pathname}/independent-living`),
+      action: () => history.push(`${location.pathname}/independentliving`),
     },
     {
       title: "DAY PROGRAMS",
       backgroundColor: "#F1F1F1",
       color: "#203E45",
-      action: () => history.push(`${location.pathname}/day-programs`),
+      action: () => history.push(`${location.pathname}/dayprograms`),
     },
   ];
 

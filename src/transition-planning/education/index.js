@@ -1,8 +1,11 @@
 import React from "react";
-import "../App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "../../App.scss";
+import { BrowserRouter as Router, Switch, Route, useHistory, useLocation } from "react-router-dom";
+import ButtonsGroup from "../../components/Button/ButtonsGroup";
 
 export default function Education() {
+  let history = useHistory();
+  let location = useLocation();
   const info = [
     {
       title: "College/University",
@@ -10,6 +13,7 @@ export default function Education() {
       trade school to community college to four year universities.`,
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
+      action: () => history.push(`${location.pathname}/college`)
     },
     {
       title: "Transitional Programs",
@@ -17,6 +21,7 @@ export default function Education() {
       upon life skills for young adults transitioning out of secondary education.`,
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
+      action: () => history.push(`${location.pathname}/programs`)
     },
   ];
   return (

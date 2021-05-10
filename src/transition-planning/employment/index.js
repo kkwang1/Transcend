@@ -1,5 +1,6 @@
 import React from "react";
-import "../App.scss";
+import "../../App.scss";
+import ButtonsGroup from "../../components/Button/ButtonsGroup";
 
 export default function Employment() {
   const info = [

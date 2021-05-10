@@ -1,7 +1,7 @@
 import "./App.css";
 import { React, useState } from "react";
 import Main from "./main/index";
-import TransitionPlanning from "./transition-planning";
+import TransitionPlanning from "./transition-planning/route";
 import AlternativePathways from "./alternative-pathways";
 import Community from "./community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -19,8 +19,8 @@ function App() {
       <div style={{opacity: open && "0.5"}}>
         <NavBar openSidebar={open} setOpenSidebar={setOpen} />
         <Switch>
-          <Route path="/transitionalplanning" component={TransitionPlanning} />
           <Route exact path="/" component={Main} />
+          <TransitionPlanning />
           <Route path="/community" exact component={Community} />
           <Route
             path="/alternativepathways"
