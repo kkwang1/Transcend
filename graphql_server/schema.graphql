@@ -1,4 +1,11 @@
-type Query
-{
-  greeting: String
+type Query {
+  searchTerm(term:String): [Result]
+  searchCat(cat:String): [Result]
+  allResults: [Result]
+}
+
+type Result {
+  name: String!
+  href: String!
+  category: String!
 }
