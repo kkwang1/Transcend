@@ -4,12 +4,18 @@
 
 .buttonGroup .card-deck .card {
   min-width: auto;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .buttonGroup .card-deck .card .card-body {
   min-height: 125px;
   text-align: center;
-  
+  position: relative; 
+  display: flex;
+  align-items: center;
+  margin: auto
 }
 
 .buttonGroup .card-deck .card .card-body .card-title{

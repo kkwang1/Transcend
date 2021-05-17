@@ -1,0 +1,7 @@
+.sideButtons {
+    border: none !important;
+    border-radius: 15px !important;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+}

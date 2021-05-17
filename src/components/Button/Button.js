@@ -22,8 +22,9 @@ export default function Button({
       style={{
         backgroundColor: backgroundColor,
         color: color,
-        border: "none",
-        borderRadius: "15px",
+        // border: "none",
+        // borderRadius: "15px",
+        // cursor: "pointer",
       }}
       onClick={() => action()}
     >

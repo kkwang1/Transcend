@@ -14,7 +14,7 @@ $icon-size: 35px;
 $dark-green: rgb(27, 123, 137);
 .layout-header {
   color: $dark-green;
-  margin: 50px;
+  margin: 50px 50px 20px 50px;
 }
 
 .layout-btn {
@@ -41,6 +41,7 @@ body {
 
 #root {
   height: 100%;
+  min-width: fit-content;
 }
 
 .app {
