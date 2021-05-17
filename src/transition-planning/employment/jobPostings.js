@@ -1,9 +1,9 @@
 import React from "react";
 import Filter from "../../components/Filter";
-import SearchBar from "../../components/SearchBar";
-import "../App.scss";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import "../../App.scss";
 
-export default function jobPostings() {
+export default function JobPostings() {
   return (
     <>
       <h1 className="layout-header">Job Postings</h1>

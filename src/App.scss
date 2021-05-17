@@ -18,10 +18,16 @@ $dark-green: rgb(27, 123, 137);
 }
 
 .layout-btn {
-  flex: 1 0;
-  margin-right: 15px;
-  margin-bottom: 0;
-  margin-left: 15px;
+  // flex: 1 0;
+  // margin-right: 15px;
+  // margin-bottom: 0;
+  // margin-left: 15px;
+  margin: 2rem 0rem 5rem;
+  padding: 0px 0px 50px;
+}
+
+.layout-content {
+  margin: 50px;
 }
 
 //////////////////////////////////////////////////////

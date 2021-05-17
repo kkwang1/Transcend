@@ -1,10 +1,10 @@
 import React from "react";
 import TransitionPlanning from ".";
 import Education from "./education";
-import Employment from "./employment";
 import IndependentLiving from "./independent-living";
 import DayPrograms from "./day-programs";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
+import EmploymentRoutes from './employment/routes';
 
 const route = () => {
   return (
@@ -15,7 +15,7 @@ const route = () => {
         component={TransitionPlanning}
       />
       <Route path="/transitionalplanning/education" component={Education} />
-      <Route path="/transitionalplanning/employment" component={Employment} />
+      <EmploymentRoutes />
       <Route
         path="/transitionalplanning/independentliving"
         component={IndependentLiving}
