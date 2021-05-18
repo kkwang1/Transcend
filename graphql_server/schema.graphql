@@ -1,7 +1,15 @@
 type Query {
-  searchTerm(term:String): [Result]
-  searchCat(cat:String): [Result]
+  searchTerm(term:String, options:OptionInput): [Result]
   allResults: [Result]
+}
+
+input OptionInput {
+  category: [[Option]]!
+}
+
+input Option {
+  id: ID!
+  text: String!
 }
 
 type Result {
