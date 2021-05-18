@@ -5,17 +5,18 @@ import Career from "./career";
 import JobPostings from "./jobPostings";
 import VocationalTrainings from "./vocationalTraining";
 
-const route = () => {
+const route = ({match}) => {
+  console.log(match)
   return (
-    <>
+    <div>
       <Route
-        path="/transitionalplanning/employment/career"
+        path={`${match.path}/career`}
         component={Career}
       />
-      <Route exact path="/transitionalplanning/employment" component={Employment} />
-      <Route path="/transitionalplanning/employment/vocationaltraining" component={VocationalTrainings} />
-      <Route path="/transitionalplanning/employment/jobpostings" component={JobPostings} />
-    </>
+      <Route exact path={match.path} component={Employment} />
+      <Route path={`${match.path}/vocationaltraining`} component={VocationalTrainings} />
+      <Route path={`${match.path}/jobpostings`} component={JobPostings} />
+    </div>
   );
 };
 

@@ -28,7 +28,7 @@ export default function Education() {
       upon life skills for young adults transitioning out of secondary education.`,
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/programs`),
+      action: () => history.push(`${location.pathname}/transitionalprograms`),
     },
   ];
   return (

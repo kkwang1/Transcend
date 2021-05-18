@@ -1,17 +1,29 @@
 import React from "react";
 import DashboardGroups from "../../components/Dashboard/DashboardsGroup";
-import Filter from "../../components/Filter";
-import SearchBar from "../../components/SearchBar";
-import "../App.scss";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import "../../App.scss";
+import { dashboardInfo, selectInfo } from "./config";
+import SelectGroups from "../../components/Select/SelectGroup";
+import "./style.css";
 
-export default function college() {
+export default function College() {
   return (
     <>
       <h1 className="layout-header">College</h1>
-      <div>
+      <div style={{ padding: "0px 50px" }}>
         <SearchBar />
-        <Filter />
-        <DashboardGroups />
+        <div className="select-btn">
+          <SelectGroups info={selectInfo} />
+        </div>
+        
+        <div
+          style={{
+            marginTop: "15px",
+            paddingBottom: "50px",
+          }}
+        >
+          <DashboardGroups info={dashboardInfo} />
+        </div>
       </div>
     </>
   );

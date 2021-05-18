@@ -3,7 +3,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
-import { dashboardInfo } from "../../components/Dashboard/data";
+import { dashboardInfo } from "../education/config";
 import SideButtons from "../../components/SideButton.js/SideButtons";
 
 export default function JobPosting() {
@@ -68,7 +68,6 @@ export default function JobPosting() {
                 color: "#000",
                 textAlign: "center",
                 marginBottom: "15px",
-                height: "5%",
               }}
             >
               <h4>SKILLS & TIPS</h4>
