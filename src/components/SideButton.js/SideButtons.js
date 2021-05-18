@@ -18,9 +18,7 @@ Description:
 */
 export default function SideButtons({ info }) {
   return info.map((s) => (
-    <Card
-      className="sideButtons"
-    >
+    <Card className="sideButtons">
       <Card.Body
         style={{
           position: "relative",
@@ -29,7 +27,7 @@ export default function SideButtons({ info }) {
           justifyContent: "space-between",
         }}
       >
-        <div>
+        <div style={{ textAlign: "left" }}>
           {s.title && (
             <Card.Title style={{ marginBottom: "0px" }}>{s.title}</Card.Title>
           )}

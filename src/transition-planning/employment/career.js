@@ -6,11 +6,7 @@ import "../../App.scss";
 export default function Career() {
   return (
     <>
-      <h1 className="layout-header">Job Postings</h1>
-      <div>
-        <SearchBar />
-        <Filter />
-      </div>
+      <h1 className="layout-header">Career</h1>
     </>
   );
 }
