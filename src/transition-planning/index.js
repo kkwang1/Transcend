@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import "../App.scss";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
-import Filter from "../components/Filter";
 import SearchBar from "../components/SearchBar/SearchBar";
 import SelectGroup from "../components/Select/SelectGroup";
 

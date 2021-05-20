@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import searchIcon from "../../images/search.png";
 import "./style.css";
 import Filter from "../Filter";
 
@@ -54,6 +53,7 @@ export default function SearchBar(props) {
   for (var key in filterOptions) {
     filterList.push(<Filter
       key={key}
+      name={key}
       title={("Filter by " + key)}
       items={(filterOptions[key])[2]}
       prompt={(filterOptions[key])[0]}
@@ -62,33 +62,21 @@ export default function SearchBar(props) {
   }
 
   return (
-    // <div className="search-bar">
-    //   <img className="search-icon" src={ searchIcon } alt="" />
-    //   <input
-    //     className="search-text"
-    //     type="text"
-    //     value={ textState }
-    //     onChange={ (event) => changeText(event.target.value) }
-    //   />
-    // </div>
     <div>
-      <Form>
-        <Form.Control
-          className="input-search"
-          placeholder="Search all resources"
-          onChange={(event) => changeText(event.target.value)}
-        />
+      <Form onSubmit={ (event) => {
+        event.preventDefault();
+        loadSearch(textState, filterOptions).then(results => updateResults(results));
+      }}>
+        <Form.Row>
+          <Form.Control
+            className="input-search"
+            placeholder="Search all resources"
+            onChange={(event) => changeText(event.target.value)}
+          />
+        </Form.Row>
       </Form>
       <div className="filter-area">
         { filterList }
-      </div>
-      <div className="submit-search">
-        <Button
-          variant="primary"
-          onClick={ () => loadSearch(textState, filterOptions).then(results => updateResults(results)) }
-        >
-          Search
-        </Button>
       </div>
       <div className="result-area">
         <p>{ JSON.stringify(resultState) }</p>

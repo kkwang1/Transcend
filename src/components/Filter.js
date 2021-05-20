@@ -18,10 +18,10 @@ the selected items.
 export default class Filter extends React.Component {
   constructor(props) {
     super(props);
-    (this[props.key]) = React.createRef();
+    (this[this.props.name]) = React.createRef();
   }
   getItems() {
-    return (this[this.props.key]).current.getSelectedItems();
+    return (this[this.props.name]).current.getSelectedItems();
   }
   render() {
     return (
@@ -32,7 +32,7 @@ export default class Filter extends React.Component {
         selectedValues={ this.props.prompt }
         showCheckbox={ true }
         placeholder={ this.props.title }
-        ref={ this[this.props.key] }
+        ref={ this[this.props.name] }
         onSelect={ (event) => this.props.updateFn(this.getItems()) }
         onRemove={ (event) => this.props.updateFn(this.getItems()) }
       />
