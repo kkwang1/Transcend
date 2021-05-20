@@ -3,10 +3,10 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
-import { dashboardInfo } from "../education/config";
+import { dashboardInfo } from "./config";
 import SideButtons from "../../components/SideButton.js/SideButtons";
 
-export default function DayPrograms() {
+export default function ResidentialPrograms() {
   const selectInfo = [
     {
       title: "All fields",
@@ -23,7 +23,7 @@ export default function DayPrograms() {
   ];
   return (
     <div>
-      <h1 className="layout-header">Day Programs</h1>
+      <h1 className="layout-header">Transitional Programs</h1>
       <div
         style={{
           padding: "0px 50px",
@@ -65,7 +65,7 @@ export default function DayPrograms() {
                 marginBottom: "15px",
               }}
             >
-              <h5>TYPES OF DAY PROGRAMS</h5>
+              <h5>PERMANENT RESIDENCE & INTEGRATED COMMUNITIES</h5>
             </div>
             <div style={{ height: "85%", display: "grid" }}>
               <SideButtons
