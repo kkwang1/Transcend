@@ -1,5 +1,11 @@
+"""
+Adding new filters - need to edit schema.graphql and SearchBar.js
+In this file:
+- add "filter_name: [[Option]]!" to OptionInput
+- add "filter_name: String!" to Result
+"""
 type Query {
-  searchTerm(term:String, options:OptionInput): [Result]
+  searchTerm(term: String, options: OptionInput): [Result]
   allResults: [Result]
 }
 

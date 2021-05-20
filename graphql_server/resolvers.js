@@ -18,10 +18,19 @@ const Query =
       fitsFilters is true if all the filters are satisfied.
       */
       const fitsFilters = selectedList.map(filterInfo => {
-        return ((filterInfo[1]).includes(item[(filterInfo[0])]));
+        if ((filterInfo[1]).length == 0) {
+          return true;
+        } else {
+          return ((filterInfo[1]).includes(item[(filterInfo[0])]));
+        }
       });
-      return ((item.name).includes(args.term))
-        && (fitsFilters.reduce(reduceFn));
+
+      if(args.term === "") {
+        return fitsFilters.reduce(reduceFn);
+      } else {
+        return ((item.name).includes(args.term))
+          && (fitsFilters.reduce(reduceFn));
+      }
     });
     return db.test.list().filter(filterFn);
   },
