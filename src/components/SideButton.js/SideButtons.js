@@ -16,33 +16,46 @@ Description:
     - color
     - action 
 */
-export default function SideButtons({ info }) {
-  return info.map((s) => (
-    <Card className="sideButtons">
-      <Card.Body
-        style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <div style={{ textAlign: "left" }}>
-          {s.title && (
-            <Card.Title style={{ marginBottom: "0px" }}>{s.title}</Card.Title>
-          )}
-          {s.text && (
-            <Card.Text style={{ marginTop: "revert" }}>{s.text}</Card.Text>
-          )}
-        </div>
-        <div>
-          <FontAwesomeIcon
-            icon={faCaretRight}
-            color="#DEDEDE"
-            style={{ fontSize: "4em", marginLeft: "10px" }}
-          />
-        </div>
-      </Card.Body>
-    </Card>
-  ));
+export default function SideButtons({
+  info,
+  backgroundColor = "",
+  color = "",
+}) {
+  return (
+    <div className="hey">
+      {info.map((s) => (
+        <Card
+          className="sideButtons"
+          style={{ backgroundColor: `${backgroundColor}`, color: `${color}` }}
+        >
+          <Card.Body
+            style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ textAlign: "left" }}>
+              {s.title && (
+                <Card.Title style={{ marginBottom: "0px" }}>
+                  {s.title}
+                </Card.Title>
+              )}
+              {s.text && (
+                <Card.Text style={{ marginTop: "revert" }}>{s.text}</Card.Text>
+              )}
+            </div>
+            <div>
+              <FontAwesomeIcon
+                icon={faCaretRight}
+                color="#DEDEDE"
+                style={{ fontSize: "4em", marginLeft: "10px" }}
+              />
+            </div>
+          </Card.Body>
+        </Card>
+      ))}
+    </div>
+  );
 }
