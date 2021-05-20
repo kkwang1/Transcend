@@ -2,8 +2,9 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import "../../App.scss";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function IndependentLiving() {
+export default function IndependentLiving({ match }) {
   let history = useHistory();
   let location = useLocation();
 
@@ -27,7 +28,7 @@ export default function IndependentLiving() {
       action: () => history.push(`${location.pathname}/grouphomes`),
     },
     {
-      title: "Resdidential Programs",
+      title: "Residential Programs",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/residentialprograms`),
@@ -35,6 +36,9 @@ export default function IndependentLiving() {
   ];
   return (
     <>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">Independent Living</h1>
       <div className="layout-content">
         <p>

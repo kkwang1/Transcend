@@ -5,8 +5,9 @@ import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
 import { dashboardInfo } from "../education/config";
 import SideButtons from "../../components/SideButton.js/SideButtons";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function VocationalTrainings() {
+export default function VocationalTrainings({ match }) {
   const selectInfo = [
     {
       title: "All fields",
@@ -23,6 +24,9 @@ export default function VocationalTrainings() {
   ];
   return (
     <div>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">Vocational Trainings</h1>
       <div
         style={{

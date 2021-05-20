@@ -1,10 +1,14 @@
 import React from "react";
 import "../../App.scss";
+import NavPath from "../../components/NavPath/NavPath";
 import SideButtons from "../../components/SideButton.js/SideButtons";
 
-export default function LivingAtHome() {
+export default function LivingAtHome({ match }) {
   return (
     <>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">Living at Home</h1>
       <div className="layout-content">
         <p>
@@ -17,7 +21,7 @@ export default function LivingAtHome() {
             display: "flex",
             width: "100%",
             paddingBottom: "50px",
-            marginTop: "30px"
+            marginTop: "30px",
           }}
         >
           <div>

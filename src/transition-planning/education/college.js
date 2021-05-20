@@ -5,17 +5,21 @@ import "../../App.scss";
 import { dashboardInfo, selectInfo } from "./config";
 import SelectGroups from "../../components/Select/SelectGroup";
 import "./style.css";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function College() {
+export default function College({ match }) {
   return (
     <>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">College</h1>
       <div style={{ padding: "0px 50px" }}>
         <SearchBar />
         <div className="select-btn">
           <SelectGroups info={selectInfo} />
         </div>
-        
+
         <div
           style={{
             marginTop: "15px",

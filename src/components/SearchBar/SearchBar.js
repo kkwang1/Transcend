@@ -79,7 +79,7 @@ export default function SearchBar(props) {
           onChange={(event) => changeText(event.target.value)}
         />
       </Form>
-      <div className="filter-area">
+      {/* <div className="filter-area">
         { filterList }
       </div>
       <div className="submit-search">
@@ -92,7 +92,7 @@ export default function SearchBar(props) {
       </div>
       <div className="result-area">
         <p>{ JSON.stringify(resultState) }</p>
-      </div>
+      </div> */}
     </div>
   );
 }

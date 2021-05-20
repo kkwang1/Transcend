@@ -5,8 +5,9 @@ import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
 import { dashboardInfo } from "./config";
 import SideButtons from "../../components/SideButton.js/SideButtons";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function TransitionalPrograms() {
+export default function TransitionalPrograms({ match }) {
   const selectInfo = [
     {
       title: "All fields",
@@ -23,6 +24,9 @@ export default function TransitionalPrograms() {
   ];
   return (
     <div>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">Transitional Programs</h1>
       <div
         style={{
