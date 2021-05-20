@@ -1,6 +1,6 @@
 import React from "react";
 import TransitionPlanning from ".";
-import IndependentLiving from "./independent-living";
+import IndependentLivingRoutes from "./independent-living/routes";
 import DayPrograms from "./day-programs";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import EducationRoutes from "./education/routes";
@@ -24,7 +24,7 @@ const route = () => {
       />
       <Route
         path="/transitionalplanning/independentliving"
-        component={IndependentLiving}
+        component={IndependentLivingRoutes}
       />
       <Route path="/transitionalplanning/dayprograms" component={DayPrograms} />
     </Switch>

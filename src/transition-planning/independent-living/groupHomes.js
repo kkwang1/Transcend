@@ -4,10 +4,9 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
 import { dashboardInfo, selectInfo } from "./config";
 import SelectGroups from "../../components/Select/SelectGroup";
-import "./style.css";
 import NavPath from "../../components/NavPath/NavPath";
 
-export default function College({ match }) {
+export default function GroupHomes({ match }) {
   return (
     <>
       <div className="layout-navpath">

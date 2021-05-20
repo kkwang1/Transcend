@@ -3,11 +3,11 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
-import { dashboardInfo } from "../education/config";
+import { dashboardInfo } from "./config";
 import SideButtons from "../../components/SideButton.js/SideButtons";
 import NavPath from "../../components/NavPath/NavPath";
 
-export default function VocationalTrainings({ match }) {
+export default function ResidentialPrograms({ match }) {
   const selectInfo = [
     {
       title: "All fields",
@@ -27,7 +27,7 @@ export default function VocationalTrainings({ match }) {
       <div className="layout-navpath">
         <NavPath path={match.path} />
       </div>
-      <h1 className="layout-header">Vocational Trainings</h1>
+      <h1 className="layout-header">Transitional Programs</h1>
       <div
         style={{
           padding: "0px 50px",
@@ -36,11 +36,6 @@ export default function VocationalTrainings({ match }) {
         }}
       >
         <div style={{ marginRight: "35px", minWidth: "65%" }}>
-          <div
-            style={{ color: "#000", textAlign: "center", margin: "15px 0px" }}
-          >
-            <h4>VOCATIONAL PROGRAM SEARCH</h4>
-          </div>
           <SearchBar />
           <SelectGroups info={selectInfo} />
           <div
@@ -74,16 +69,14 @@ export default function VocationalTrainings({ match }) {
                 marginBottom: "15px",
               }}
             >
-              <h4>SKILLS & TIPS</h4>
+              <h5>PERMANENT RESIDENCE & INTEGRATED COMMUNITIES</h5>
             </div>
             <div style={{ height: "85%", display: "grid" }}>
               <SideButtons
                 info={[
-                  {
-                    title: "Application tips & tricks",
-                  },
-                  { title: "Interview Skills" },
-                  { title: "In the Workplace" },
+                  { title: "Embedded Link#1" },
+                  { title: "Embedded Link#2" },
+                  { title: "Embedded Link#3" },
                 ]}
               />
             </div>

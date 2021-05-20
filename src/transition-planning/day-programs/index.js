@@ -1,48 +1,88 @@
 import React from "react";
-import { useHistory, useLocation } from "react-router";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
-import ButtonsGroup from "../../components/Button/ButtonsGroup";
+import SelectGroups from "../../components/Select/SelectGroup";
+import Dashboard from "../../components/Dashboard/Dashboard";
+import { dashboardInfo } from "../education/config";
+import SideButtons from "../../components/SideButton.js/SideButtons";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function DayPrograms() {
-  let history = useHistory();
-  let location = useLocation();
-  const info = [
+export default function DayPrograms({ match }) {
+  const selectInfo = [
     {
-      title: "Living at Home",
-      backgroundColor: "#F1F1F1",
-      color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/livingathome`)
+      title: "All fields",
+      options: ["option1", "option2", "option3"],
     },
     {
-      title: "Assisted Living",
-      backgroundColor: "#F1F1F1",
-      color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/assitedliving`)
+      title: "All skill levels",
+      options: ["option1", "option2", "option3"],
     },
     {
-      title: "Group Homes",
-      backgroundColor: "#F1F1F1",
-      color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/grouphomes`)
+      title: "All program types",
+      options: ["option1", "option2", "option3"],
     },
-    {
-      title: "Residential Programs",
-      backgroundColor: "#F1F1F1",
-      color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/residentialprograms`)
-    }
   ];
-
   return (
-    <>
-      <h1 className="layout-header">Day Programs</h1>
-      <p>
-        You indicated seeking out assisted living in your transition plan. 
-        Here are some options we found for assisted living.
-      </p>
-      <div className="layout-btn">
-        <ButtonsGroup info={info} />
+    <div>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
       </div>
-    </>
+      <h1 className="layout-header">Day Programs</h1>
+      <div
+        style={{
+          padding: "0px 50px",
+          display: "flex",
+          width: "100%",
+        }}
+      >
+        <div style={{ marginRight: "35px", minWidth: "65%" }}>
+          <SearchBar />
+          <SelectGroups info={selectInfo} />
+          <div
+            style={{
+              marginTop: "15px",
+              paddingBottom: "50px",
+            }}
+          >
+            <Dashboard
+              title={dashboardInfo[0].title}
+              desc={dashboardInfo[0].desc}
+              schoolsInfo={dashboardInfo[0].schoolsInfo}
+              backgroundColor={dashboardInfo[0].backgroundColor}
+              color={dashboardInfo[0].color}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            minWidth: "25%",
+            backgroundColor: "#F1F1F1",
+            borderRadius: "10px",
+            marginBottom: "50px",
+          }}
+        >
+          <div style={{ margin: "15px 30px", height: "100%" }}>
+            <div
+              style={{
+                color: "#000",
+                textAlign: "center",
+                marginBottom: "15px",
+              }}
+            >
+              <h5>TYPES OF DAY PROGRAMS</h5>
+            </div>
+            <div style={{ height: "85%", display: "grid" }}>
+              <SideButtons
+                info={[
+                  { title: "Embedded Link#1" },
+                  { title: "Embedded Link#2" },
+                  { title: "Embedded Link#3" },
+                ]}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

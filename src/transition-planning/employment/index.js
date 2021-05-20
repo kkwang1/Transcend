@@ -2,8 +2,9 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import "../../App.scss";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function Employment() {
+export default function Employment({ match }) {
   let history = useHistory();
   let location = useLocation();
 
@@ -29,6 +30,9 @@ export default function Employment() {
   ];
   return (
     <>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">Employment</h1>
       <div className="layout-content">
         <p>

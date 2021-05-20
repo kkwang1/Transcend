@@ -20,7 +20,7 @@ function App() {
         <NavBar openSidebar={open} setOpenSidebar={setOpen} />
         <Switch>
           <Route exact path="/" component={Main} />
-          <TransitionPlanning />
+          <Route exact path="/transitionalplanning" component={TransitionPlanning} />
           <Route path="/community" exact component={Community} />
           <Route
             path="/alternativepathways"

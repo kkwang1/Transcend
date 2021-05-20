@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import "./style.css";
 /* 
 Usage: create buttons
 Description:
@@ -19,6 +19,7 @@ export default function Button({
 }) {
   return (
     <Card
+      className="card-button"
       style={{
         backgroundColor: backgroundColor,
         color: color,

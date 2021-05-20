@@ -8,11 +8,12 @@ import {
   useLocation,
 } from "react-router-dom";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
+import NavPath from "../../components/NavPath/NavPath";
 
-export default function Education() {
+export default function Education({ match }) {
   let history = useHistory();
   let location = useLocation();
-  
+
   const info = [
     {
       title: "COLLEGE / UNIVERSITY",
@@ -33,8 +34,11 @@ export default function Education() {
   ];
   return (
     <>
+      <div className="layout-navpath">
+        <NavPath path={match.path} />
+      </div>
       <h1 className="layout-header">Education</h1>
-      <div className="layout-content"> 
+      <div className="layout-content">
         <p>
           You indicated <b>community college</b> in your transition plan under
           postsecondary education.
@@ -43,7 +47,10 @@ export default function Education() {
           <a href=""> See community colleges we think could fit your needs </a>
           or explore all education options below.
         </p>
-        <div className="layout-btn" style={{padding: "0px 180px", minHeight: "250px"}}>
+        <div
+          className="layout-btn"
+          style={{ padding: "0px 180px", minHeight: "250px" }}
+        >
           <ButtonsGroup info={info} />
         </div>
       </div>

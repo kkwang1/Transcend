@@ -12,9 +12,14 @@ $icon-size: 35px;
 
 ///////////////////////IMPORTANT///////////////////////
 $dark-green: rgb(27, 123, 137);
-.layout-header {
+.layout-main-header {
   color: $dark-green;
   margin: 50px 50px 20px 50px;
+}
+
+.layout-header {
+  color: $dark-green;
+  margin: 20px 50px;
 }
 
 .layout-btn {
@@ -27,8 +32,13 @@ $dark-green: rgb(27, 123, 137);
 }
 
 .layout-content {
-  margin: 50px;
+  margin: 25px 50px;
 }
+
+.layout-navpath {
+  margin: 50px 0px 0px 50px;
+}
+
 
 //////////////////////////////////////////////////////
 

@@ -75,12 +75,12 @@ export default function SearchBar(props) {
           />
         </Form.Row>
       </Form>
-      <div className="filter-area">
+      {/* <div className="filter-area">
         { filterList }
       </div>
       <div className="result-area">
         <p>{ JSON.stringify(resultState) }</p>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -23,7 +23,7 @@ showGreeting() {
 }
 
 */
-export default function TransitionPlanning() {
+export default function TransitionPlanning({match}) {
   let history = useHistory();
   let location = useLocation();
 
@@ -88,7 +88,7 @@ export default function TransitionPlanning() {
       <SideMenu>
         <NavBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
       </SideMenu>  */}
-      <h1 className="layout-header">Transitional Planning</h1>
+      <h1 className="layout-main-header">Transitional Planning</h1>
       <div style={{ width: "65%", margin: "auto" }}>
         <SearchBar />
         <SelectGroup info={selectInfo}/>
