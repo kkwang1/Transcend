@@ -10,7 +10,8 @@ const Query =
     });
     selectedList = (Object.entries(args.options)).map(mapFn);
 
-    const reduceFn = ((total, bool) => total && bool);
+    const reduceAnd = ((total, bool) => total && bool);
+    const reduceOr = ((total, bool) => total || bool);
     const filterFn = (item => {
       /*
       map [key, list_of_selected] for each type of filter; map to true if
@@ -26,10 +27,13 @@ const Query =
       });
 
       if(args.term === "") {
-        return fitsFilters.reduce(reduceFn);
+        return fitsFilters.reduce(reduceAnd);
       } else {
-        return ((item.name).includes(args.term))
-          && (fitsFilters.reduce(reduceFn));
+        // if the search term is non-empty, include results with any of the
+        // words in args.term
+        const wordArr = args.term.split(/[\s,.!?:;]+/);
+        return (wordArr.map((word) => (item.name).includes(word)).reduce(reduceOr))
+          && (fitsFilters.reduce(reduceAnd));
       }
     });
     return db.test.list().filter(filterFn);
