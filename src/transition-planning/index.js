@@ -4,8 +4,7 @@ import "../App.scss";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
 import Filter from "../components/Filter";
 import SearchBar from "../components/SearchBar/SearchBar";
-import SelectGroups from "../components/Select/SelectGroup";
-import Education from "./education";
+import SelectGroup from "../components/Select/SelectGroup";
 
 /* example usage of graphql:
 
@@ -28,7 +27,8 @@ showGreeting() {
 export default function TransitionPlanning() {
   let history = useHistory();
   let location = useLocation();
-  const info = [
+
+  const btnInfo = [
     {
       title: "EDUCATION",
       backgroundColor: "#F1F1F1",
@@ -55,6 +55,24 @@ export default function TransitionPlanning() {
     },
   ];
 
+  const selectInfo = [
+    {
+      title: "Filter",
+      options: ["option1", "option2", "option3"]
+
+    },
+    {
+      title: "Filter",
+      options: ["option1", "option2", "option3"]
+
+    },
+    {
+      title: "Filter",
+      options: ["option1", "option2", "option3"]
+
+    }
+  ]
+
   return (
     <div>
       {/* <Drawer title="SKILLS & TIPS">
@@ -74,6 +92,7 @@ export default function TransitionPlanning() {
       <h1 className="layout-header">Transitional Planning</h1>
       <div style={{ width: "65%", margin: "auto" }}>
         <SearchBar />
+        <SelectGroup info={selectInfo}/>
         {/* <div style={{ margin: "15px" }}>
           <Filter />
         </div> */}
@@ -81,8 +100,8 @@ export default function TransitionPlanning() {
       <h3 className="layout-header" style={{ textAlign: "center" }}>
         Explore the following sections:{" "}
       </h3>
-      <div className="layout-btn" style={{ margin: "1rem 5rem" }}>
-        <ButtonsGroup info={info} />
+      <div className="layout-btn" style={{ margin: "1rem 5rem"}}>
+        <ButtonsGroup info={btnInfo} />
       </div>
     </div>
   );

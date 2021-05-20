@@ -1,7 +1,7 @@
 import "./App.css";
 import { React, useState } from "react";
 import Main from "./main/index";
-import TransitionPlanning from "./transition-planning/route";
+import TransitionPlanning from "./transition-planning/routes";
 import AlternativePathways from "./alternative-pathways";
 import Community from "./community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

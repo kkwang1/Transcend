@@ -1,26 +1,33 @@
 .buttonGroup .card-deck {
-  /* margin-right: -15px;
-  margin-left: -15px; */
   flex-flow: inherit;
 }
 
 .buttonGroup .card-deck .card {
   min-width: auto;
-  /* text-align: center; */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .buttonGroup .card-deck .card .card-body {
-  /* flex: 1 1 auto; */
   min-height: 125px;
-  /* align-items: center;
-  justify-content: center;
-  overflow-wrap: initial; */
-  display: table;
   text-align: center;
+  position: relative; 
+  display: flex;
+  align-items: center;
+  margin: auto
 }
 
 .buttonGroup .card-deck .card .card-body .card-title{
-    margin: 20px;
+    margin: 15px;
 }
+
+.buttonGroup .card-deck .card .card-body .card-text{
+  font-size: 15px;
+  text-align: left;
+  margin: 30px 0px;
+}
+
+
 
 

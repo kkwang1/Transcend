@@ -1,12 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import TitleBanner from "../images/title_banner.jpg";
 import { Button } from "react-bootstrap";
 import "./style.css";
-import { btnInfo } from "./config";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
 import "../App.scss";
+import { useHistory, useLocation } from "react-router";
 
 export default function Main() {
+  let history = useHistory();
+  let location = useLocation();
+
+  const btnInfo = [
+    {
+      title: "RESOURCES FOR TRANSITION PLANNING",
+      text: `Find and save resources for planning transition into adulthood.
+          Utilizing the information in your profile, our system can help
+          you create an appropriate, feasible, and individualized
+          transition plan.`,
+      backgroundColor: "#F1F1F1",
+      action: () => history.push(`/transitionalplanning`),
+      color: "#1B7B89",
+    },
+    {
+      title: "BUILD A COMMUNITY",
+      text: `Connect with groups and communities of interest, ranging from
+          service providers to educators to parents and students. Can’t
+          find the group you’re looking for? Create your own!`,
+      backgroundColor: "#F1F1F1",
+      action: () => history.push(`/community`),
+      color: "#1B7B89",
+    },
+    {
+      title: "ALTERNATIVE PATHWAYS",
+      text: `Have our system populate a customized day program (using
+              information from your profile and a preliminary student
+              assessment) for continued life skills learning and/or
+              alternative forms of employment or fulfillment.`,
+      backgroundColor: "#F1F1F1",
+      action: () => history.push(`/alternativepathways`),
+      color: "#1B7B89",
+    },
+  ];
+
   return (
     <>
       <div style={{ position: "relative" }}>
@@ -43,7 +78,10 @@ export default function Main() {
         </div>
       </div>
       <div style={{ margin: "3em" }}>
-        <h3 className="layout-header" style={{ textAlign: "center", color: "#000" }}>
+        <h3
+          className="layout-header"
+          style={{ textAlign: "center", color: "#000" }}
+        >
           Explore the following sections:{" "}
         </h3>
         <ButtonsGroup info={btnInfo} />
