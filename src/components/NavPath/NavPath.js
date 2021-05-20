@@ -24,7 +24,7 @@ export default function NavPath({ path }) {
           }
           return (
             <a
-              href={"/" + pathList.slice(0, index).join("/")}
+              href={"/" + pathList.slice(0, index + 1).join("/")}
               style={{ color: "#203E45" }}
             >
               {s}
