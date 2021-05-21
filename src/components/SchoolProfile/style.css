@@ -1,0 +1,51 @@
+.schoolProfile {
+    background-color: white;
+}
+
+.schoolProfile-name {
+    padding-left: 60px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    color: #1B7B89;
+}
+
+.schoolProfile-image {
+    border-radius: 8px;
+    margin-right: 40px;
+    max-width: 45%;
+}
+
+.schoolProfile-description {
+    padding-left: 60px;
+    width: 400px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    color: black;
+}
+
+.schoolProfile-price {
+    padding-left: 80px;
+    color: #1B7B89;
+    font-family: "Open Sans", sans-serif;
+}
+
+.schoolProfile-distance {
+    padding-left: 80px;
+    color: #1B7B89;
+    font-family: "Open Sans", sans-serif;
+}
+
+.schoolProfile-duration {
+    padding-left: 80px;
+    color: #1B7B89;
+    font-family: "Open Sans", sans-serif;
+}
+
+.schoolProfile-link {
+    padding-left: 500px;
+    padding-right: 10px;
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
