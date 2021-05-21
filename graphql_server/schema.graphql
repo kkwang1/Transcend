@@ -11,6 +11,7 @@ type Query {
 
 input OptionInput {
   category: [[Option]]!
+  subcategory: [[Option]]!
 }
 
 input Option {
@@ -22,4 +23,5 @@ type Result {
   name: String!
   href: String!
   category: String!
+  subcategory: String!
 }

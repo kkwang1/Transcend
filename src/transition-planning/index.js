@@ -3,7 +3,7 @@ import { useHistory, useLocation } from "react-router";
 import "../App.scss";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
 import SearchBar from "../components/SearchBar/SearchBar";
-import SelectGroup from "../components/Select/SelectGroup";
+// import SelectGroup from "../components/Select/SelectGroup";
 
 /* example usage of graphql:
 
@@ -91,8 +91,9 @@ export default function TransitionPlanning({match}) {
       <h1 className="layout-main-header">Transitional Planning</h1>
       <div style={{ width: "65%", margin: "auto" }}>
         <SearchBar />
+        {/*
         <SelectGroup info={selectInfo}/>
-        {/* <div style={{ margin: "15px" }}>
+        <div style={{ margin: "15px" }}>
           <Filter />
         </div> */}
       </div>

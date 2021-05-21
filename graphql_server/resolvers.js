@@ -30,10 +30,11 @@ const Query =
         return fitsFilters.reduce(reduceAnd);
       } else {
         // if the search term is non-empty, include results with any of the
-        // words in args.term
+        // words in args.term (case-insensitive, ignoring punctuation)
         const wordArr = args.term.split(/[\s,.!?:;]+/);
-        return (wordArr.map((word) => (item.name).includes(word)).reduce(reduceOr))
-          && (fitsFilters.reduce(reduceAnd));
+        return (wordArr.map((word) => 
+            (item.name).toLowerCase().includes(word.toLowerCase())).reduce(reduceOr)
+          ) && (fitsFilters.reduce(reduceAnd));
       }
     });
     return db.test.list().filter(filterFn);

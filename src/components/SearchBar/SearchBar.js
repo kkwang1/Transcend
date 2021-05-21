@@ -17,13 +17,14 @@ In this file:
 async function loadSearch(term, options) {
   const optionStr = JSON.stringify(options).replaceAll('\"id\"', 'id')
                                            .replaceAll('\"text\"', 'text')
-                                           .replaceAll('\"category\"', 'category');
+                                           .replaceAll('\"category\"', 'category')
+                                           .replaceAll('\"subcategory\"', 'subcategory');
   console.log(optionStr);
   const response = await fetch('http://localhost:9000/graphql', {
     method: 'POST',
     headers: { 'content-type':'application/json'},
     body: JSON.stringify({
-      query: `{ searchTerm(term:"${ term }", options:${ optionStr }) { name\nhref\ncategory } }`
+      query: `{ searchTerm(term:"${ term }", options:${ optionStr }) { name\nhref\ncategory\nsubcategory } }`
     })
   })
   const responseBody = await response.json();
@@ -40,13 +41,37 @@ export default function SearchBar(props) {
   const [textState, changeText] = useState("");
 
   const catList = [
-    {id: 0, text: "education"},
-    {id: 1, text: "employment"}
+    {id: 0, text: "Education"},
+    {id: 1, text: "Employment"},
+    {id: 2, text: "Independent Living"},
+    {id: 3, text: "Day Programs"},
+    {id: 4, text: "Know Your Rights"},
+    {id: 5, text: "Funding"}
   ];
   const [catState, changeCat] = useState([]);
 
+  const subList = [
+    {id: 0, text: "College (general)"},
+    {id: 1, text: "College (four year)"},
+    {id: 2, text: "Education: Articles and Info"},
+    {id: 3, text: "Transitional Programs"},
+    {id: 4, text: "Vocational Training"},
+    {id: 5, text: "Employment: Articles and Info"},
+    {id: 6, text: "Job Postings"},
+    {id: 7, text: "Career Aptitude Tools"},
+    {id: 8, text: "Living at Home"},
+    {id: 9, text: "Assisted Living"},
+    {id: 10, text: "Group Homes"},
+    {id: 11, text: "Residential Programs"},
+    {id: 12, text: "Day Programs"},
+    {id: 13, text: "Know Your Rights"},
+    {id: 14, text: "Funding"}
+  ]
+  const [subState, changeSub] = useState([]);
+
   const filterOptions = {
-    category: [catState, changeCat, catList]
+    category: [catState, changeCat, catList],
+    subcategory: [subState, changeSub, subList]
   };
 
   const filterList = [];
@@ -75,12 +100,19 @@ export default function SearchBar(props) {
           />
         </Form.Row>
       </Form>
-      {/* <div className="filter-area">
+      <div className="filter-area">
         { filterList }
       </div>
       <div className="result-area">
-        <p>{ JSON.stringify(resultState) }</p>
-      </div> */}
+        { resultState.map((result) => {
+          return (
+            <div key={ result.name + result.category }>
+              <a href={ result.href } target="_blank_">{ result.name }</a>
+              <p>{ result.category + "  -  " + result.subcategory }</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 }

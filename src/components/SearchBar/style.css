@@ -11,3 +11,12 @@
     font-style: italic;
 
 }
+
+.filter-area {
+    padding: 10px;
+    width: 70%;
+}
+
+.multiselect-container {
+    margin: 5px;
+}
