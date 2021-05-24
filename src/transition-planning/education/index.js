@@ -17,8 +17,9 @@ export default function Education({ match }) {
   const info = [
     {
       title: "COLLEGE / UNIVERSITY",
-      text: `Traditional higher education resources, ranging from vocational and 
-      trade school to community college to four year universities.`,
+      text: `Traditional higher education resources, ranging from vocational and trade school 
+      to community college to four year universities with accomodations for individuals 
+      with disabilities.`,
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/college`),

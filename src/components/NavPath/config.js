@@ -3,7 +3,7 @@ export const page = {
     "employment" : "Employment",
     "career": "Career",
     "jobpostings": "Job Postings",
-    "vocationaltraning": "Vocational Training",
+    "vocationaltraining": "Vocational Training",
     "education": "Education",
     "college": "College",
     "transitionalprograms": "Transitional Programs",

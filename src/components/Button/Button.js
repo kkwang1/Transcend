@@ -23,13 +23,10 @@ export default function Button({
       style={{
         backgroundColor: backgroundColor,
         color: color,
-        // border: "none",
-        // borderRadius: "15px",
-        // cursor: "pointer",
       }}
       onClick={() => action()}
     >
-      <Card.Body>
+      <Card.Body style={{alignItems: !text && "center"}}>
         <div className="button-text">
           {title && <Card.Title>{title}</Card.Title>}
           {text && <Card.Text>{text}</Card.Text>}
