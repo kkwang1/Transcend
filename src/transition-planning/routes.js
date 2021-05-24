@@ -8,7 +8,7 @@ import EmploymentRoutes from "./employment/routes";
 
 const route = () => {
   return (
-    <Switch>
+    <div>
       <Route
         exact
         path="/transitionalplanning"
@@ -27,7 +27,7 @@ const route = () => {
         component={IndependentLivingRoutes}
       />
       <Route path="/transitionalplanning/dayprograms" component={DayPrograms} />
-    </Switch>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Education from ".";
-import Career from "./college";
+import College from "./college";
 import TransitionalPrograms from "./transitionalPrograms";
 
 const route = ({ match }) => {
@@ -9,8 +9,11 @@ const route = ({ match }) => {
   return (
     <div>
       <Route exact path={match.path} component={Education} />
-      <Route path={`${match.path}/college`} component={Career} />
-      <Route path={`${match.path}/transitionalprograms`} component={TransitionalPrograms} />
+      <Route path={`${match.path}/college`} component={College} />
+      <Route
+        path={`${match.path}/transitionalprograms`}
+        component={TransitionalPrograms}
+      />
     </div>
   );
 };

@@ -16,17 +16,13 @@ function App() {
       <div style={{ direction: "rtl" }}>
         {open && <Sidebar setOpenSidebar={setOpen} />}
       </div>
-      <div style={{opacity: open && "0.5"}}>
+      <div style={{ opacity: open && "0.5" }}>
         <NavBar openSidebar={open} setOpenSidebar={setOpen} />
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route exact path="/transitionalplanning" component={TransitionPlanning} />
-          <Route path="/community" exact component={Community} />
-          <Route
-            path="/alternativepathways"
-            exact
-            component={AlternativePathways}
-          />
+          <Route path="/transitionalplanning" component={TransitionPlanning} />
+          <Route path="/community" component={Community} />
+          <Route path="/alternativepathways" component={AlternativePathways} />
         </Switch>
       </div>
     </Router>
