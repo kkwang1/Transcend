@@ -77,14 +77,36 @@ export default function Main() {
           </p>
         </div>
       </div>
-      <div style={{ margin: "3em" }}>
+      <div style={{ margin: "4em" }}>
         <h3
           className="layout-header"
-          style={{ textAlign: "center", color: "#000" }}
+          style={{ textAlign: "center", color: "#000", marginBottom: "2em" }}
+        >
+          Create your account!{" "}
+        </h3>
+        <div style={{ textAlign: "center" }}>
+          <p>
+            The more we know about you and your needs, the better we can match
+            you with information and services!
+          </p>
+          <h4>
+            <u>GO</u>
+          </h4>
+          <p>
+            Want to explore first? <a>Save account for later.</a>
+          </p>
+        </div>
+      </div>
+      <div style={{ margin: "4em" }}>
+        <h3
+          className="layout-header"
+          style={{ textAlign: "center", color: "#000", marginBottom: "2em" }}
         >
           Explore the following sections:{" "}
         </h3>
-        <ButtonsGroup info={btnInfo} />
+        <div className="layout-bottom">
+          <ButtonsGroup info={btnInfo} />
+        </div>
       </div>
     </>
   );

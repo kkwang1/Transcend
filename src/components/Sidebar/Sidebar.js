@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import {
   ProSidebar,
   Menu,
@@ -13,84 +13,86 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../../App.scss";
 
-export default function Sidebar({setOpenSidebar}) {
+export default function Sidebar({ setOpenSidebar }) {
   return (
-    <ProSidebar>
-      <div>
-        <img src={Logo} width="50%"></img>
-        <div style={{ float: "right", padding: "10px" }}>
-          <FontAwesomeIcon
-            icon={faTimes}
-            style={{ fontSize: "1.5em", verticalAlign: "middle" }}
-            color="#DEDEDE"
-            onClick={() => setOpenSidebar(false)}
-          />
+    <div className="sideBar">
+      <ProSidebar>
+        <div>
+          <img src={Logo} width="50%"></img>
+          <div style={{ float: "right", padding: "10px" }}>
+            <FontAwesomeIcon
+              icon={faTimes}
+              style={{ fontSize: "1.5em", verticalAlign: "middle" }}
+              color="#DEDEDE"
+              onClick={() => setOpenSidebar(false)}
+            />
+          </div>
         </div>
-      </div>
-      <SidebarContent>
-        <Menu iconShape="circle">
-          <div className="header">Services</div>
-          <SubMenu title="Transitional Planning">
-            <MenuItem path="/education">
-              Education
-              <Link to="/transitionalplanning/education" />
+        <SidebarContent>
+          <Menu>
+            <div className="header">SERVICES</div>
+            <SubMenu title="Transitional Planning">
+              <MenuItem path="/education">
+                Education
+                <Link to="/transitionalplanning/education" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Employment
+                <Link to="/transitionalplanning/employment" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Independent living
+                <Link to="/transitionalplanning/independentliving" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Day Programs
+                <Link to="/transitionalplanning/dayprograms" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Know your rights
+                <Link to="/transitionalplanning/rights" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+            </SubMenu>
+            <SubMenu title={"Community"}>
+              <MenuItem>
+                Virtual communities
+                <Link to="/community/virtual" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Your community
+                <Link to="/community/yourcommunity" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Mentorship
+                <Link to="/community/mentorship" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+              <MenuItem>
+                Start your own community
+                <Link to="/community/startyourown" onClick={() => setOpenSidebar(false)}/>
+              </MenuItem>
+            </SubMenu>
+            <MenuItem>
+              Day Program
+              <Link to="/dayprogram" onClick={() => setOpenSidebar(false)}/>
+            </MenuItem>
+          </Menu>
+          <div className="header">PROFILE</div>
+          <Menu>
+            <MenuItem>
+              Edit account
+              <Link to="/profile/view" onClick={() => setOpenSidebar(false)}/>
             </MenuItem>
             <MenuItem>
-              Employment
-              <Link to="/transitionalplanning/employment" />
+              Saved items
+              <Link to="/profile/saved" onClick={() => setOpenSidebar(false)}/>
             </MenuItem>
             <MenuItem>
-              Independent living
-              <Link to="/transitionalplanning/independentliving" />
+              Search history
+              <Link to="/profile/reccomendations" onClick={() => setOpenSidebar(false)}/>
             </MenuItem>
-            <MenuItem>
-              Integrated communities
-              <Link to="/transitionalplanning/integratedcommunities" />
-            </MenuItem>
-            <MenuItem>
-              Know your rights
-              <Link to="/transitionalplanning/rights" />v
-            </MenuItem>
-          </SubMenu>
-          <SubMenu title={"Community"}>
-            <MenuItem>
-              Virtual communities
-              <Link to="/community/virtual" />
-            </MenuItem>
-            <MenuItem>
-              Your community
-              <Link to="/community/yourcommunity" />
-            </MenuItem>
-            <MenuItem>
-              Mentorship
-              <Link to="/community/mentorship" />
-            </MenuItem>
-            <MenuItem>
-              Start your own community
-              <Link to="/community/startyourown" />
-            </MenuItem>
-          </SubMenu>
-          <MenuItem>
-            Day Program
-            <Link to="/dayprogram" />
-          </MenuItem>
-        </Menu>
-        <div className="header">Profile</div>
-        <Menu>
-          <MenuItem>
-            View profile
-            <Link to="/profile/view" />
-          </MenuItem>
-          <MenuItem>
-            Saved items
-            <Link to="/profile/saved" />
-          </MenuItem>
-          <MenuItem>
-            Reccomendations
-            <Link to="/profile/reccomendations" />
-          </MenuItem>
-        </Menu>
-      </SidebarContent>
-    </ProSidebar>
+          </Menu>
+        </SidebarContent>
+      </ProSidebar>
+    </div>
   );
 }

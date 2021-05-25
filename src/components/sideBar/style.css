@@ -1,7 +1,7 @@
-.header {
+.sideBar .header {
   background-color: rgb(27, 123, 137);
   height: 2.5em;
-  text-align: center;
+  padding-left: 20px;
   line-height: 2.5em;
   color: rgb(255, 255, 255);
 }
@@ -20,4 +20,8 @@ nav {
   justify-content: center;
   align-items: center;
   list-style: none;
+}
+
+.sideBar .pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu .pro-inner-list-item .pro-inner-item:before{
+  content: none
 }

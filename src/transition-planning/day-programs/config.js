@@ -1,6 +1,6 @@
 const dashboardInfo = [
   {
-    desc: "Adult day programs or day services in your area.",
+    title: "Adult day programs or day services in your area.",
     schoolsInfo: [
       {
         name: "School 1",
