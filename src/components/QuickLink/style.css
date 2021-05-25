@@ -1,0 +1,21 @@
+.quickLinks {
+    border: none !important;
+    border-radius: 15px !important;
+    text-align: center;
+    cursor: pointer;
+    height: 60px;
+}
+
+.quickLinks .card-body{
+    background-color: #F1F1F1;
+    border: none !important;
+    border-radius: 15px !important;
+}
+
+.quickLinks .card-body:hover{
+    color: #FFFFFF !important;
+    background-color: #1B7B89 !important;
+    border: none !important;
+    border-radius: 15px !important;
+}
+

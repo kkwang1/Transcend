@@ -3,6 +3,8 @@ import { useHistory, useLocation } from "react-router";
 import "../../App.scss";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
 import NavPath from "../../components/NavPath/NavPath";
+import QuickLinks from "../../components/QuickLink/QuickLinks";
+import { quickLinks } from "./config";
 
 export default function IndependentLiving({ match }) {
   let history = useHistory();
@@ -51,6 +53,10 @@ export default function IndependentLiving({ match }) {
         <div className="layout-btn">
           <ButtonsGroup info={info} />
         </div>
+      </div>
+      <h3 className="layout-header">QUICK LINKS</h3>
+      <div className="layout-content layout-bottom">
+        <QuickLinks info={quickLinks} />
       </div>
     </>
   );

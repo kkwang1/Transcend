@@ -3,8 +3,8 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
-import { dashboardInfo } from "./config";
-import SideButtons from "../../components/SideButton.js/SideButtons";
+import { vocationalTrainingDashboardInfo } from "./config";
+import SideButtons from "../../components/SideButton/SideButtons";
 import NavPath from "../../components/NavPath/NavPath";
 
 export default function TransitionalPrograms({ match }) {
@@ -45,11 +45,11 @@ export default function TransitionalPrograms({ match }) {
             }}
           >
             <Dashboard
-              title={dashboardInfo[0].title}
-              desc={dashboardInfo[0].desc}
-              schoolsInfo={dashboardInfo[0].schoolsInfo}
-              backgroundColor={dashboardInfo[0].backgroundColor}
-              color={dashboardInfo[0].color}
+              title={vocationalTrainingDashboardInfo.title}
+              desc={vocationalTrainingDashboardInfo.desc}
+              schoolsInfo={vocationalTrainingDashboardInfo.schoolsInfo}
+              backgroundColor={vocationalTrainingDashboardInfo.backgroundColor}
+              color={vocationalTrainingDashboardInfo.color}
             />
           </div>
         </div>

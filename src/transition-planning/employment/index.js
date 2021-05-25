@@ -3,6 +3,8 @@ import { useHistory, useLocation } from "react-router";
 import "../../App.scss";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
 import NavPath from "../../components/NavPath/NavPath";
+import QuickLinks from "../../components/QuickLink/QuickLinks";
+import { quickLinks } from "./config";
 
 export default function Employment({ match }) {
   let history = useHistory();
@@ -51,15 +53,15 @@ export default function Employment({ match }) {
           >
             <u>independent living</u>
           </a>{" "}
-          tabs to find postsecondary programs, or{" "}
-          <a href="/transitionalplanning/dayprograms" style={{ color: "#000" }}>
-            <u>create your own day program</u>
-          </a>{" "}
-          for living at home.
+          tabs!
         </p>
         <div className="layout-btn">
           <ButtonsGroup info={info} />
         </div>
+      </div>
+      <h3 className="layout-header">QUICK LINKS</h3>
+      <div className="layout-content layout-bottom">
+        <QuickLinks info={quickLinks} />
       </div>
     </>
   );

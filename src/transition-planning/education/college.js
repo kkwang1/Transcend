@@ -2,7 +2,7 @@ import React from "react";
 import DashboardGroups from "../../components/Dashboard/DashboardsGroup";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
-import { dashboardInfo, selectInfo } from "./config";
+import { collegeDashboardInfo, selectInfo } from "./config";
 import SelectGroups from "../../components/Select/SelectGroup";
 import "./style.css";
 import NavPath from "../../components/NavPath/NavPath";
@@ -26,7 +26,7 @@ export default function College({ match }) {
             paddingBottom: "50px",
           }}
         >
-          <DashboardGroups info={dashboardInfo} />
+          <DashboardGroups info={collegeDashboardInfo} />
         </div>
       </div>
     </>

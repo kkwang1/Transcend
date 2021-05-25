@@ -3,8 +3,8 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
-import { dashboardInfo } from "../education/config";
-import SideButtons from "../../components/SideButton.js/SideButtons";
+import { collegeDashboardInfo } from "../education/config";
+import SideButtons from "../../components/SideButton/SideButtons";
 import NavPath from "../../components/NavPath/NavPath";
 
 export default function VocationalTrainings({ match }) {
@@ -50,11 +50,10 @@ export default function VocationalTrainings({ match }) {
             }}
           >
             <Dashboard
-              title={dashboardInfo[0].title}
-              desc={dashboardInfo[0].desc}
-              schoolsInfo={dashboardInfo[0].schoolsInfo}
-              backgroundColor={dashboardInfo[0].backgroundColor}
-              color={dashboardInfo[0].color}
+              title={"Vocational training programs  in your area"}
+              schoolsInfo={collegeDashboardInfo[0].schoolsInfo}
+              backgroundColor={collegeDashboardInfo[0].backgroundColor}
+              color={collegeDashboardInfo[0].color}
             />
           </div>
         </div>

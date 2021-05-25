@@ -100,7 +100,7 @@ export default function TransitionPlanning({match}) {
       <h3 className="layout-header" style={{ textAlign: "center" }}>
         Explore the following sections:{" "}
       </h3>
-      <div className="layout-btn" style={{ margin: "1rem 5rem"}}>
+      <div className="layout-btn layout-bottom" style={{ margin: "1rem 5rem"}}>
         <ButtonsGroup info={btnInfo} />
       </div>
     </div>

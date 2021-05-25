@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
 import NavPath from "../../components/NavPath/NavPath";
+import QuickLinks from "../../components/QuickLink/QuickLinks";
+import { quickLinks } from "./config";
 
 export default function Education({ match }) {
   let history = useHistory();
@@ -54,6 +56,16 @@ export default function Education({ match }) {
         >
           <ButtonsGroup info={info} />
         </div>
+      </div>
+      <h3 className="layout-header">QUICK LINKS</h3>
+      <div className="layout-content layout-bottom">
+        <p>
+          Explore what postsecondary education options are best to you using the
+          following links.
+        </p>
+        <QuickLinks
+          info={quickLinks}
+        />
       </div>
     </>
   );

@@ -5,8 +5,8 @@ import { Card } from "react-bootstrap";
 import "./style.css";
 
 export default function Dashboard({
-  title,
-  desc,
+  title="",
+  desc="",
   schoolsInfo,
   saved = false,
   url = "",

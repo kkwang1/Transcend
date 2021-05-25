@@ -22,7 +22,7 @@ export default function SideButtons({
   color = "",
 }) {
   return (
-    <div className="hey">
+    <div>
       {info.map((s) => (
         <Card
           className="sideButtons"

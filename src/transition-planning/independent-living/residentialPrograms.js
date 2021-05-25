@@ -4,7 +4,7 @@ import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
 import { dashboardInfo } from "./config";
-import SideButtons from "../../components/SideButton.js/SideButtons";
+import SideButtons from "../../components/SideButton/SideButtons";
 import NavPath from "../../components/NavPath/NavPath";
 
 export default function ResidentialPrograms({ match }) {
@@ -27,7 +27,7 @@ export default function ResidentialPrograms({ match }) {
       <div className="layout-navpath">
         <NavPath path={match.path} />
       </div>
-      <h1 className="layout-header">Transitional Programs</h1>
+      <h1 className="layout-header">Residential Programs</h1>
       <div
         style={{
           padding: "0px 50px",
@@ -45,8 +45,7 @@ export default function ResidentialPrograms({ match }) {
             }}
           >
             <Dashboard
-              title={dashboardInfo[0].title}
-              desc={dashboardInfo[0].desc}
+              title="Residential programs and facilities in your area"
               schoolsInfo={dashboardInfo[0].schoolsInfo}
               backgroundColor={dashboardInfo[0].backgroundColor}
               color={dashboardInfo[0].color}

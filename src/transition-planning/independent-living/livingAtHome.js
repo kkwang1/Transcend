@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.scss";
 import NavPath from "../../components/NavPath/NavPath";
-import SideButtons from "../../components/SideButton.js/SideButtons";
+import SideButtons from "../../components/SideButton/SideButtons";
 
 export default function LivingAtHome({ match }) {
   return (

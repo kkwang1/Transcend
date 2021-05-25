@@ -1,7 +1,7 @@
 import React from "react";
 import { CardDeck } from "react-bootstrap";
 import Dashboard from "./Dashboard";
-import {dashboardInfo} from '../../transition-planning/education/config';
+import {dashboardInfo} from './config';
 
 export default function DashboardGroups({
   info = dashboardInfo, //mock data, remember to remove  
