@@ -1,0 +1,26 @@
+.creationLabel {
+    padding-top: 15%;
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+    font-size: 64px;
+    color: #203E45;
+}
+
+.pageSelect {
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    background-color: #F1F1F1;
+    padding-left: 10px;
+    text-align: right;
+    font-family: "Open sans", sans-serif;
+    font-size: 64px;
+    color: #203E45;
+}
+
+.instruction {
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+    font-size: 30px;
+    color: #203E45;
+}
