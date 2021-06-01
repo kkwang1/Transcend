@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import "../App.scss";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
-import SearchBar from "../components/SearchBar/SearchBar";
+import SearchFilter from "../components/SearchAndFilter/SearchFilter";
 // import SelectGroup from "../components/Select/SelectGroup";
 
 /* example usage of graphql:
@@ -74,28 +74,9 @@ export default function TransitionPlanning({match}) {
 
   return (
     <div>
-      {/* <Drawer title="SKILLS & TIPS">
-        <p href="https://www.google.com">
-          Application
-          <br />
-          tips & tricks
-        </p>
-        <p href="https://www.cmu.edu">Interview Skills</p>
-        <p href="https://www.facebook.com">In the Workplace</p>
-      </Drawer> */}
-      {/* <h1>Transitional Planning</h1>
-      {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar} />}
-      <SideMenu>
-        <NavBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
-      </SideMenu>  */}
       <h1 className="layout-main-header">Transitional Planning</h1>
       <div style={{ width: "65%", margin: "auto" }}>
-        <SearchBar />
-        {/*
-        <SelectGroup info={selectInfo}/>
-        <div style={{ margin: "15px" }}>
-          <Filter />
-        </div> */}
+        <SearchFilter />
       </div>
       <h3 className="layout-header" style={{ textAlign: "center" }}>
         Explore the following sections:{" "}

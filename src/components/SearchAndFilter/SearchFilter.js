@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "./style.css";
-import Filter from "../Filter";
+import Filter from "./Filter";
 
 /*
 Adding new filters - need to edit schema.graphql and SearchBar.js
@@ -11,7 +11,7 @@ In this file:
 - create a list of all of the filter's options and create state for it in
   SearchBar()
 - add "filter_name: [new_state, change_state_fn, new_option_list]" to
-  filterOptions
+ filterOptions
 */
 
 async function loadSearch(term, options) {

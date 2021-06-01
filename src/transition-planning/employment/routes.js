@@ -6,7 +6,6 @@ import JobPostings from "./jobPostings";
 import VocationalTrainings from "./vocationalTraining";
 
 const route = ({match}) => {
-  console.log(match)
   return (
     <div>
       <Route

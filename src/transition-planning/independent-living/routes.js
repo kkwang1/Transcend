@@ -7,7 +7,6 @@ import LivingAtHome from "./livingAtHome";
 import ResidentialPrograms from "./residentialPrograms";
 
 const route = ({ match }) => {
-  console.log(match);
   return (
     <div>
       <Route exact path={match.path} component={IndependentLiving} />

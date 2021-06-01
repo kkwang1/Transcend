@@ -11,7 +11,7 @@ import "../App.scss";
 
 export default function NavBar({openSidebar, setOpenSidebar}) {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar bg="light" variant="light" style={{zIndex: "99"}}>
       <Navbar.Brand href="/">
         <img src={Logo} width="200px"></img>
       </Navbar.Brand>

@@ -50,17 +50,20 @@ export default function Main() {
           <Button
             style={{
               backgroundColor: "#1B7B89",
-              width: "100%",
-              height: "100%",
+              minWidth: "100%",
+              minHeight: "100%",
               fontSize: "large",
               fontWeight: "bold",
             }}
           >
             GET STARTED
           </Button>
+          <div style={{right: "20%"}}>
+            Already have an account? <a>Log in</a>
+          </div>
         </div>
       </div>
-      <div style={{ display: "flex", margin: "3em" }}>
+      <div style={{ display: "flex", margin: "5em" }}>
         <div style={{ margin: "auto 1.5em auto auto" }}>
           <h1>About the Service</h1>
         </div>
@@ -77,7 +80,7 @@ export default function Main() {
           </p>
         </div>
       </div>
-      <div style={{ margin: "4em" }}>
+      <div style={{ margin: "5em" }}>
         <h3
           className="layout-header"
           style={{ textAlign: "center", color: "#000", marginBottom: "2em" }}
@@ -97,7 +100,7 @@ export default function Main() {
           </p>
         </div>
       </div>
-      <div style={{ margin: "4em" }}>
+      <div style={{ margin: "5em" }}>
         <h3
           className="layout-header"
           style={{ textAlign: "center", color: "#000", marginBottom: "2em" }}

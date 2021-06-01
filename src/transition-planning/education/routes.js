@@ -5,7 +5,6 @@ import College from "./college";
 import TransitionalPrograms from "./transitionalPrograms";
 
 const route = ({ match }) => {
-  console.log(match);
   return (
     <div>
       <Route exact path={match.path} component={Education} />

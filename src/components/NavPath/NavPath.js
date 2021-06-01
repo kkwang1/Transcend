@@ -4,7 +4,6 @@ import { page } from "./config";
 export default function NavPath({ path }) {
   const pathList = path.split("/").filter((s) => s != "");
   const pageList = pathList.map((s) => page[s]);
-  console.log(path, pathList);
   return (
     <p>
       <i>

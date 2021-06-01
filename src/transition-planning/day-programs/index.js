@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../../components/SearchAndFilter/SearchBar";
 import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";

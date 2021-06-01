@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardGroups from "../../components/Dashboard/DashboardsGroup";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../../components/SearchAndFilter/SearchBar";
 import "../../App.scss";
 import { dashboardInfo, selectInfo } from "./config";
 import SelectGroups from "../../components/Select/SelectGroup";
