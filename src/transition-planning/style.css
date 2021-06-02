@@ -56,3 +56,36 @@
   height: 40px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.t-main-menu {
+  display: flex;
+  margin: 40px 0px;
+}
+
+.t-main-menu p {
+  padding: 5px 10px;
+  margin: auto;
+  color: #000;
+}
+
+.t-main-menu h5 {
+  color: #000;
+}
+
+.t-main-menu h5:hover {
+  color: #1b7b89 !important;
+}
+
+.t-main-menu a:hover {
+  text-decoration: none;
+}
+
+.t-main-menu p:hover {
+  background: #1b7b89;
+  color: white;
+  border: 1px solid;
+  border-radius: 30px;
+}

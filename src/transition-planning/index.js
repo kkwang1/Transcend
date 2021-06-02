@@ -3,6 +3,17 @@ import { useHistory, useLocation } from "react-router";
 import "../App.scss";
 import ButtonsGroup from "../components/Button/ButtonsGroup";
 import SearchFilter from "../components/SearchAndFilter/SearchFilter";
+import SideMenu from "../components/SideMenu/SideMenu";
+import "./style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGraduationCap,
+  faBriefcase,
+  faHome,
+  faSchool,
+  faGavel,
+} from "@fortawesome/free-solid-svg-icons";
+import MainMenu from "./MainMenu";
 // import SelectGroup from "../components/Select/SelectGroup";
 
 /* example usage of graphql:
@@ -23,7 +34,7 @@ showGreeting() {
 }
 
 */
-export default function TransitionPlanning({match}) {
+export default function TransitionPlanning({ match }) {
   let history = useHistory();
   let location = useLocation();
 
@@ -52,38 +63,52 @@ export default function TransitionPlanning({match}) {
       color: "#203E45",
       action: () => history.push(`${location.pathname}/dayprograms`),
     },
+    {
+      title: "KNOW YOUR RIGHTS",
+      backgroundColor: "#F1F1F1",
+      color: "#203E45",
+      action: () => history.push(`${location.pathname}/knowyourrights`),
+    },
   ];
 
   const selectInfo = [
     {
       title: "Filter",
-      options: ["option1", "option2", "option3"]
-
+      options: ["option1", "option2", "option3"],
     },
     {
       title: "Filter",
-      options: ["option1", "option2", "option3"]
-
+      options: ["option1", "option2", "option3"],
     },
     {
       title: "Filter",
-      options: ["option1", "option2", "option3"]
-
-    }
-  ]
+      options: ["option1", "option2", "option3"],
+    },
+  ];
 
   return (
     <div>
-      <h1 className="layout-main-header">Transitional Planning</h1>
-      <div style={{ width: "65%", margin: "auto" }}>
+      <SideMenu />
+      <div style={{ width: "65%", margin: "50px auto" }}>
+        <h1 style={{ color: "#1b7b89", marginBottom: "25px" }}>
+          Transitional Planning
+        </h1>
+        <p>
+          Find and save resources for planning transition into adulthood.
+          Utilizing the information in your profile, our system can help you
+          create an appropriate, feasible, and individualized transition plan.
+        </p>
+      </div>
+      <div style={{ width: "50%", margin: "auto", textSize: "10px" }}>
         <SearchFilter />
       </div>
-      <h3 className="layout-header" style={{ textAlign: "center" }}>
+      <h3 className="layout-header" style={{ textAlign: "center", marginTop: "40px" }}>
         Explore the following sections:{" "}
       </h3>
-      <div className="layout-btn layout-bottom" style={{ margin: "1rem 5rem"}}>
+      <MainMenu />
+      {/* <div className="layout-btn layout-bottom" style={{ margin: "1rem 5rem" }}>
         <ButtonsGroup info={btnInfo} />
-      </div>
+      </div> */}
     </div>
   );
 }
