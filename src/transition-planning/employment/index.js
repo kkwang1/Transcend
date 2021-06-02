@@ -61,6 +61,10 @@ export default function Employment({ match }) {
       </div>
       <h3 className="layout-header">QUICK LINKS</h3>
       <div className="layout-content layout-bottom">
+        <p>
+          Find important employment databases and job assistance using the
+          following links.
+        </p>
         <QuickLinks info={quickLinks} />
       </div>
     </>

@@ -23,9 +23,6 @@ export default class Filter extends React.Component {
     super(props);
     this[this.props.name] = React.createRef();
   }
-  getItems() {
-    return this[this.props.name].current.getSelectedItems();
-  }
   render() {
     return (
       <div className="filter">
@@ -45,8 +42,8 @@ export default class Filter extends React.Component {
           showCheckbox={true}
           placeholder={this.props.title}
           ref={this[this.props.name]}
-          onSelect={(event) => this.props.updateFn(this.getItems())}
-          onRemove={(event) => this.props.updateFn(this.getItems())}
+          onSelect={this.props.updateFn}
+          onRemove={this.props.updateFn}
           closeIcon="cancel"
           closeOnSelect={false}
           hidePlaceholder={true}
