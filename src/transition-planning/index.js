@@ -5,14 +5,6 @@ import ButtonsGroup from "../components/Button/ButtonsGroup";
 import SearchFilter from "../components/SearchAndFilter/SearchFilter";
 import SideMenu from "../components/SideMenu/SideMenu";
 import "./style.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGraduationCap,
-  faBriefcase,
-  faHome,
-  faSchool,
-  faGavel,
-} from "@fortawesome/free-solid-svg-icons";
 import MainMenu from "./MainMenu";
 // import SelectGroup from "../components/Select/SelectGroup";
 

@@ -5,7 +5,7 @@ import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
 import { collegeDashboardInfo } from "../education/config";
 import SideButtons from "../../components/SideButton/SideButtons";
-import NavPath from "../../components/NavPath/NavPath";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 export default function JobPosting({ match }) {
   const selectInfo = [
@@ -24,8 +24,8 @@ export default function JobPosting({ match }) {
   ];
   return (
     <div>
-      <div className="layout-navpath">
-        <NavPath path={match.path} />
+      <div className="layout-breadcrumb">
+        <Breadcrumb path={match.path} />
       </div>
       <h1 className="layout-header">Job Postings</h1>
       <div

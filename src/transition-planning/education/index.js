@@ -8,7 +8,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
-import NavPath from "../../components/NavPath/NavPath";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import QuickLinks from "../../components/QuickLink/QuickLinks";
 import { quickLinks } from "./config";
 
@@ -37,8 +37,8 @@ export default function Education({ match }) {
   ];
   return (
     <>
-      <div className="layout-navpath">
-        <NavPath path={match.path} />
+      <div className="layout-breadcrumb">
+        <Breadcrumb path={match.path} />
       </div>
       <h1 className="layout-header">Education</h1>
       <div className="layout-content">

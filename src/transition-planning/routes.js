@@ -5,6 +5,7 @@ import DayPrograms from "./day-programs";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import EducationRoutes from "./education/routes";
 import EmploymentRoutes from "./employment/routes";
+import KnowYourRightsRoutes from "./know-your-rights/routes";
 
 const route = () => {
   return (
@@ -27,6 +28,7 @@ const route = () => {
         component={IndependentLivingRoutes}
       />
       <Route path="/transitionalplanning/dayprograms" component={DayPrograms} />
+      <Route path="/transitionalplanning/knowyourrights" component={KnowYourRightsRoutes} />
     </div>
   );
 };

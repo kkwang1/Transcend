@@ -6,54 +6,42 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import QuickLinks from "../../components/QuickLink/QuickLinks";
 import { quickLinks } from "./config";
 
-export default function Employment({ match }) {
+
+export default function KnowYourRights({ match }) {
   let history = useHistory();
   let location = useLocation();
 
   const info = [
     {
-      title: "VOCATIONAL TRAINING",
+      title: "FUNDING",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/vocationaltraining`),
+      action: () => history.push(`${location.pathname}/funding`),
     },
     {
-      title: "JOB POSTINGS",
+      title: "LEGAL RIGHTS",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/jobpostings`),
+      action: () => history.push(`${location.pathname}/legalrights`),
     },
     {
-      title: "CAREER APTITUDE",
+      title: "GET ON THE LIST",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
-      action: () => history.push(`${location.pathname}/career`),
+      action: () => history.push(`${location.pathname}/getonthelist`),
     },
   ];
+
   return (
     <>
       <div className="layout-breadcrumb">
         <Breadcrumb path={match.path} />
       </div>
-      <h1 className="layout-header">Employment</h1>
+      <h1 className="layout-header">Know Your Rights</h1>
       <div className="layout-content">
         <p>
-          You have indicated that <b>competitive employment</b> is not part of
-          your transition plan.
-        </p>
-        <p>
-          We recommend you check out the{" "}
-          <a href="/transitionalplanning/education" style={{ color: "#000" }}>
-            <u>education</u>
-          </a>{" "}
-          or{" "}
-          <a
-            href="/transitionalplanning/independentliving"
-            style={{ color: "#000" }}
-          >
-            <u>independent living</u>
-          </a>{" "}
-          tabs!
+          Knowing you rights is a critical part of building self-advocacy
+          skills. Explore the funding policies that apply to you.
         </p>
         <div className="layout-btn">
           <ButtonsGroup info={info} />
@@ -61,10 +49,7 @@ export default function Employment({ match }) {
       </div>
       <h3 className="layout-header">QUICK LINKS</h3>
       <div className="layout-content layout-bottom">
-        <p>
-          Find important employment databases and job assistance using the
-          following links.
-        </p>
+        <p>Explore the above information by office sites. </p>
         <QuickLinks info={quickLinks} />
       </div>
     </>

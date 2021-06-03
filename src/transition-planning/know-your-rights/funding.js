@@ -7,27 +7,38 @@ import { dashboardInfo } from "./config";
 import SideButtons from "../../components/SideButton/SideButtons";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
-export default function ResidentialPrograms({ match }) {
+export default function Funding({ match }) {
   const selectInfo = [
     {
-      title: "All fields",
+      title: "All specialities",
       options: ["option1", "option2", "option3"],
     },
     {
-      title: "All skill levels",
+      title: "All degrees",
       options: ["option1", "option2", "option3"],
     },
     {
-      title: "All program types",
+      title: "All accomodations",
+      options: ["option1", "option2", "option3"],
+    },
+    {
+      title: "All types",
       options: ["option1", "option2", "option3"],
     },
   ];
+
   return (
     <div>
       <div className="layout-breadcrumb">
         <Breadcrumb path={match.path} />
       </div>
-      <h1 className="layout-header">Residential Programs</h1>
+      <h1 className="layout-header">Funding</h1>
+      <div className="layout-content">
+        <p>
+          Explore public and private funding that you may be entitles to or may
+          be qualify for.
+        </p>
+      </div>
       <div
         style={{
           padding: "0px 50px",
@@ -35,7 +46,7 @@ export default function ResidentialPrograms({ match }) {
           width: "100%",
         }}
       >
-        <div style={{ marginRight: "35px", minWidth: "65%" }}>
+        <div style={{ marginRight: "35px", minWidth: "50%" }}>
           <SearchBar />
           <SelectGroups info={selectInfo} />
           <div
@@ -45,7 +56,6 @@ export default function ResidentialPrograms({ match }) {
             }}
           >
             <Dashboard
-              title="Residential programs and facilities in your area"
               schoolsInfo={dashboardInfo[0].schoolsInfo}
               backgroundColor={dashboardInfo[0].backgroundColor}
               color={dashboardInfo[0].color}
@@ -54,7 +64,7 @@ export default function ResidentialPrograms({ match }) {
         </div>
         <div
           style={{
-            minWidth: "25%",
+            minWidth: "45%",
             backgroundColor: "#F1F1F1",
             borderRadius: "10px",
             marginBottom: "50px",
@@ -68,16 +78,9 @@ export default function ResidentialPrograms({ match }) {
                 marginBottom: "15px",
               }}
             >
-              <h5>PERMANENT RESIDENCE & INTEGRATED COMMUNITIES</h5>
+              <h5>FUNDING INFO</h5>
             </div>
-            <div style={{ height: "85%", display: "grid" }}>
-              <SideButtons
-                info={[
-                  { title: "Embedded Link#1" },
-                  { title: "Embedded Link#2" },
-                  { title: "Embedded Link#3" },
-                ]}
-              />
+            <div style={{ height: "85%", display: "grid", backgroundColor: "#fff" }}>
             </div>
           </div>
         </div>

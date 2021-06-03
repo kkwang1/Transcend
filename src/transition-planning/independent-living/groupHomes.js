@@ -4,13 +4,13 @@ import SearchBar from "../../components/SearchAndFilter/SearchBar";
 import "../../App.scss";
 import { dashboardInfo, selectInfo } from "./config";
 import SelectGroups from "../../components/Select/SelectGroup";
-import NavPath from "../../components/NavPath/NavPath";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 export default function GroupHomes({ match }) {
   return (
     <>
-      <div className="layout-navpath">
-        <NavPath path={match.path} />
+      <div className="layout-breadcrumb">
+        <Breadcrumb path={match.path} />
       </div>
       <h1 className="layout-header">College</h1>
       <div style={{ padding: "0px 50px" }}>

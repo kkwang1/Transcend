@@ -1,14 +1,14 @@
 import React from "react";
 import "../../App.scss";
-import NavPath from "../../components/NavPath/NavPath";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import SideButtons from "../../components/SideButton/SideButtons";
 
 export default function Career({ match }) {
   return (
     <>
       <>
-        <div className="layout-navpath">
-          <NavPath path={match.path} />
+        <div className="layout-breadcrumb">
+          <Breadcrumb path={match.path} />
         </div>
         <h1 className="layout-header">Career</h1>
         <div className="layout-content">

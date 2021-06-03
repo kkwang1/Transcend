@@ -1,7 +1,7 @@
 import React from "react";
 import { page } from "./config";
 
-export default function NavPath({ path }) {
+export default function Breadcrumb({ path }) {
   const pathList = path.split("/").filter((s) => s != "");
   const pageList = pathList.map((s) => page[s]);
   return (

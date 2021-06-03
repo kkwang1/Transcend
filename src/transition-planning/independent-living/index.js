@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import "../../App.scss";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
-import NavPath from "../../components/NavPath/NavPath";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import QuickLinks from "../../components/QuickLink/QuickLinks";
 import { quickLinks } from "./config";
 
@@ -12,25 +12,25 @@ export default function IndependentLiving({ match }) {
 
   const info = [
     {
-      title: "Living At Home",
+      title: "LIVING AT HOME",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/livingathome`),
     },
     {
-      title: "Assisted Living",
+      title: "ASSITED LIVING",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/assistedliving`),
     },
     {
-      title: "Group Homes",
+      title: "GROUP HOMES",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/grouphomes`),
     },
     {
-      title: "Residential Programs",
+      title: "RESIDENTIAL PROGRAMS",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/residentialprograms`),
@@ -38,8 +38,8 @@ export default function IndependentLiving({ match }) {
   ];
   return (
     <>
-      <div className="layout-navpath">
-        <NavPath path={match.path} />
+      <div className="layout-breadcrumb">
+        <Breadcrumb path={match.path} />
       </div>
       <h1 className="layout-header">Independent Living</h1>
       <div className="layout-content">
@@ -56,6 +56,10 @@ export default function IndependentLiving({ match }) {
       </div>
       <h3 className="layout-header">QUICK LINKS</h3>
       <div className="layout-content layout-bottom">
+        <p>
+          Search for housing and assisted living options in your state using
+          these databases.
+        </p>
         <QuickLinks info={quickLinks} />
       </div>
     </>
