@@ -1,0 +1,18 @@
+.c-collapse-toggle {
+  background: none !important;
+  border-bottom: none !important;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #1b7b89;
+  font-weight: 500;
+}
+
+.c-collapse-container {
+  border: none !important;
+  margin: 15px 0px;
+}
+
+.c-collapse-collapse {
+  margin-left: 30px;
+}

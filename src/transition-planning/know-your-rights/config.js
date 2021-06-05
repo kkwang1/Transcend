@@ -1,238 +1,240 @@
+import QuickLinks from "../../components/QuickLink/QuickLinks";
+
 const dashboardInfo = [
-    {
-      schoolsInfo: [
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-      ],
-    },
-    {
-      title: "PRIVATE GROUP HOMES",
-      desc: "Group homes managed by private organizations or individuals.",
-      FundingsInfo: [
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 1",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 2",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 3",
-          location: "New York, NY",
-        },
-        {
-          name: "Funding 4",
-          location: "New York, NY",
-        },
-      ],
-    },
+  {
+    schoolsInfo: [
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+    ],
+  },
+  {
+    title: "PRIVATE GROUP HOMES",
+    desc: "Group homes managed by private organizations or individuals.",
+    FundingsInfo: [
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 1",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 2",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 3",
+        location: "New York, NY",
+      },
+      {
+        name: "Funding 4",
+        location: "New York, NY",
+      },
+    ],
+  },
 ];
 const quickLinks = [
   {
@@ -249,4 +251,22 @@ const quickLinks = [
   },
 ];
 
-export { quickLinks, dashboardInfo };
+const collapseInfo = [
+  {
+    title: "WORKPLACE",
+    key: "0",
+    children: <QuickLinks info={quickLinks} />,
+  },
+  {
+    title: "EDUCATIONAL PRACTICES",
+    key: "1",
+    children: <QuickLinks info={quickLinks} />,
+  },
+  {
+    title: "GUARDIANSHIP",
+    key: "2",
+    children: <QuickLinks info={quickLinks} />,
+  },
+];
+
+export { quickLinks, dashboardInfo, collapseInfo };

@@ -6,7 +6,6 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import QuickLinks from "../../components/QuickLink/QuickLinks";
 import { quickLinks } from "./config";
 
-
 export default function KnowYourRights({ match }) {
   let history = useHistory();
   let location = useLocation();

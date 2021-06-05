@@ -9,8 +9,7 @@ export default function DashboardGroups({
   color = "#1B7B89",
 }) {
   return (
-    // <CardDeck style={{"margin": "10px"}}>
-    <CardDeck>
+    <CardDeck style={{"margin": "10px"}}>
       {info.map((s) => (
         <Dashboard
           title={s.title}

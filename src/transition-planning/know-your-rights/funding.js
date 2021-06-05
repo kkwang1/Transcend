@@ -4,7 +4,6 @@ import "../../App.scss";
 import SelectGroups from "../../components/Select/SelectGroup";
 import Dashboard from "../../components/Dashboard/Dashboard";
 import { dashboardInfo } from "./config";
-import SideButtons from "../../components/SideButton/SideButtons";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 export default function Funding({ match }) {
