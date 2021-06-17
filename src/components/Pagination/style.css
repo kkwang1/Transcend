@@ -1,0 +1,5 @@
+.pagination-footer .pagination .page-item .page-link{
+    background-color: unset;
+    color: rgb(27, 123, 137);
+    border: unset;
+}
