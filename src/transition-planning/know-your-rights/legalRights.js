@@ -21,7 +21,7 @@ export default function LegalRights({ match }) {
         <CollapseGroup info={collapseInfo} />
         <p style={{ color: "#000", float: "right", fontWeight: "bold" }}>
           Or see{" "}
-          <a href="" style={{color: "#000"}}>
+          <a href={`${match.path}/all`} style={{color: "#000"}}>
             <u>all legal rights</u>
           </a>{" "}
           for individuals with disabilities

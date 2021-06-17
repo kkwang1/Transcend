@@ -17,4 +17,5 @@ export const page = {
   funding: "Funding",
   legalrights: "Legal Rights",
   getonthelist: "Get On The List",
+  all: "All"
 };
