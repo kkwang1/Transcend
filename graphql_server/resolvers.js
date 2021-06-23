@@ -41,4 +41,16 @@ const Query =
   },
   allResults: () => db.test.list()
 }
-module.exports = { Query }
+
+const Mutation = {
+  createDummy:(root,args,context,info) => {
+     return db.test.create({
+      isParent:false,
+      ageRange:-1,
+      state:-1,
+      transitionState:-1,
+      IDEACategories:[],
+      need: false})
+  }
+}
+module.exports = { Query, Mutation }
