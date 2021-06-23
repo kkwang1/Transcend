@@ -1,10 +1,28 @@
 import React from 'react';
 import "./style.css";
 
+async function makeDummy() {
+    const response = await fetch("htp://localhost:9000/graphql", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body:JSON.stringify({mutation:''})
+  });
+  const responseBody = await response.json();
+  if (responseBody.transitionState) {
+      return ID;
+  }
+  else {
+    alert("Sorry, but we could not process your request.");
+    return 0;
+  }
+}
+
 export default function CreationPage(props) {
     const handleSubmit = res => {
         res.preventDefault();
-        // need to incorporate back-end for where the info goes
+        if (props.newUser) {
+            makeDummy();
+        }
     }
     const space = " ";
     return (
