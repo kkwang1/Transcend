@@ -25,3 +25,20 @@ type Result {
   category: String!
   subcategory: String!
 }
+
+"""
+Mostly placeholders here because we are not implementing
+the full account funcationality yet
+"""
+type User {
+  isParent: Boolean
+  ageRange: Int
+  state: Int
+  transitionState: Int
+  IDEACategories: [Boolean]!
+  need: Boolean
+}
+
+type Mutation {
+  createDummy():String
+}
