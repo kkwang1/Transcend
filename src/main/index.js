@@ -45,7 +45,7 @@ export default function Main() {
   ];
 
   return (
-    <div style={{height: "100%"}}>
+    <div style={{ height: "100%" }}>
       <div style={{ position: "relative", height: "25%" }}>
         <img src={TitleBanner} style={{ width: "100%" }} />
         <div className="homeButton">
@@ -96,6 +96,7 @@ export default function Main() {
               display: "inline-flex",
               alignItems: "center",
             }}
+            onClick={() => history.push(`/createaccount`)}
           >
             <h4 style={{ marginBottom: "0px !important" }}>
               <u>GO</u>

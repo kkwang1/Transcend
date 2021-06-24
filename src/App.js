@@ -2,6 +2,7 @@ import "./App.css";
 import { React, useState } from "react";
 import Main from "./main/index";
 import TransitionPlanning from "./transition-planning/routes";
+import CreateAccount from "./create-account/routes";
 import AlternativePathways from "./alternative-pathways";
 import Community from "./community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/transitionalplanning" component={TransitionPlanning} />
           <Route path="/community" component={Community} />
           <Route path="/alternativepathways" component={AlternativePathways} />
+          <Route path="/createaccount" component={CreateAccount} />
         </Switch>
       </div>
     </Router>

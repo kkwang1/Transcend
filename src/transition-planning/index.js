@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory, useLocation } from "react-router";
 import "../App.scss";
-import ButtonsGroup from "../components/Button/ButtonsGroup";
 import SearchFilter from "../components/SearchAndFilter/SearchFilter";
 import SideMenu from "../components/SideMenu/SideMenu";
 import "./style.css";
