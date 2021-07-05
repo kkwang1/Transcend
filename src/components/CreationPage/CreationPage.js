@@ -8,8 +8,8 @@ async function makeDummy() {
     body:JSON.stringify({mutation:''})
   });
   const responseBody = await response.json();
-  if (responseBody.transitionState) {
-      return ID;
+  if (responseBody.data) {
+      return responseBody.data.createDummy;
   }
   else {
     alert("Sorry, but we could not process your request.");
