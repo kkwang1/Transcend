@@ -10,9 +10,8 @@ async function makeDummy() {
   });
   const responseBody = await response.json();
   if (responseBody.data) {
-      return responseBody.data.createDummy;
-  }
-  else {
+    return responseBody.data.createDummy;
+  } else {
     alert("Sorry, but we could not process your request.");
     return 0;
   }
@@ -32,19 +31,21 @@ export default function CreationPage(props) {
       onSubmit={(res) => {
         handleSubmit(res);
       }}
+      className="creationLabel"
+      style={props.creationLabelStyle}
     >
-      <div className="creationLabel">
-        {props.before.concat(" ")}
-        <select className="pageSelect">
-          {props.options.map((curVal) => {
-            return <option value={curVal}> {curVal} </option>;
-          })}
-        </select>
-        {space.concat(props.after)}
-      </div>
-      <br />
-      <br />
-      <h4 className="instruction">*select one option from the dropdown menu</h4>
+      {props.before.concat(" ")}
+      <select className="pageSelect" style={props.pageSelectStyle}>
+        {props.options.map((curVal) => {
+          return <option value={curVal}> {curVal} </option>;
+        })}
+      </select>
+      {space.concat(props.after)}
+      {!props.noFooter && (
+        <h4 className="instruction" style={{ marginTop: "10px" }}>
+          *select one option from the dropdown menu
+        </h4>
+      )}
     </form>
   );
 }

@@ -12,15 +12,15 @@ export default function QuestionnaireItem(props) {
   const item = {
     1: (
       <>
-        <h5>
+        <h4>
           Help us customize resources for you by answering a few questions.
-        </h5>
+        </h4>
         <h1>I am a...</h1>
         <div
-          style={{ display: "inline-flex" }}
+          style={{ display: "flex", marginTop: "50px" }}
           onClick={() => props.setIsParent(false)}
         >
-          <div style={{ margin: "20px" }}>
+          <div style={{ width: "50%" }}>
             <FontAwesomeIcon
               icon={faUserGraduate}
               color="#C4C4C4"
@@ -36,10 +36,7 @@ export default function QuestionnaireItem(props) {
               STUDENT
             </h4>
           </div>
-          <div
-            style={{ margin: "20px" }}
-            onClick={() => props.setIsParent(true)}
-          >
+          <div style={{ width: "50%" }} onClick={() => props.setIsParent(true)}>
             <FontAwesomeIcon
               icon={faUserFriends}
               color="#C4C4C4"
@@ -59,7 +56,7 @@ export default function QuestionnaireItem(props) {
       </>
     ),
     2: (
-      <div className="layout-content">
+      <>
         {props.isParent ? (
           <CreationPage
             before={"My child is"}
@@ -73,11 +70,11 @@ export default function QuestionnaireItem(props) {
             options={info.ageRange}
           />
         )}
-      </div>
+      </>
     ),
     3: (
       <>
-        <div className="layout-content">
+        <div>
           {props.isParent ? (
             <CreationPage
               before={"My child reside in"}
@@ -96,10 +93,10 @@ export default function QuestionnaireItem(props) {
     ),
     4: (
       <div style={{ display: "flex" }}>
-        <h3 style={{ margin: "auto" }}>
+        <h1 style={{ margin: "auto 50px", width: "50%", textAlign: "center" }}>
           How far along are you in the transition process?
-        </h3>
-        <div>
+        </h1>
+        <div style={{ width: "50%" }}>
           <h5>*check all that apply.</h5>
           <Form>
             {info.process.map((s, index) => (
@@ -111,53 +108,69 @@ export default function QuestionnaireItem(props) {
     ),
     5: (
       <div style={{ display: "flex" }}>
-        <h3 style={{ margin: "auto" }}>
+        <h1 style={{ margin: "auto 100px", width: "50%", textAlign: "center" }}>
           Do you fall under any of the 13 IDEA disability categories?
-        </h3>
-        <div>
-          <h5>*check all that apply.</h5>
-          <Form>
+        </h1>
+        <div style={{ width: "50%" }}>
+          <h3 style={{ marginTop: "5rem", marginBottom: "1rem" }}>
+            *check all that apply.
+          </h3>
+          <Form style={{ marginLeft: "10%" }}>
             {info.disabilityCategories.map((s, index) => (
-              <Form.Check type={"checkbox"} id={`id-${index}`} label={s} />
+              <Form.Check
+                type={"checkbox"}
+                id={`id-${index}`}
+                label={s}
+                style={{ margin: "10px" }}
+              />
             ))}
           </Form>
         </div>
       </div>
     ),
     6: (
-      <div className="layout-content">
-        <h3>What best describes your economic need?</h3>
-        <CreationPage before={"I am"} after={""} options={info.funds} />
-      </div>
+      <>
+        <h1 style={{ marginBottom: "50px" }}>
+          What best describes your economic need?
+        </h1>
+        <CreationPage before={"I am "} after={""} options={info.funds} />
+      </>
     ),
     7: (
       <div style={{ display: "flex" }}>
-        <h3 style={{ margin: "auto" }}>
+        <h1 style={{ margin: "auto 50px", width: "60%", textAlign: "center" }}>
           What best describes your postsecondary goals in the following
           sections?
-        </h3>
+        </h1>
 
-        <div>
-          <Form>
-            <h5>Education:</h5>
-            <Form.Control as="select" custom>
-              {info.education.map((s) => (
-                <option>{s}</option>
-              ))}
-            </Form.Control>
-            <h5>Employment:</h5>
-            <Form.Control as="select" custom>
-              {info.employment.map((s) => (
-                <option>{s}</option>
-              ))}
-            </Form.Control>
-            <h5>Independent Living:</h5>
-            <Form.Control as="select" custom>
-              {info.independentLiving.map((s) => (
-                <option>{s}</option>
-              ))}
-            </Form.Control>
-          </Form>
+        <div style={{ width: "50%" }}>
+          <h3 style={{marginTop: "20px"}}>Education:</h3>
+          <CreationPage
+            before={""}
+            after={""}
+            options={info.education}
+            noFooter={true}
+            creationLabelStyle={{textAlign: "revert"}}
+            pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
+          />
+          <h3 style={{marginTop: "20px"}}>Employment:</h3>
+          <CreationPage
+            before={""}
+            after={""}
+            options={info.employment}
+            noFooter={true}
+            creationLabelStyle={{textAlign: "revert"}}
+            pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
+          />
+          <h3 style={{marginTop: "20px"}}>Independent Living:</h3>
+          <CreationPage
+            before={""}
+            after={""}
+            options={info.independentLiving}
+            noFooter={true}
+            creationLabelStyle={{textAlign: "revert"}}
+            pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
+          />
         </div>
       </div>
     ),

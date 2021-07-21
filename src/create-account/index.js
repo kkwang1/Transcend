@@ -9,15 +9,23 @@ export default function CreateAccount() {
 
   return (
     <>
-      <div className="layout-content" style={{}}>
-        <QuestionnaireItem
-          itemNum={pageNum}
-          isParent={isParent}
-          setIsParent={setIsParent}
-        />
+      <div
+        style={{
+          display: "table",
+          height: "500px",
+          margin: "auto",
+        }}
+      >
+        <div style={{ display: "table-cell", verticalAlign: "middle" }}>
+          <QuestionnaireItem
+            itemNum={pageNum}
+            isParent={isParent}
+            setIsParent={setIsParent}
+          />
+        </div>
       </div>
 
-      <div className="layout-bottom" style={{ float: "right" }}>
+      <div className="layout-bottom layout-content" style={{ float: "right" }}>
         <PaginationFooter
           pageNum={pageNum}
           setPageNum={setPageNum}
