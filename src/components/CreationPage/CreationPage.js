@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from "react";
 import "./style.css";
+import { Form } from "react-bootstrap";
 
 async function makeDummy() {
-    const response = await fetch("htp://localhost:9000/graphql", {
+  const response = await fetch("htp://localhost:9000/graphql", {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body:JSON.stringify({mutation:''})
+    body: JSON.stringify({ mutation: "" }),
   });
   const responseBody = await response.json();
   if (responseBody.data) {
@@ -18,28 +19,32 @@ async function makeDummy() {
 }
 
 export default function CreationPage(props) {
-    const handleSubmit = res => {
-        res.preventDefault();
-        if (props.newUser) {
-            makeDummy();
-        }
+  const handleSubmit = (res) => {
+    res.preventDefault();
+    if (props.newUser) {
+      makeDummy();
     }
-    const space = " ";
-    return (
-        <form onSubmit = {res => {handleSubmit(res)}}>
-            <div className = "creationLabel">
-                <label for = {props.name}> {props.before.concat(" ")} </label>
-                <select className = "pageSelect">
-                    {props.options.map ((curVal) => {
-                    return <option value = {curVal}> {curVal} </option>
-                    })}
-                </select>
-                {space.concat(props.after)}
-            </div>
-            <br/><br/>
-            <h4 className = "instruction"> 
-                *select one option from the dropdown menu 
-            </h4>
-        </form>
-    )
+  };
+  const [curVal, setCurVal] = useState(" ");
+  const space = " ";
+  return (
+    <form
+      onSubmit={(res) => {
+        handleSubmit(res);
+      }}
+    >
+      <div className="creationLabel">
+        {props.before.concat(" ")}
+        <select className="pageSelect">
+          {props.options.map((curVal) => {
+            return <option value={curVal}> {curVal} </option>;
+          })}
+        </select>
+        {space.concat(props.after)}
+      </div>
+      <br />
+      <br />
+      <h4 className="instruction">*select one option from the dropdown menu</h4>
+    </form>
+  );
 }
