@@ -62,12 +62,14 @@ export default function QuestionnaireItem(props) {
             before={"My child is"}
             after={"years old."}
             options={info.ageRange}
+            selected={2}
           />
         ) : (
           <CreationPage
             before={"I am"}
             after={"years old."}
             options={info.ageRange}
+            selected={2}
           />
         )}
       </>
@@ -80,12 +82,14 @@ export default function QuestionnaireItem(props) {
               before={"My child reside in"}
               after={""}
               options={info.stateNames}
+              selected={44}
             />
           ) : (
             <CreationPage
               before={"I reside in"}
               after={""}
               options={info.stateNames}
+              selected={44}
             />
           )}
         </div>
@@ -149,6 +153,7 @@ export default function QuestionnaireItem(props) {
             before={""}
             after={""}
             options={info.education}
+            selected={1}
             noFooter={true}
             creationLabelStyle={{textAlign: "revert"}}
             pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
@@ -158,6 +163,7 @@ export default function QuestionnaireItem(props) {
             before={""}
             after={""}
             options={info.employment}
+            selected={4}
             noFooter={true}
             creationLabelStyle={{textAlign: "revert"}}
             pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
@@ -167,6 +173,7 @@ export default function QuestionnaireItem(props) {
             before={""}
             after={""}
             options={info.independentLiving}
+            selected={1}
             noFooter={true}
             creationLabelStyle={{textAlign: "revert"}}
             pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
