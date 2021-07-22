@@ -37,11 +37,23 @@ export default function PaginationFooter(props) {
   return (
     <div className="pagination-footer">
       <Pagination>
-        <Pagination.First />
-        <Pagination.Prev />
+        <Pagination.First
+          disabled={pageNum == 1}
+          onClick={() => setPageNum(1)}
+        />
+        <Pagination.Prev
+          disabled={pageNum == 1}
+          onClick={() => setPageNum(pageNum - 1)}
+        />
         {addPaginationItems()}
-        <Pagination.Next />
-        <Pagination.Last />
+        <Pagination.Next
+          disabled={pageNum == totalPageNum}
+          onClick={() => setPageNum(pageNum + 1)}
+        />
+        <Pagination.Last
+          disabled={pageNum == totalPageNum}
+          onClick={() => setPageNum(totalPageNum)}
+        />
       </Pagination>
     </div>
   );
