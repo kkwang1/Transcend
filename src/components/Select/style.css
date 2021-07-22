@@ -29,6 +29,27 @@
   margin: 0.5rem;
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
   width: 97%;
+}
+
+.select-group, .select-group > *, *::before, *::after {
+  margin: 10px 5px;
+  color: #1b7b89 !important;
+}
+
+.select-control {
+  border-radius: 0rem !important;
+}
+
+.select-group > .form-control {
+  background-color: white;
+  border-color: #ced4da;
+  color: #1b7b89;
+  font-style: italic;
+  font-size: smaller;
+}
+
+select.form-control > option  {
+  background-color: red!important;
 }
