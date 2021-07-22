@@ -10,21 +10,8 @@ Description:
 */
 export default function Select({ title, options }) {
   return (
-    // <DropdownButton
-    //   id={`dropdown-variants-${title}`}
-    //   title={title}
-    //   style={{ display: "table-cell", padding: "5px" }}
-    //   className="dropdown-link"
-    // >
-    //   {options.map((s) => (
-    //     <Dropdown.Item eventKey={s}>{s}</Dropdown.Item>
-    //   ))}
-    // </DropdownButton>
     <Form style={{ display: "table-cell" }}>
       <Form.Group
-        // id={`dropdown-variants-${title}`}
-        // title={title}
-        // style={{ display: "table-cell", padding: "5px" }}
         className="select-group"
       >
         <Form.Control as="select" className="select-control">

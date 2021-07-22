@@ -11,11 +11,6 @@ Description:
 */
 export default function SelectGroups({ info }) {
   return (
-    // <div style={{ display: "table", width: "100%" }}>
-    //   {info.map((s) => (
-    //     <Select title={s.title} options={s.options} />
-    //   ))}
-    // </div>
     <div style={{ display: "table", width: "100%"}}>
     {info.map((s) => (
       <Select title={s.title} options={s.options} />
