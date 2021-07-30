@@ -16,9 +16,7 @@ export default function College({ match }) {
       <h1 className="layout-header">College</h1>
       <div style={{ padding: "0px 50px" }}>
         <SearchBar />
-        <div className="select-btn">
-          <SelectGroups info={selectInfo} />
-        </div>
+        <SelectGroups info={selectInfo} />
 
         <div
           style={{

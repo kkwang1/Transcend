@@ -36,8 +36,12 @@ export default function CreationPage(props) {
     >
       {props.before.concat(" ")}
       <select className="pageSelect" style={props.pageSelectStyle}>
-        {props.options.map((curVal) => {
-          return <option value={curVal}> {curVal} </option>;
+        {props.options.map((curVal, i) => {
+          if (i == props.selected) {
+            return <option selected value={curVal}> {curVal} </option>;
+          } else {
+            return <option value={curVal}> {curVal} </option>;
+          }
         })}
       </select>
       {space.concat(props.after)}
