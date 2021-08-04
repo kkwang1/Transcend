@@ -5,7 +5,7 @@ import QuestionnaireItem from "./QuestionnaireItem";
 
 export default function CreateAccount() {
   const [pageNum, setPageNum] = useState(1);
-  const [isParent, setIsParent] = useState();
+  const [isParent, setIsParent] = useState(false);
 
   return (
     <>
