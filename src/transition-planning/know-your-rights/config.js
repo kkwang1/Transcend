@@ -269,4 +269,28 @@ const collapseInfo = [
   },
 ];
 
-export { quickLinks, dashboardInfo, collapseInfo };
+const collapseList = [
+  {
+    title: "HELLO WORLD",
+    description: `Public and private programs and funds can have extremeley long
+    waitlists (even those you are entitles to). Public and private programs and funds can have extremeley long
+    waitlists (even those you are entitles to).`,
+    key: "0",
+    children: <QuickLinks info={quickLinks} />,
+    hasProgressBar: true
+  },
+  {
+    title: "EDUCATIONAL PRACTICES",
+    description: "",
+    key: "1",
+    children: <QuickLinks info={quickLinks} />,
+  },
+  {
+    title: "GUARDIANSHIP",
+    description: "",
+    key: "2",
+    children: <QuickLinks info={quickLinks} />,
+  },
+];
+
+export { quickLinks, dashboardInfo, collapseInfo, collapseList };
