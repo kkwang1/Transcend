@@ -55,6 +55,26 @@ async function loadSearch(input, filters) {
 
 // converts the raw html into a series of college objects
 function parse(src) {
+  let parser = new DOMParser();
+  const doc = parser.parseFromString(src, "text/html");
+  const nodes = doc.querySelectorAll(".program-box"); // get list of programs
+  console.log(nodes);
+  console.log(nodes[0].querySelector(".program-search-program-name").querySelector("a").href);
+  const programs = Array.from(nodes).map(program => {
+    // the href will have the wrong base url, so processing is required:
+    let hrefBad = program.querySelector(".program-search-program-name")
+      .querySelector("a").getAttribute("href");
+    let i = hrefBad.indexOf('/');
+    return {
+      name: program.querySelector(".program-search-program-name").innerText.trim(),
+      university: program.querySelector(".program-university").innerText.trim(),
+      location: program.querySelector(".program-location").innerText.trim(),
+      description: program.querySelector(".panel-body").innerText.trim(),
+      href: "https://thinkcollege.net" + hrefBad.slice(i)
+    }
+  });
+
+  console.log(programs);
   return src;
 }
 
