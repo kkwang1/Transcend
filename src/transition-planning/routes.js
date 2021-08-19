@@ -2,7 +2,7 @@ import React from "react";
 import TransitionPlanning from ".";
 import IndependentLivingRoutes from "./independent-living/routes";
 import DayPrograms from "./day-programs";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import EducationRoutes from "./education/routes";
 import EmploymentRoutes from "./employment/routes";
 import KnowYourRightsRoutes from "./know-your-rights/routes";
