@@ -5,7 +5,13 @@ import { Accordion, AccordionContext, Card } from "react-bootstrap";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import "./style.css";
 
-function ContextAwareToggle({ eventKey, title, callback }) {
+function ContextAwareToggle({
+  eventKey,
+  title,
+  description,
+  callback,
+  hasProgressBar,
+}) {
   const currentEventKey = useContext(AccordionContext);
 
   const decoratedOnClick = useAccordionToggle(
@@ -17,7 +23,7 @@ function ContextAwareToggle({ eventKey, title, callback }) {
 
   return (
     <Accordion.Toggle
-      className="c-collapse-toggle"
+      className="c-checklist-toggle"
       as={Card.Header}
       eventKey={eventKey}
       onClick={decoratedOnClick}
@@ -27,17 +33,39 @@ function ContextAwareToggle({ eventKey, title, callback }) {
         color="#DEDEDE"
         style={{ fontSize: "2rem", marginRight: "20px" }}
       />
-      <div>{title}</div>
+      <div style={{ display: "flex", width: "100%" }}>
+        <div style={{ width: "50%" }}>
+          <div className="c-checklist-toggle-title">{title}</div>
+          {description.length > 0 && <div className="c-checklist-toggle-desc">{description}</div>}
+        </div>
+        {hasProgressBar && (
+          <>
+            <div class="c-checklist-toggle-vl"></div>
+            <div style={{ width: "50%" }}></div>
+          </>
+        )}
+      </div>
     </Accordion.Toggle>
   );
 }
 
-export default function Collapse({ eventKey, title, children }) {
+export default function Checklist({
+  eventKey,
+  title,
+  description,
+  children,
+  hasProgressBar = false,
+}) {
   const [open, setOpen] = useState(false);
   return (
-    <Card className="c-collapse-container">
-      <ContextAwareToggle eventKey={eventKey} title={title} />
-      <Accordion.Collapse className="c-collapse-collapse" eventKey={eventKey}>
+    <Card className="c-checklist-container">
+      <ContextAwareToggle
+        eventKey={eventKey}
+        title={title}
+        description={description}
+        hasProgressBar={hasProgressBar}
+      />
+      <Accordion.Collapse className="c-checklist-collapse" eventKey={eventKey}>
         {children}
       </Accordion.Collapse>
     </Card>

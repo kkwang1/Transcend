@@ -18,19 +18,19 @@ export default function QuestionnaireItem(props) {
         <h1>I am a...</h1>
         <div
           style={{ display: "flex", marginTop: "50px" }}
-          onClick={() => props.setIsParent(false)}
+          
         >
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "50%" }} onClick={() => props.setIsParent(false)}>
             <FontAwesomeIcon
               icon={faUserGraduate}
-              color="#C4C4C4"
+              color={props.isParent ? "#C4C4C4" : "#1B7B89"}
               style={{ fontSize: "7rem", margin: "auto", display: "flex" }}
             />
             <h4
               style={{
                 marginTop: "20px",
                 textAlign: "center",
-                color: "#1B7B89",
+                color: props.isParent ? "#C4C4C4" : "#1B7B89",
               }}
             >
               STUDENT
@@ -39,14 +39,14 @@ export default function QuestionnaireItem(props) {
           <div style={{ width: "50%" }} onClick={() => props.setIsParent(true)}>
             <FontAwesomeIcon
               icon={faUserFriends}
-              color="#C4C4C4"
+              color={!props.isParent ? "#C4C4C4" : "#1B7B89"}
               style={{ fontSize: "7rem", margin: "auto", display: "flex" }}
             />
             <h4
               style={{
                 marginTop: "20px",
                 textAlign: "center",
-                color: "#1B7B89",
+                color: !props.isParent ? "#C4C4C4" : "#1B7B89",
               }}
             >
               PARENT or CAREGIVER
