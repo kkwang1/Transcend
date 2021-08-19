@@ -8,27 +8,32 @@ import Filter from "./Filter";
 // the user's input
 async function loadSearch(input, filters) {
   try {
+    // temporarily fix certain parameters
+    filters.pageNum = 0;
+
     const baseUrl = "https://thinkcollege.net/college-search";
     const searchTerm = `?search_api_views_fulltext=${ input }`;
     const pageNum = filters.pageNum == 0 ? "" : `&page=${ filters.pageNum }`;
 
     // unpack all additional args
     let argsList = [];
-    Object.entries(filters).forEach((entry, index) => {
-      if (entry[1].length > 0) {
-        entry[1].forEach((val, index) => {
-          argsList.push([entry[0], val]);
-        });
+    for (let i in Object.entries(filters)) {
+      let [key, val] = Object.entries(filters)[i];
+      if (val && val[0].length > 0) {
+        for (let j in val[0]) {
+          argsList.push([key, val[0][j].text]);
+        }
       }
-    })
+    }
 
     // enumerate and format additional args
     const formattedArgs = argsList.map(entry => {
-      switch(entry[0]) {
+      let [key, val] = entry;
+      switch(key) {
         case "location": 
-          return `tc_state_province%3A${ entry[1] }`;
-        case "numYears":
-          return `field_prog_length_years%3A${ entry[1] }%20years`;
+          return `tc_state_province%3A${ val }`;
+        case "number of years":
+          return `field_prog_length_years%3A${ val }%20years`;
         default:
           return "";
       }
@@ -58,8 +63,7 @@ function parse(src) {
   let parser = new DOMParser();
   const doc = parser.parseFromString(src, "text/html");
   const nodes = doc.querySelectorAll(".program-box"); // get list of programs
-  console.log(nodes);
-  console.log(nodes[0].querySelector(".program-search-program-name").querySelector("a").href);
+
   const programs = Array.from(nodes).map(program => {
     // the href will have the wrong base url, so processing is required:
     let hrefBad = program.querySelector(".program-search-program-name")
@@ -82,55 +86,80 @@ export default function WebSearchBar(props) {
   const [resultState, updateResults] = useState("");
   const [textState, changeText] = useState("");
 
-  const catList = [
-    { id: 0, text: "Education" },
-    { id: 1, text: "Employment" },
-    { id: 2, text: "Independent Living" },
-    { id: 3, text: "Day Programs" },
-    { id: 4, text: "Know Your Rights" },
-    { id: 5, text: "Funding" },
+  const yearsList = [
+    { id: 0, text: "2" },
+    { id: 1, text: "3" },
+    { id: 2, text: "4" }
   ];
-  const [catState, changeCat] = useState([]);
+  const [yearsState, changeYears] = useState([]);
 
-  const subList = [
-    { id: 0, text: "College (general)" },
-    { id: 1, text: "College (four year)" },
-    { id: 2, text: "Education: Articles and Info" },
-    { id: 3, text: "Transitional Programs" },
-    { id: 4, text: "Vocational Training" },
-    { id: 5, text: "Employment: Articles and Info" },
-    { id: 6, text: "Job Postings" },
-    { id: 7, text: "Career Aptitude Tools" },
-    { id: 8, text: "Living at Home" },
-    { id: 9, text: "Assisted Living" },
-    { id: 10, text: "Group Homes" },
-    { id: 11, text: "Residential Programs" },
-    { id: 12, text: "Day Programs" },
-    { id: 13, text: "Know Your Rights" },
-    { id: 14, text: "Funding" },
-  ];
-  const [subState, changeSub] = useState([]);
+  const locList = [
+    { id: 0, text: "Alabama" },
+    { id: 1, text: "Alaska" },
+    { id: 2, text: "Arizona" },
+    { id: 3, text: "Arkansas" },
+    { id: 4, text: "California" },
+    { id: 5, text: "Colorado" },
+    { id: 6, text: "Connecticut" },
+    { id: 7, text: "Delaware" },
+    { id: 8, text: "Florida" },
+    { id: 9, text: "Georgia" },
+    { id: 10, text: "Hawaii" },
+    { id: 11, text: "Idaho" },
+    { id: 12, text: "Illinois" },
+    { id: 13, text: "Indiana" },
+    { id: 14, text: "Iowa" },
+    { id: 15, text: "Kansas" },
+    { id: 16, text: "Kentucky" },
+    { id: 17, text: "Louisiana" },
+    { id: 18, text: "Maine" },
+    { id: 19, text: "Maryland" },
+    { id: 20, text: "Massachusetts" },
+    { id: 21, text: "Michigan" },
+    { id: 22, text: "Minnesota" },
+    { id: 23, text: "Mississippi" },
+    { id: 24, text: "Missouri" },
+    { id: 25, text: "Montana" },
+    { id: 26, text: "Nebraska" },
+    { id: 27, text: "Nevada" },
+    { id: 28, text: "New Hampshire" },
+    { id: 29, text: "New Jersey" },
+    { id: 30, text: "New Mexico" },
+    { id: 31, text: "New York" },
+    { id: 32, text: "North Carolina" },
+    { id: 33, text: "North Dakota" },
+    { id: 34, text: "Ohio" },
+    { id: 35, text: "Oklahoma" },
+    { id: 36, text: "Oregon" },
+    { id: 37, text: "Pennsylvania" },
+    { id: 38, text: "Rhode Island" },
+    { id: 39, text: "South Carolina" },
+    { id: 40, text: "South Dakota" },
+    { id: 41, text: "Tennessee" },
+    { id: 42, text: "Texas" },
+    { id: 43, text: "Utah" },
+    { id: 44, text: "Vermont" },
+    { id: 45, text: "Virginia" },
+    { id: 46, text: "Washington" },
+    { id: 47, text: "West Virginia" },
+    { id: 48, text: "Wisconsin" },
+  ]
+  const [locState, changeLoc] = useState([]);
 
   const filterOptions = {
-    category: [catState, changeCat, catList],
-    subcategory: [subState, changeSub, subList],
-  };
-
-  const testFilters = {
-    location: ["Pennsylvania"],
-    numYears: [4],
-    pageNum: 0
+    "number of years": [yearsState, changeYears, yearsList],
+    "location": [locState, changeLoc, locList]
   };
 
   useEffect(() => {
-    if (!catState.length && !subState.length && !textState) {
+    if (!yearsState.length && !locState.length && !textState) {
       updateResults("");
     } else {
-      loadSearch(textState, testFilters).then((results) =>
+      loadSearch(textState, filterOptions).then((results) =>
         updateResults(parse(results))
       );
     }
-  }, [catState, subState, textState]);
+  }, [yearsState, locState, textState]);
 
   const filterList = [];
   for (var key in filterOptions) {
@@ -151,7 +180,7 @@ export default function WebSearchBar(props) {
       <Form
         onSubmit={(event) => {
           event.preventDefault();
-          loadSearch(textState, testFilters).then((results) => {
+          loadSearch(textState, filterOptions).then((results) => {
             updateResults(parse(results));
           });
         }}
@@ -164,7 +193,7 @@ export default function WebSearchBar(props) {
           />
         </Form.Row>
       </Form>
-      <div className="filter-area">{filterList}</div>
+      <div className="filter-area">{ filterList }</div>
       <div className="result-area">
         <p style={{width: "800px"}}>{ resultState }</p>
       </div>
