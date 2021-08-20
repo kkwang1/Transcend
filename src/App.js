@@ -13,18 +13,18 @@ function App() {
   const [open, setOpen] = useState(false);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      {/* <div style={{ direction: "rtl" }}>
+    <Router>
+      <div style={{ direction: "rtl" }}>
         {open && <Sidebar setOpenSidebar={setOpen} />}
-      </div> */}
+      </div>
       <div style={{ opacity: open && "0.5" }}>
         <NavBar openSidebar={open} setOpenSidebar={setOpen} />
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/transitionalplanning" component={TransitionPlanning} />
-          <Route path="/community" component={Community} />
-          <Route path="/alternativepathways" component={AlternativePathways} />
-          <Route path="/createaccount" component={CreateAccount} />
+          <Route path={process.env.PUBLIC_URL + "/transitionalplanning"} component={TransitionPlanning} />
+          <Route path={process.env.PUBLIC_URL + "/community"} component={Community} />
+          <Route path={process.env.PUBLIC_URL + "/alternativepathways"} component={AlternativePathways} />
+          <Route path={process.env.PUBLIC_URL+ "/createaccount"} component={CreateAccount} />
         </Switch>
       </div>
     </Router>

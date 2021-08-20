@@ -1,4 +1,4 @@
-/* .c-collapse-toggle {
+.c-collapse-toggle {
   background: none !important;
   border-bottom: none !important;
   display: inline-flex;
@@ -15,45 +15,4 @@
 
 .c-collapse-collapse {
   margin-left: 30px;
-} */
-
-.c-collapse-toggle {
-  background: none !important;
-  border-bottom: none !important;
-  display: inline-flex;
-  align-items: center;
-}
-
-.c-collapse-toggle-title {
-  font-size: 1.25rem;
-  color: #1b7b89;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.c-collapse-toggle-vl {
-  border-left: 1.5px solid #bdbdbd;
-  margin: 10px;
-}
-
-.c-collapse-toggle-desc {
-  font-size: 0.8rem;
-  color: #1b7b89;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-.c-collapse-container {
-  margin: 15px 0px;
-  border: 1px solid rgba(0, 0, 0, 0.125) !important;
-  border-radius: 0.5rem !important;
-}
-
-.c-collapse-container {
-  margin: 15px 0px;
-  border: 0 !important;
-}
-
-.c-collapse-collapse {
-  margin: 30px;
 }

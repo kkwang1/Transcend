@@ -9,7 +9,7 @@ import KnowYourRightsRoutes from "./know-your-rights/routes";
 
 const route = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <div>
       <Route
         exact
         path="/transitionalplanning"
@@ -29,7 +29,7 @@ const route = () => {
       />
       <Route path="/transitionalplanning/dayprograms" component={DayPrograms} />
       <Route path="/transitionalplanning/knowyourrights" component={KnowYourRightsRoutes} />
-    </Router>
+    </div>
   );
 };
 
