@@ -18,7 +18,7 @@ export default function LegalRights({ match }) {
           can help to keep you on the same page with guardians, education, and
           employers.
         </p>
-        <CollapseGroup info={collapseInfo} />
+        <CollapseGroup info={collapseInfo} border={false}/>
         <p style={{ color: "#000", float: "right", fontWeight: "bold" }}>
           Or see{" "}
           <a href={`${match.path}/all`} style={{color: "#000"}}>
