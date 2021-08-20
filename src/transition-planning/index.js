@@ -90,9 +90,9 @@ export default function TransitionPlanning({ match }) {
           create an appropriate, feasible, and individualized transition plan.
         </p>
       </div>
-      <div style={{ width: "50%", margin: "auto", textSize: "10px" }}>
+      {/* <div style={{ width: "50%", margin: "auto", textSize: "10px" }}>
         <SearchFilter />
-      </div>
+      </div> */}
       <h3 className="layout-header" style={{ textAlign: "center", marginTop: "40px" }}>
         Explore the following sections:{" "}
       </h3>
