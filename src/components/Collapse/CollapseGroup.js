@@ -3,7 +3,6 @@ import { Accordion } from "react-bootstrap";
 import Collapse from "./Collapse";
 
 export default function CollapseGroup({ info, border }) {
-  console.log(border)
   return (
     <Accordion defaultActiveKey="0">
       {info.map((s) => (

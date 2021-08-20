@@ -4,6 +4,7 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { Accordion, AccordionContext, Card } from "react-bootstrap";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import "./style.css";
+import ListProgressBar from "../ProgressBar/ProgressBar";
 
 function ContextAwareToggle({
   eventKey,
@@ -41,7 +42,9 @@ function ContextAwareToggle({
         {hasProgressBar && (
           <>
             <div class="c-collapse-toggle-vl"></div>
-            <div style={{ width: "50%" }}></div>
+            <div style={{ width: "50%" }}>
+              <ListProgressBar />
+            </div>
           </>
         )}
       </div>
