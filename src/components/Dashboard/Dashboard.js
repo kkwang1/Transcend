@@ -25,13 +25,14 @@ export default function Dashboard({
             <p style={{ fontSize: "0.8em" }}>{desc}</p>
             {schoolsInfo.map((s) => (
               <div style={{ margin: "10px" }}>
-                <Card.Link
-                  className="text-muted"
-                  href={url}
-                  style={{ textDecoration: "underline" }}
-                >
-                  {s.name} | {s.location}
-                </Card.Link>
+                <a href={s.href} target="_blank_">
+                  <Card.Link
+                    className="text-muted"
+                    style={{ textDecoration: "underline" }}
+                  >
+                    {s.name} | {s.location}
+                  </Card.Link>
+                </a>
                 <FontAwesomeIcon
                   icon={faBookmark}
                   style={{
@@ -47,9 +48,9 @@ export default function Dashboard({
         </div>
       </Card.Body>
       <Card.Footer>
-        <Card.Link href={url}>
+        <a href={url} target="_blank_">
           <small className="text-muted">See All</small>
-        </Card.Link>
+        </a>
       </Card.Footer>
     </Card>
   );

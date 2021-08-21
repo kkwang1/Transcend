@@ -3,6 +3,7 @@ import axios from "axios";
 import { Form } from "react-bootstrap";
 import "./style.css";
 import Filter from "./Filter";
+import DashboardGroups from "../../components/Dashboard/DashboardsGroup";
 
 // scrapes raw html from a college database after giving it a query based on
 // the user's input
@@ -33,7 +34,11 @@ async function loadSearch(input, filters) {
         case "location": 
           return `tc_state_province%3A${ val }`;
         case "number of years":
-          return `field_prog_length_years%3A${ val }%20years`;
+          return `field_prog_length_years%3A${ val }`;
+        case "disability":
+          return `field_prog_which_disabilities%3A${ val }`;
+        case "type":
+          return `tc_school_type%3A${ val }`;
         default:
           return "";
       }
@@ -51,7 +56,7 @@ async function loadSearch(input, filters) {
     // retrieve data
     const url = baseUrl + searchTerm + argsUrl + pageNum;
     const response = await axios.get(url);
-    return response.data;
+    return [url, response.data];
   } catch (error) {
     alert(error);
     return "";
@@ -78,18 +83,23 @@ function parse(src) {
     }
   });
 
-  console.log(programs);
-  return src;
+  return programs;
 }
 
 export default function WebSearchBar(props) {
-  const [resultState, updateResults] = useState("");
   const [textState, changeText] = useState("");
+  const [urlStateVoc, updateUrlVoc] = useState("");
+  const [urlStateCom, updateUrlCom] = useState("");
+  const [urlStateCol, updateUrlCol] = useState("");
+  const [resultStateVoc, updateResultsVoc] = useState([]);
+  const [resultStateCom, updateResultsCom] = useState([]);
+  const [resultStateCol, updateResultsCol] = useState([]);
 
   const yearsList = [
-    { id: 0, text: "2" },
-    { id: 1, text: "3" },
-    { id: 2, text: "4" }
+    { id: 0, text: "1 year" },
+    { id: 1, text: "2 years" },
+    { id: 2, text: "3 years" },
+    { id: 3, text: "4 years" }
   ];
   const [yearsState, changeYears] = useState([]);
 
@@ -143,22 +153,44 @@ export default function WebSearchBar(props) {
     { id: 46, text: "Washington" },
     { id: 47, text: "West Virginia" },
     { id: 48, text: "Wisconsin" },
-  ]
+  ];
   const [locState, changeLoc] = useState([]);
+
+  const disabilityList = [
+    { id: 0, text: "Intellectual disability" },
+    { id: 1, text: "Autism" },
+    { id: 2, text: "Other disabilities" },
+  ];
+  const [disabilityState, changeDisability] = useState([]);
 
   const filterOptions = {
     "number of years": [yearsState, changeYears, yearsList],
-    "location": [locState, changeLoc, locList]
+    "location": [locState, changeLoc, locList],
+    "disability": [disabilityState, changeDisability, disabilityList]
   };
 
   useEffect(() => {
-    if (!yearsState.length && !locState.length && !textState) {
-      updateResults("");
-    } else {
-      loadSearch(textState, filterOptions).then((results) =>
-        updateResults(parse(results))
-      );
-    }
+      loadSearch(textState, {
+        "type": [[{id: 0, text: "Technical or vocational/trade school"}]],
+        ...filterOptions
+      }).then((results) => {
+        updateUrlVoc(results[0]);
+        updateResultsVoc(parse(results[1]));
+      });
+      loadSearch(textState, {
+        "type": [[{id: 1, text: "2-year community college or junior college"}]],
+        ...filterOptions
+      }).then((results) => {
+        updateUrlCom(results[0]);
+        updateResultsCom(parse(results[1]));
+      });
+      loadSearch(textState, {
+        "type": [[{id: 2, text: "4-year college or university"}]],
+        ...filterOptions
+      }).then((results) => {
+        updateUrlCol(results[0]);
+        updateResultsCol(parse(results[1]));
+      });
   }, [yearsState, locState, textState]);
 
   const filterList = [];
@@ -180,8 +212,26 @@ export default function WebSearchBar(props) {
       <Form
         onSubmit={(event) => {
           event.preventDefault();
-          loadSearch(textState, filterOptions).then((results) => {
-            updateResults(parse(results));
+          loadSearch(textState, {
+            "type": [[{id: 0, text: "Technical or vocational/trade school"}]],
+            ...filterOptions
+          }).then((results) => {
+            updateUrlVoc(results[0]);
+            updateResultsVoc(parse(results[1]));
+          });
+          loadSearch(textState, {
+            "type": [[{id: 1, text: "2-year community college or junior college"}]],
+            ...filterOptions
+          }).then((results) => {
+            updateUrlCom(results[0]);
+            updateResultsCom(parse(results[1]));
+          });
+          loadSearch(textState, {
+            "type": [[{id: 2, text: "4-year college or university"}]],
+            ...filterOptions
+          }).then((results) => {
+            updateUrlCol(results[0]);
+            updateResultsCol(parse(results[1]));
           });
         }}
       >
@@ -194,9 +244,26 @@ export default function WebSearchBar(props) {
         </Form.Row>
       </Form>
       <div className="filter-area">{ filterList }</div>
-      <div className="result-area">
-        <p style={{width: "800px"}}>{ resultState }</p>
-      </div>
+      <DashboardGroups info={ [
+        {
+          title: "Vocational College & Trade School",
+          desc: "Vocational colleges and trade schools specific in your area",
+          schoolsInfo: resultStateVoc,
+          url: urlStateVoc
+        },
+        {
+          title: "Community College",
+          desc: "Community colleges and two year degree programs near you",
+          schoolsInfo: resultStateCom,
+          url: urlStateCom
+        },
+        {
+          title: "Four Year College",
+          desc: "Community colleges and two year degree programs near you",
+          schoolsInfo: resultStateCol,
+          url: urlStateCol
+        }
+      ] }/>
     </div>
   );
 }
