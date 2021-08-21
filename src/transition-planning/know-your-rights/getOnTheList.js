@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.scss";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
-import ChecklistsGroup from "../../components/Checklist/ChecklistsGroup";
+import CollapseGroup from "../../components/Collapse/CollapseGroup";
 import { collapseList } from "./config";
 
 export default function GetOnTheList({ match }) {
@@ -17,7 +17,7 @@ export default function GetOnTheList({ match }) {
           waitlists (even those you are entitles to). Follow this checklist to
           ensure you’re on all of the lists that apply to you!
         </p>
-        <ChecklistsGroup info={collapseList} />
+        <CollapseGroup info={collapseList}/>
       </div>
     </div>
   );

@@ -4,8 +4,15 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { Accordion, AccordionContext, Card } from "react-bootstrap";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import "./style.css";
+import ListProgressBar from "../ProgressBar/ProgressBar";
 
-function ContextAwareToggle({ eventKey, title, callback }) {
+function ContextAwareToggle({
+  eventKey,
+  title,
+  description,
+  callback,
+  hasProgressBar,
+}) {
   const currentEventKey = useContext(AccordionContext);
 
   const decoratedOnClick = useAccordionToggle(
@@ -27,16 +34,42 @@ function ContextAwareToggle({ eventKey, title, callback }) {
         color="#DEDEDE"
         style={{ fontSize: "2rem", marginRight: "20px" }}
       />
-      <div>{title}</div>
+      <div style={{ display: "flex", width: "100%" }}>
+        <div style={{ width: "50%" }}>
+          <div className="c-collapse-toggle-title">{title}</div>
+          {description && <div className="c-collapse-toggle-desc">{description}</div>}
+        </div>
+        {hasProgressBar && (
+          <>
+            <div class="c-collapse-toggle-vl"></div>
+            <div style={{ width: "50%" }}>
+              <ListProgressBar />
+            </div>
+          </>
+        )}
+      </div>
     </Accordion.Toggle>
   );
 }
 
-export default function Collapse({ eventKey, title, children }) {
+export default function Collapse({
+  eventKey,
+  title,
+  description,
+  children,
+  hasProgressBar = false,
+  border = true
+}) {
+  console.log(border)
   const [open, setOpen] = useState(false);
   return (
-    <Card className="c-collapse-container">
-      <ContextAwareToggle eventKey={eventKey} title={title} />
+    <Card className={border ? "c-collapse-container" : "c-collapse-container-noborder"}>
+      <ContextAwareToggle
+        eventKey={eventKey}
+        title={title}
+        description={description}
+        hasProgressBar={hasProgressBar}
+      />
       <Accordion.Collapse className="c-collapse-collapse" eventKey={eventKey}>
         {children}
       </Accordion.Collapse>

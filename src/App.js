@@ -21,10 +21,10 @@ function App() {
         <NavBar openSidebar={open} setOpenSidebar={setOpen} />
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/transitionalplanning" component={TransitionPlanning} />
-          <Route path="/community" component={Community} />
-          <Route path="/alternativepathways" component={AlternativePathways} />
-          <Route path="/createaccount" component={CreateAccount} />
+          <Route path={"/transitionalplanning"} component={TransitionPlanning} />
+          <Route path={"/community"} component={Community} />
+          <Route path={"/alternativepathways"} component={AlternativePathways} />
+          <Route path={"/createaccount"} component={CreateAccount} />
         </Switch>
       </div>
     </Router>

@@ -273,8 +273,7 @@ const collapseList = [
   {
     title: "HELLO WORLD",
     description: `Public and private programs and funds can have extremeley long
-    waitlists (even those you are entitles to). Public and private programs and funds can have extremeley long
-    waitlists (even those you are entitles to).`,
+    waitlists (even those you are......`,
     key: "0",
     children: <QuickLinks info={quickLinks} />,
     hasProgressBar: true
