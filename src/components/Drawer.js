@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "../images/right_arrow.png";
+import arrow from "../../images/right_arrow.png";
 
 // inputs: props.title is the title; should have children with href props
 

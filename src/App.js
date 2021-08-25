@@ -1,10 +1,10 @@
 import "./App.css";
 import { React, useState } from "react";
-import Main from "./main/index";
-import TransitionPlanning from "./transition-planning/routes";
-import CreateAccount from "./create-account/routes";
-import AlternativePathways from "./alternative-pathways";
-import Community from "./community";
+import Main from "./pages/main/index";
+import TransitionPlanning from "./pages/transition-planning/routes";
+import CreateAccount from "./pages/create-account/routes";
+import AlternativePathways from "./pages/alternative-pathways";
+import Community from "./pages/community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import NavBar from "./components/NavBar";

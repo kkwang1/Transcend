@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import searchIcon from "../../images/search.png";
 import "./style.css";
 
 // inputs: props.prompt is the initial text in the search bar
