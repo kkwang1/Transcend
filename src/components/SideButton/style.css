@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.sideButtons .card-body:hover{
+.sideButtons .card-body:hover, .activeSideButtons{
     color: #FFFFFF !important;
     background-color: #C4C4C4 !important;
     border: none !important;

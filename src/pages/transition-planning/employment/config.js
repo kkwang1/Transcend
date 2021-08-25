@@ -13,6 +13,26 @@ const selectInfo = [
   },
 ];
 
+const pageInfo = [
+  { title: "MyFuture", url: "https://myfuture.com/career" },
+  {
+    title: "Career One Stop Toolkit",
+    url: "https://www.careeronestop.org/Toolkit/Careers/careers.aspx",
+  },
+  {
+    title: "Finding your Career Path",
+    url: "https://www.pacer.org/transition/learning-center/employment/finding-career-path.asp",
+  },
+  {
+    title: "Your Career Superstar",
+    url: "https://www.understood.org/en/young-adults/career-compass/quiz-find-your-career-superstar?_ul=1*1vagy52*domain_userid*YW1wLTk5b2xabFZnUzMwYXAwX2hNUVFwcXc.",
+  },
+  {
+    title: "Career Examples for Diverse Learners",
+    url: "https://www.understood.org/en/young-adults/career-compass/40-career-examples-of-people-who-learn-and-think-differently?_ul=1*1vagy52*domain_userid*YW1wLTk5b2xabFZnUzMwYXAwX2hNUVFwcXc.",
+  },
+];
+
 const quickLinks = [
   {
     title: "Find your nearest American Job Center",
@@ -28,4 +48,4 @@ const quickLinks = [
   },
 ];
 
-export { quickLinks, selectInfo };
+export { quickLinks, selectInfo, pageInfo };

@@ -33,29 +33,25 @@ export default function JobPosting({ match }) {
           padding: "0px 50px",
           display: "flex",
           width: "100%",
+          height: "700px",
         }}
       >
-        <div style={{ marginRight: "35px", minWidth: "65%" }}>
-          <div
-            style={{ color: "#000", textAlign: "center", margin: "15px 0px" }}
-          >
-            <h4>JOB SEARCH</h4>
-          </div>
-          <SearchBar />
-          <SelectGroups info={selectInfo} />
-          <div
-            style={{
-              marginTop: "15px",
-              paddingBottom: "50px",
-            }}
-          >
-            <Dashboard
-              title={"Job postings in your area"}
-              schoolsInfo={collegeDashboardInfo[0].schoolsInfo}
-              backgroundColor={collegeDashboardInfo[0].backgroundColor}
-              color={collegeDashboardInfo[0].color}
-            />
-          </div>
+        <div
+          style={{
+            marginRight: "35px",
+            minWidth: "65%",
+            backgroundColor: "#F1F1F1",
+            borderRadius: "20px",
+            padding: "15px",
+          }}
+        >
+          <iframe
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            width="100%"
+            height="100%"
+            src="https://www.pacareerlink.pa.gov/jponline/individual"
+          ></iframe>
         </div>
         <div
           style={{
@@ -63,6 +59,7 @@ export default function JobPosting({ match }) {
             backgroundColor: "#F1F1F1",
             borderRadius: "10px",
             marginBottom: "50px",
+            height: "100%",
           }}
         >
           <div style={{ margin: "15px 30px", height: "100%" }}>
