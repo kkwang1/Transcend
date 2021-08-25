@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import "./style.css";
 import Filter from "./Filter";
+import DashboardGroups from "../Dashboard/DashboardsGroup";
 
 /*
 Adding new filters - need to edit schema.graphql and SearchBar.js
@@ -20,7 +21,6 @@ async function loadSearch(term, options) {
     .replaceAll('"text"', "text")
     .replaceAll('"category"', "category")
     .replaceAll('"subcategory"', "subcategory");
-  console.log(optionStr);
   const response = await fetch("http://localhost:9000/graphql", {
     method: "POST",
     headers: { "content-type": "application/json" },
@@ -30,7 +30,13 @@ async function loadSearch(term, options) {
   });
   const responseBody = await response.json();
   if (responseBody.data) {
-    return responseBody.data.searchTerm;
+    return responseBody.data.searchTerm.map(resource => {
+      return {
+        name: resource.name,
+        location: resource.subcategory + ", " + resource.category,
+        href: resource.href
+      }
+    });
   } else {
     alert("Sorry, but we could not process your request.");
     return [];
@@ -107,7 +113,16 @@ export default function SearchBar(props) {
           loadSearch(textState, filterOptions).then((results) =>
             updateResults(results)
           );
-        }}
+          updateResults([{
+            name: "a good resource",
+            location: "Employment: Articles and Info, Employment",
+            href: "https://google.com"
+          }, {
+            name: "another good resource",
+            location: "Employment: Articles and Info, Employment",
+            href: "https://google.com"
+          }]);
+            }}
       >
         <Form.Row>
           <Form.Control
@@ -118,18 +133,18 @@ export default function SearchBar(props) {
         </Form.Row>
       </Form>
       <div className="filter-area">{filterList}</div>
-      <div className="result-area">
-        {resultState.map((result) => {
-          return (
-            <div key={result.name + result.category}>
-              <a href={result.href} target="_blank_">
-                {result.name}
-              </a>
-              <p>{result.category + "  -  " + result.subcategory}</p>
-            </div>
-          );
-        })}
-      </div>
+      { resultState.length > 0 ?
+        <DashboardGroups info={ [
+          {
+            title: "Search Results",
+            desc: "Resources from our personal database",
+            schoolsInfo: resultState,
+            url: ""
+          }
+        ] }/>
+        :
+        <div></div>
+      }
     </div>
   );
 }

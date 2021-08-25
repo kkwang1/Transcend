@@ -47,11 +47,16 @@ export default function Dashboard({
           </div>
         </div>
       </Card.Body>
-      <Card.Footer>
-        <a href={url} target="_blank_">
-          <small className="text-muted">See All</small>
-        </a>
-      </Card.Footer>
+      { url ?
+        // only display the footer if the url isn't blank
+        <Card.Footer>
+          <a href={url} target="_blank_">
+            <small className="text-muted">See All</small>
+          </a>
+        </Card.Footer>
+        :
+        <Card.Footer></Card.Footer>
+      }
     </Card>
   );
 }

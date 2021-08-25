@@ -58,8 +58,8 @@ async function loadSearch(input, filters) {
     const response = await axios.get(url);
     return [url, response.data];
   } catch (error) {
-    alert(error);
-    return "";
+    alert("Sorry, but we could not process your request.");
+    return ["", ""];
   }
 }
 
