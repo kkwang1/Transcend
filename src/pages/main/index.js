@@ -48,19 +48,6 @@ export default function Main() {
     <div style={{ height: "100%" }}>
       <div style={{ position: "relative", height: "25%" }}>
         <img src={TitleBanner} style={{ width: "100%" }} />
-        <div className="homeButton">
-          <Button
-            style={{
-              backgroundColor: "#1B7B89",
-              width: "100%",
-              height: "100%",
-              fontSize: "large",
-              fontWeight: "bold",
-            }}
-          >
-            GET STARTED
-          </Button>
-        </div>
       </div>
       <div style={{ display: "flex", margin: "3em", height: "25%" }}>
         <div style={{ margin: "auto 1.5em auto auto" }}>
