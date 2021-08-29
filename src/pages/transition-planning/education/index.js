@@ -27,7 +27,7 @@ export default function Education({ match }) {
       action: () => history.push(`${location.pathname}/college`),
     },
     {
-      title: "TRANSITIONAL PROGRAMS",
+      title: "TRANSITION PROGRAMS",
       text: `Short term educational programs geared towards developing and expanding 
       upon life skills for young adults transitioning out of secondary education.`,
       backgroundColor: "#F1F1F1",

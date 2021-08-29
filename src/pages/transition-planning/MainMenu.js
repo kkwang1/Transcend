@@ -23,7 +23,7 @@ export default function MainMenu() {
           url: `${location.pathname}/education/college`,
         },
         {
-          subtitle: "Transitional Programs",
+          subtitle: "Transition Programs",
           url: `${location.pathname}/education/transitionalprograms`,
         },
       ],

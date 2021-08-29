@@ -61,7 +61,7 @@ export default function SearchBar(props) {
     { id: 0, text: "College (general)" },
     { id: 1, text: "College (four year)" },
     { id: 2, text: "Education: Articles and Info" },
-    { id: 3, text: "Transitional Programs" },
+    { id: 3, text: "Transition Programs" },
     { id: 4, text: "Vocational Training" },
     { id: 5, text: "Employment: Articles and Info" },
     { id: 6, text: "Job Postings" },

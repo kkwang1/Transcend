@@ -38,7 +38,7 @@ export default function SideMenu({ children }) {
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
               <MenuItem>College/University</MenuItem>
-              <MenuItem>Transitional Programs</MenuItem>
+              <MenuItem>Transition Programs</MenuItem>
             </SubMenu>
             <SubMenu
               title="Employment"

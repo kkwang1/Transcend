@@ -27,7 +27,7 @@ export default function TransitionalPrograms({ match }) {
       <div className="layout-breadcrumb">
         <Breadcrumb path={match.path} />
       </div>
-      <h1 className="layout-header">Transitional Programs</h1>
+      <h1 className="layout-header">Transition Programs</h1>
       <div
         style={{
           padding: "0px 50px",
@@ -69,7 +69,7 @@ export default function TransitionalPrograms({ match }) {
                 marginBottom: "15px",
               }}
             >
-              <h4>TRANSITIONAL PROGRAMS</h4>
+              <h4>TRANSITION PROGRAMS</h4>
             </div>
             <div style={{ height: "85%", display: "grid" }}>
               <SideButtons

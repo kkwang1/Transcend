@@ -1,5 +1,5 @@
 const vocationalTrainingDashboardInfo = {
-  title: "Transitional programs in your area",
+  title: "Transition programs in your area",
   schoolsInfo: [
     {
       name: "School 1",

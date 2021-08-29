@@ -82,7 +82,7 @@ export default function TransitionPlanning({ match }) {
       <SideMenu />
       <div style={{ width: "65%", margin: "50px auto" }}>
         <h1 style={{ color: "#1b7b89", marginBottom: "25px" }}>
-          Transitional Planning
+          Transition Planning
         </h1>
         <p>
           Find and save resources for planning transition into adulthood.

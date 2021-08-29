@@ -16,7 +16,7 @@ export default function NavBar({openSidebar, setOpenSidebar}) {
         <img src={Logo} width="200px"></img>
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link style={{margin: "auto"}} href="/transitionalplanning">Transitional Planning</Nav.Link>
+        <Nav.Link style={{margin: "auto"}} href="/transitionalplanning">Transition Planning</Nav.Link>
         <Nav.Link style={{margin: "auto"}} href="/alternativepathways">Alternative Pathways</Nav.Link>
         <Nav.Link style={{margin: "auto"}} href="/community">Community</Nav.Link>
       </Nav>
