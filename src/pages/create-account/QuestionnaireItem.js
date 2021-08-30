@@ -79,7 +79,7 @@ export default function QuestionnaireItem(props) {
         <div>
           {props.isParent ? (
             <CreationPage
-              before={"My child reside in"}
+              before={"My child resides in"}
               after={""}
               options={info.stateNames}
               selected={44}
