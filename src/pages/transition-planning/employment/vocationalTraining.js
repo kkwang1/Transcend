@@ -6,6 +6,7 @@ import Dashboard from "../../../components/Dashboard/Dashboard";
 import { collegeDashboardInfo } from "../education/config";
 import SideButtons from "../../../components/SideButton/SideButtons";
 import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb";
+import { vocationalTrainingsInfo } from "./config";
 
 export default function VocationalTrainings({ match }) {
   const selectInfo = [
@@ -76,15 +77,7 @@ export default function VocationalTrainings({ match }) {
               <h4>SKILLS & TIPS</h4>
             </div>
             <div style={{ height: "85%", display: "grid" }}>
-              <SideButtons
-                info={[
-                  {
-                    title: "Application tips & tricks",
-                  },
-                  { title: "Interview Skills" },
-                  { title: "In the Workplace" },
-                ]}
-              />
+              <SideButtons info={vocationalTrainingsInfo} />
             </div>
           </div>
         </div>

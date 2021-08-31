@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../App.scss";
 import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb";
 import SideButtons from "../../../components/SideButton/SideButtons";
+import { pageInfo } from "./config";
 
 export default function LivingAtHome({ match }) {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <>
       <div className="layout-breadcrumb">
@@ -28,13 +30,9 @@ export default function LivingAtHome({ match }) {
             <SideButtons
               backgroundColor="#F1F1F1"
               color="#1B7B89"
-              info={[
-                { title: "Self-sufficiency" },
-                { title: "Guardianship" },
-                { title: "Economic Success" },
-                { title: "Support" },
-                { title: "Fullfillment & Recreation" },
-              ]}
+              info={pageInfo}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
             />
           </div>
           <div
@@ -47,17 +45,19 @@ export default function LivingAtHome({ match }) {
           >
             <div
               style={{
-                marginTop: "15px",
+                margin: "15px",
                 paddingBottom: "50px",
+                height: "100%",
               }}
             >
-              {/* <Dashboard
-                title={dashboardInfo[0].title}
-                desc={dashboardInfo[0].desc}
-                schoolsInfo={dashboardInfo[0].schoolsInfo}
-                backgroundColor={dashboardInfo[0].backgroundColor}
-                color={dashboardInfo[0].color}
-              /> */}
+              <iframe
+                id="inlineFrameExample"
+                title="Inline Frame Example"
+                width="100%"
+                height="100%"
+                src={pageInfo[activeIndex].url}
+                allowfullscreen={true}
+              ></iframe>
             </div>
           </div>
         </div>
