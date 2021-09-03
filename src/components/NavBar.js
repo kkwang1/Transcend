@@ -20,11 +20,13 @@ export default function NavBar({openSidebar, setOpenSidebar}) {
         <Nav.Link style={{margin: "auto"}} href="/alternativepathways">Alternative Pathways</Nav.Link>
         <Nav.Link style={{margin: "auto"}} href="/community">Community</Nav.Link>
       </Nav>
+      { /*
       <FontAwesomeIcon
         icon={faSearch}
         style={{ fontSize: "2em", margin: "10px" }}
         color="#DEDEDE"
       />
+      */ }
       <FontAwesomeIcon
         icon={faUserCircle}
         style={{ fontSize: "2em", margin: "10px" }}
