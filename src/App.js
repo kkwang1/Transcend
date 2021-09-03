@@ -1,5 +1,5 @@
 import "./App.css";
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Main from "./pages/main/index";
 import TransitionPlanning from "./pages/transition-planning/routes";
 import CreateAccount from "./pages/create-account/routes";
@@ -8,6 +8,7 @@ import Community from "./pages/community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import NavBar from "./components/NavBar";
+import StoreProvider from "./utils/store";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -21,9 +22,16 @@ function App() {
         <NavBar openSidebar={open} setOpenSidebar={setOpen} />
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path={"/transitionalplanning"} component={TransitionPlanning} />
+          <Route
+            path={"/transitionalplanning"}
+            component={TransitionPlanning}
+          />
+
           <Route path={"/community"} component={Community} />
-          <Route path={"/alternativepathways"} component={AlternativePathways} />
+          <Route
+            path={"/alternativepathways"}
+            component={AlternativePathways}
+          />
           <Route path={"/createaccount"} component={CreateAccount} />
         </Switch>
       </div>

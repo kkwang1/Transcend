@@ -60,7 +60,6 @@ export default function Collapse({
   hasProgressBar = false,
   border = true
 }) {
-  console.log(border)
   const [open, setOpen] = useState(false);
   return (
     <Card className={border ? "c-collapse-container" : "c-collapse-container-noborder"}>
