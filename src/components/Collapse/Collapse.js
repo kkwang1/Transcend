@@ -37,7 +37,9 @@ function ContextAwareToggle({
       <div style={{ display: "flex", width: "100%" }}>
         <div style={{ width: "50%" }}>
           <div className="c-collapse-toggle-title">{title}</div>
-          {description && <div className="c-collapse-toggle-desc">{description}</div>}
+          {description && (
+            <div className="c-collapse-toggle-desc">{description}</div>
+          )}
         </div>
         {hasProgressBar && (
           <>
@@ -58,12 +60,15 @@ export default function Collapse({
   description,
   children,
   hasProgressBar = false,
-  border = true
+  border = true,
 }) {
-  console.log(border)
   const [open, setOpen] = useState(false);
   return (
-    <Card className={border ? "c-collapse-container" : "c-collapse-container-noborder"}>
+    <Card
+      className={
+        border ? "c-collapse-container" : "c-collapse-container-noborder"
+      }
+    >
       <ContextAwareToggle
         eventKey={eventKey}
         title={title}

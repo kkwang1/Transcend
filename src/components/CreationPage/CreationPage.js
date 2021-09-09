@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Form } from "react-bootstrap";
+import { cssNumber } from "jquery";
 
 async function makeDummy() {
   const response = await fetch("htp://localhost:9000/graphql", {
@@ -24,28 +25,48 @@ export default function CreationPage(props) {
       makeDummy();
     }
   };
-  const [curVal, setCurVal] = useState(" ");
   const space = " ";
+
   return (
     <form
       onSubmit={(res) => {
         handleSubmit(res);
       }}
       className="creationLabel"
-      style={props.creationLabelStyle}
+      style={props.isSelectGroup && { textAlign: "revert" }}
     >
       {props.before.concat(" ")}
-      <select className="pageSelect" style={props.pageSelectStyle}>
+      <select
+        className="pageSelect"
+        style={
+          props.isSelectGroup && {
+            fontSize: "30px",
+            maxWidth: "75%",
+            padding: "8px",
+          }
+        }
+        onChange={e => props.onChange(e.target.value)}
+      >
         {props.options.map((curVal, i) => {
           if (i == props.selected) {
-            return <option selected value={curVal}> {curVal} </option>;
+            return (
+              <option selected value={i} key={i}>
+                {" "}
+                {curVal}{" "}
+              </option>
+            );
           } else {
-            return <option value={curVal}> {curVal} </option>;
+            return (
+              <option value={i} key={i}>
+                {" "}
+                {curVal}{" "}
+              </option>
+            );
           }
         })}
       </select>
       {space.concat(props.after)}
-      {!props.noFooter && (
+      {!props.isSelectGroup && (
         <h4 className="instruction" style={{ marginTop: "10px" }}>
           *select one option from the dropdown menu
         </h4>

@@ -33,6 +33,62 @@ const pageInfo = [
   },
 ];
 
+const jobPostingInfo = [
+  {
+    title: "Most Inclusive Workspaces",
+    text: "We’ve compiled this list of top-ranked, neuro-diverse, and inclusive workplaces in your area.",
+    action: () =>
+      window.open(
+        "https://www.pathwaysofpa.com/5-great-companies-that-employ-adults-with-special-needs/",
+        "_blank"
+      ),
+  },
+  {
+    title: "Thorough training included",
+    text: "The following businesses offer through training for their first-time employees, so no prior experience is needed.",
+    action: () =>
+      window.open(
+        "https://www.mycil.org/the-best-places-to-work-if-you-have-a-disability/",
+        "_blank"
+      ),
+  },
+];
+
+const vocationalTrainingsInfo = [
+  {
+    title: "12 Steps for Easing the Transition into the Workplace",
+    action: () =>
+      window.open(
+        "https://www.understood.org/en/school-learning/choosing-starting-school/leaving-high-school/12-steps-for-easing-the-transition-to-work",
+        "_blank"
+      ),
+  },
+  {
+    title: "Employment Stories",
+    action: () =>
+      window.open(
+        "https://www.pacer.org/students/transition-to-life/employment-stories.asp",
+        "_blank"
+      ),
+  },
+  {
+    title: "Employment Resource Guide",
+    action: () =>
+      window.open(
+        "https://mn.gov/deed/assets/employment-resource-guide_tcm1045-290595.pdf",
+        "_blank"
+      ),
+  },
+  {
+    title: "PACER Employment resources",
+    action: () =>
+      window.open(
+        "https://www.pacer.org/transition/learning-center/employment/",
+        "_blank"
+      ),
+  },
+];
+
 const quickLinks = [
   {
     title: "Find your nearest American Job Center",
@@ -48,4 +104,4 @@ const quickLinks = [
   },
 ];
 
-export { quickLinks, selectInfo, pageInfo };
+export { quickLinks, selectInfo, pageInfo, jobPostingInfo, vocationalTrainingsInfo };

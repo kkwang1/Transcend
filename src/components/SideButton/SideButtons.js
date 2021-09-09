@@ -23,17 +23,18 @@ export default function SideButtons({
   backgroundColor = "",
   color = "",
 }) {
+
   return (
     <div>
       {info.map((s, index) => (
         <Card
           className="sideButtons"
           style={
-            activeIndex != null || index != activeIndex
+            activeIndex == null || index != activeIndex
               ? { backgroundColor: `${backgroundColor}`, color: `${color}` }
               : { backgroundColor: "#C4C4C4", color: `#FFFFFF` }
           }
-          onClick={() => setActiveIndex(index)}
+          onClick={() => setActiveIndex ? setActiveIndex(index) : s.action()}
         >
           <Card.Body
             style={{

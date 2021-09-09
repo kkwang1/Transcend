@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserGraduate,
@@ -7,8 +7,12 @@ import {
 import { Form } from "react-bootstrap";
 import CreationPage from "../../components/CreationPage/CreationPage";
 import { info } from "./config";
+import { StoreContext } from "../../utils/store";
+import { valHooks } from "jquery";
 
 export default function QuestionnaireItem(props) {
+  const { questionnaire, setQuestionnaire } = useContext(StoreContext);
+
   const item = {
     1: (
       <>
@@ -16,37 +20,44 @@ export default function QuestionnaireItem(props) {
           Help us customize resources for you by answering a few questions.
         </h4>
         <h1>I am a...</h1>
-        <div
-          style={{ display: "flex", marginTop: "50px" }}
-          
-        >
-          <div style={{ width: "50%" }} onClick={() => props.setIsParent(false)}>
+        <div style={{ display: "flex", marginTop: "50px" }}>
+          <div
+            style={{ width: "50%" }}
+            onClick={() =>
+              setQuestionnaire({ ...questionnaire, isParent: false })
+            }
+          >
             <FontAwesomeIcon
               icon={faUserGraduate}
-              color={props.isParent ? "#C4C4C4" : "#1B7B89"}
+              color={questionnaire.isParent ? "#C4C4C4" : "#1B7B89"}
               style={{ fontSize: "7rem", margin: "auto", display: "flex" }}
             />
             <h4
               style={{
                 marginTop: "20px",
                 textAlign: "center",
-                color: props.isParent ? "#C4C4C4" : "#1B7B89",
+                color: questionnaire.isParent ? "#C4C4C4" : "#1B7B89",
               }}
             >
               STUDENT
             </h4>
           </div>
-          <div style={{ width: "50%" }} onClick={() => props.setIsParent(true)}>
+          <div
+            style={{ width: "50%" }}
+            onClick={() =>
+              setQuestionnaire({ ...questionnaire, isParent: true })
+            }
+          >
             <FontAwesomeIcon
               icon={faUserFriends}
-              color={!props.isParent ? "#C4C4C4" : "#1B7B89"}
+              color={!questionnaire.isParent ? "#C4C4C4" : "#1B7B89"}
               style={{ fontSize: "7rem", margin: "auto", display: "flex" }}
             />
             <h4
               style={{
                 marginTop: "20px",
                 textAlign: "center",
-                color: !props.isParent ? "#C4C4C4" : "#1B7B89",
+                color: !questionnaire.isParent ? "#C4C4C4" : "#1B7B89",
               }}
             >
               PARENT or CAREGIVER
@@ -57,29 +68,34 @@ export default function QuestionnaireItem(props) {
     ),
     2: (
       <>
-        {props.isParent ? (
-          <CreationPage
-            before={"My child is"}
-            after={"years old."}
-            options={info.ageRange}
-            selected={2}
-          />
-        ) : (
-          <CreationPage
-            before={"I am"}
-            after={"years old."}
-            options={info.ageRange}
-            selected={2}
-          />
-        )}
+        <CreationPage
+          before={questionnaire.isParent ? "My child is" : "I am"}
+          after={"years old."}
+          options={info.ageRange}
+          selected={questionnaire.ageRange}
+          onChange={(val) => {
+            setQuestionnaire({ ...questionnaire, ageRange: val });
+          }}
+        />
       </>
     ),
     3: (
       <>
         <div>
+<<<<<<< Updated upstream
+          <CreationPage
+            before={props.isParent ? "My child reside in" : "I reside in"}
+            after={""}
+            options={info.stateNames}
+            selected={questionnaire.stateNames}
+            onChange={(val) =>
+              setQuestionnaire({ ...questionnaire, stateNames: val })
+            }
+          />
+=======
           {props.isParent ? (
             <CreationPage
-              before={"My child reside in"}
+              before={"My child resides in"}
               after={""}
               options={info.stateNames}
               selected={44}
@@ -92,6 +108,7 @@ export default function QuestionnaireItem(props) {
               selected={44}
             />
           )}
+>>>>>>> Stashed changes
         </div>
       </>
     ),
@@ -101,10 +118,14 @@ export default function QuestionnaireItem(props) {
           How far along are you in the transition process?
         </h1>
         <div style={{ width: "50%" }}>
-          <h5>*check all that apply.</h5>
           <Form>
             {info.process.map((s, index) => (
-              <Form.Check type={"radio"} id={`id-${index}`} label={s} />
+              <Form.Check
+                type="radio"
+                name="group1"
+                id={`id-${index}`}
+                label={s}
+              />
             ))}
           </Form>
         </div>
@@ -137,7 +158,13 @@ export default function QuestionnaireItem(props) {
         <h1 style={{ marginBottom: "50px" }}>
           What best describes your economic need?
         </h1>
-        <CreationPage before={"I am "} after={""} options={info.funds} />
+        <CreationPage
+          before={"I am "}
+          after={""}
+          options={info.funds}
+          selected={questionnaire.funds}
+          onChange={(val) => setQuestionnaire({ ...questionnaire, funds: val })}
+        />
       </>
     ),
     7: (
@@ -148,35 +175,38 @@ export default function QuestionnaireItem(props) {
         </h1>
 
         <div style={{ width: "50%" }}>
-          <h3 style={{marginTop: "20px"}}>Education:</h3>
+          <h3 style={{ marginTop: "20px" }}>Education:</h3>
           <CreationPage
             before={""}
             after={""}
             options={info.education}
-            selected={1}
-            noFooter={true}
-            creationLabelStyle={{textAlign: "revert"}}
-            pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
+            selected={questionnaire.education}
+            isSelectGroup={true}
+            onChange={(val) =>
+              setQuestionnaire({ ...questionnaire, education: val })
+            }
           />
-          <h3 style={{marginTop: "20px"}}>Employment:</h3>
+          <h3 style={{ marginTop: "20px" }}>Employment:</h3>
           <CreationPage
             before={""}
             after={""}
             options={info.employment}
-            selected={4}
-            noFooter={true}
-            creationLabelStyle={{textAlign: "revert"}}
-            pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
+            selected={questionnaire.employment}
+            isSelectGroup={true}
+            onChange={(val) =>
+              setQuestionnaire({ ...questionnaire, employment: val })
+            }
           />
-          <h3 style={{marginTop: "20px"}}>Independent Living:</h3>
+          <h3 style={{ marginTop: "20px" }}>Independent Living:</h3>
           <CreationPage
             before={""}
             after={""}
             options={info.independentLiving}
-            selected={1}
-            noFooter={true}
-            creationLabelStyle={{textAlign: "revert"}}
-            pageSelectStyle={{ fontSize: "30px", maxWidth: "75%", padding: "8px" }}
+            selected={questionnaire.independentLiving}
+            isSelectGroup={true}
+            onChange={(val) =>
+              setQuestionnaire({ ...questionnaire, independentLiving: val })
+            }
           />
         </div>
       </div>

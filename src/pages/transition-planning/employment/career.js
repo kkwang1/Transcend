@@ -60,6 +60,7 @@ export default function Career({ match }) {
                   width="100%"
                   height="100%"
                   src={pageInfo[activeIndex].url}
+                  allowfullscreen={true}
                 ></iframe>
               </div>
             </div>
