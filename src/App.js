@@ -1,14 +1,14 @@
 import "./App.css";
-import { React, useState, useContext } from "react";
+import { React, useState} from "react";
 import Main from "./pages/main/index";
 import TransitionPlanning from "./pages/transition-planning/routes";
+import UserProfile from "./pages/user-profile/routes";
 import CreateAccount from "./pages/create-account/routes";
 import AlternativePathways from "./pages/alternative-pathways";
 import Community from "./pages/community";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import NavBar from "./components/NavBar";
-import StoreProvider from "./utils/store";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -23,10 +23,13 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route
+            path={"/userprofile"}
+            component={UserProfile}
+          />
+          <Route
             path={"/transitionalplanning"}
             component={TransitionPlanning}
           />
-
           <Route path={"/community"} component={Community} />
           <Route
             path={"/alternativepathways"}
