@@ -34,7 +34,7 @@ export default function SideMenu({ children }) {
         <SidebarContent>
           <Menu>
             <SubMenu
-              title="Eduction"
+              title="Education"
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
               <MenuItem>College/University</MenuItem>

@@ -31,7 +31,7 @@ export default function Sidebar({ setOpenSidebar }) {
         <SidebarContent>
           <Menu>
             <div className="header">SERVICES</div>
-            <SubMenu title="Transition Planning">
+            <SubMenu title="Transitional Planning">
               <MenuItem path="/education">
                 Education
                 <Link to="/transitionalplanning/education" onClick={() => setOpenSidebar(false)}/>
