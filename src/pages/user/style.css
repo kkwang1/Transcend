@@ -1,0 +1,67 @@
+a:hover {
+  text-decoration: underline !important;
+}
+
+.userProfileContainer {
+  background-color: #f1f1f1;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.firstRow {
+  margin: 30px 15px;
+  width: 20%;
+  display: table;
+  border-collapse: collapse;
+}
+
+.avatarNameContainer {
+  display: table-row;
+  background-color: #fff;
+  position: relative;
+  z-index: 8;
+  top: -30px;
+  height: 30%;
+}
+
+.avatarName {
+  font-size: 50px;
+  vertical-align: middle;
+  margin: 80px 0px 20px 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.avatarImage {
+  display: table-row;
+  position: relative;
+  z-index: 9;
+  top: 20px;
+  right: 30px;
+  height: 0;
+}
+
+.profileInfo {
+  display: table-row;
+  background-color: rgb(255, 255, 255);
+  height: 60%;
+}
+
+.secondAndThirdRow {
+  background-color: rgb(255, 255, 255);
+  margin: 30px 15px;
+  width: 40%;
+}
+
+.profileRowTitle {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.savedResources {
+  height: 40%;
+  display: grid;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}

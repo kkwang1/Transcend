@@ -2,7 +2,7 @@ import "./App.css";
 import { React, useState} from "react";
 import Main from "./pages/main/index";
 import TransitionPlanning from "./pages/transition-planning/routes";
-import UserProfile from "./pages/user-profile/routes";
+import UserProfile from "./pages/user/routes";
 import CreateAccount from "./pages/create-account/routes";
 import AlternativePathways from "./pages/alternative-pathways";
 import Community from "./pages/community";

@@ -5,20 +5,6 @@ import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb";
 import { jobPostingInfo } from "./config";
 
 export default function JobPosting({ match }) {
-  const selectInfo = [
-    {
-      title: "All fields",
-      options: ["option1", "option2", "option3"],
-    },
-    {
-      title: "All skill levels",
-      options: ["option1", "option2", "option3"],
-    },
-    {
-      title: "All program types",
-      options: ["option1", "option2", "option3"],
-    },
-  ];
 
   return (
     <div>

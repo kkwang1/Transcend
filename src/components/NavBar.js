@@ -1,9 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUserCircle,
-  faBars,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/logo.png";
 import "../App.scss";
@@ -35,11 +32,13 @@ export default function NavBar({ openSidebar, setOpenSidebar }) {
           Community
         </Link>
       </Nav>
-      <FontAwesomeIcon
-        icon={faUserCircle}
-        style={{ fontSize: "2em", margin: "10px" }}
-        color="#DEDEDE"
-      />
+      <Link to="/userprofile">
+        <FontAwesomeIcon
+          icon={faUserCircle}
+          style={{ fontSize: "2em", margin: "10px" }}
+          color="#DEDEDE"
+        />
+      </Link>
       <FontAwesomeIcon
         icon={faBars}
         style={{ fontSize: "2em", margin: "10px" }}

@@ -82,7 +82,6 @@ export default function QuestionnaireItem(props) {
     3: (
       <>
         <div>
-<<<<<<< Updated upstream
           <CreationPage
             before={props.isParent ? "My child reside in" : "I reside in"}
             after={""}
@@ -92,23 +91,6 @@ export default function QuestionnaireItem(props) {
               setQuestionnaire({ ...questionnaire, stateNames: val })
             }
           />
-=======
-          {props.isParent ? (
-            <CreationPage
-              before={"My child resides in"}
-              after={""}
-              options={info.stateNames}
-              selected={44}
-            />
-          ) : (
-            <CreationPage
-              before={"I reside in"}
-              after={""}
-              options={info.stateNames}
-              selected={44}
-            />
-          )}
->>>>>>> Stashed changes
         </div>
       </>
     ),

@@ -32,13 +32,12 @@ export default function Dashboard({
             {schoolsInfo.map((s) => {
               return (
                 <div style={{ margin: "10px" }}>
-                  <a href={s.href} target="_blank_">
-                    <Card.Link
-                      className="text-muted"
-                      style={{ textDecoration: "underline" }}
-                    >
-                      {s.name} | {s.location}
-                    </Card.Link>
+                  <a
+                    href={s.href}
+                    target="_blank_"
+                    style={{ textDecoration: "underline" }}
+                  >
+                    {s.name} | {s.location}
                   </a>
                   <FontAwesomeIcon
                     icon={faBookmark}
