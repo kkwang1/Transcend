@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 
 export default function AlternativePathways() {
   let history = useHistory();
-  
+
   return (
       <Modal
         show
@@ -19,9 +19,6 @@ export default function AlternativePathways() {
             history.goBack();
           }}
         >
-          <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
-          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <img

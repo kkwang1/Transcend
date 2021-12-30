@@ -18,9 +18,6 @@ export default function Community() {
           history.goBack();
         }}
       >
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <img
