@@ -79,7 +79,7 @@ export default function TransitionPlanning({ match }) {
 
   return (
     <div>
-      <SideMenu />
+      {/* <SideMenu /> */}
       <div style={{ width: "65%", margin: "50px auto" }}>
         <h1 style={{ color: "#1b7b89", marginBottom: "25px" }}>
           Transition Planning

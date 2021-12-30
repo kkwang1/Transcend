@@ -58,6 +58,7 @@ export default function Main() {
               fontSize: "large",
               fontWeight: "bold",
             }}
+            // className="layout-btn"
           >
             GET STARTED
           </Button>

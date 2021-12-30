@@ -3,3 +3,8 @@
     color: rgb(27, 123, 137);
     border: unset;
 }
+
+.pagination-footer .pagination {
+    align-items: center;
+    justify-content: center;
+}

@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 $sidebar-bg-color: #ffffff;
@@ -35,14 +34,21 @@ $dark-green: rgb(27, 123, 137);
   margin: 50px 0px 0px 50px;
 }
 
-.layout-bottom{
+.layout-bottom {
   padding-bottom: 5rem;
 }
 
-.layout-footer{
+.layout-footer {
   align-items: center;
 }
 
+.layout-btn {
+  background-color: $dark-green !important;
+  width: 100%;
+  height: 100%;
+  font-size: large !important;
+  font-weight: bold !important;
+}
 
 //////////////////////////////////////////////////////
 
