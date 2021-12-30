@@ -18,6 +18,7 @@
     "gh-pages": "^3.2.3",
     "jquery": "^3.6.0",
     "multiselect-react-dropdown": "^1.6.11",
+    "netlify-cli": "^8.4.2",
     "popper.js": "^1.16.1",
     "react": "^16.7.0",
     "react-bootstrap": "^1.6.1",
