@@ -44,7 +44,7 @@ export default function CreateAccount() {
           </div>
           <div className="layout-bottom" style={{ margin: "25px 40%" }}>
             <Button
-              className="layout-btn"
+              className="main-btn"
               onClick={() => history.push(`/userprofile`)}
             >
               CREATE
