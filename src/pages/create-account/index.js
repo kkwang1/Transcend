@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router";
 import "../../App.scss";
 import PaginationFooter from "../../components/Pagination/PaginationFooter";
 import QuestionnaireItem from "./QuestionnaireItem";
+import { StoreContext } from "../../utils/store";
 
 export default function CreateAccount() {
   const [pageNum, setPageNum] = useState(1);
   const [isParent, setIsParent] = useState(false);
   let history = useHistory();
+  const { setIsAccountCreated } = useContext(StoreContext);
 
   return (
     <>
@@ -45,7 +47,10 @@ export default function CreateAccount() {
           <div className="layout-bottom" style={{ margin: "25px 40%" }}>
             <Button
               className="main-btn"
-              onClick={() => history.push(`/userprofile`)}
+              onClick={() => {
+                history.push(`/transitionalplanning`);
+                setIsAccountCreated(true);
+              }}
             >
               CREATE
             </Button>

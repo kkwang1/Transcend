@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory, useLocation } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,10 +9,12 @@ import {
   faGavel,
 } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
+import { StoreContext } from "../../utils/store";
 
 export default function MainMenu() {
-  let history = useHistory();
   let location = useLocation();
+  const { isAccountCreated } = useContext(StoreContext);
+
   const infoCol1 = [
     {
       title: "EDUCATION",
@@ -21,6 +23,7 @@ export default function MainMenu() {
         {
           subtitle: "College/University",
           url: `${location.pathname}/education/college`,
+          highlight: true,
         },
         {
           subtitle: "Transition Programs",
@@ -36,6 +39,7 @@ export default function MainMenu() {
         {
           subtitle: "Living at Home",
           url: `${location.pathname}/independentliving/livingathome`,
+          highlight: true,
         },
         {
           subtitle: "Assisted Living",
@@ -86,6 +90,7 @@ export default function MainMenu() {
         {
           subtitle: "Funding",
           url: `${location.pathname}/knowyourrights/funding`,
+          highlight: true,
         },
         {
           subtitle: "Legal Rights",
@@ -115,7 +120,15 @@ export default function MainMenu() {
             {s.subitems &&
               s.subitems.map((t) => (
                 <a href={t.url}>
-                  <p>{t.subtitle}</p>
+                  {isAccountCreated && t.highlight ? (
+                    <p
+                      className="subitem-highlighted"
+                    >
+                      {t.subtitle}
+                    </p>
+                  ) : (
+                    <p>{t.subtitle}</p>
+                  )}
                 </a>
               ))}
           </div>

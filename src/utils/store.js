@@ -16,6 +16,7 @@ export default ({ children }) => {
     independentLiving: 1,
   });
   const [suggestedPages, setSuggestedPages] = useState([]);
+  const [isAccountCreated, setIsAccountCreated] = useState();
 
   const store = {
     bookmarks,
@@ -24,6 +25,8 @@ export default ({ children }) => {
     setQuestionnaire,
     suggestedPages,
     setSuggestedPages,
+    isAccountCreated,
+    setIsAccountCreated
   };
 
   return (
