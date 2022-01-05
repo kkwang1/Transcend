@@ -80,7 +80,7 @@ ul {
 }
 
 .t-main-menu a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .t-main-menu p:hover {
