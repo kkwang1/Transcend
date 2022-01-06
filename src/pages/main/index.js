@@ -1,5 +1,5 @@
 import React from "react";
-import TitleBanner from "../../images/title_banner.jpg";
+import TitleBanner from "../../images/title_banner.png";
 import { Button } from "react-bootstrap";
 import "./style.css";
 import ButtonsGroup from "../../components/Button/ButtonsGroup";
@@ -47,7 +47,7 @@ export default function Main() {
   return (
     <div style={{ height: "100%" }}>
       <div style={{ position: "relative", height: "25%" }}>
-        <img src={TitleBanner} style={{ width: "100%" }} />
+        <img src={TitleBanner} style={{ width: "100%", height: "80%" }} />
         <div className="homeButton">
           <Button
             onClick={() => history.push(`/createaccount`)}
@@ -78,42 +78,6 @@ export default function Main() {
             stress of planning and (b) point students to fulfilling and
             accessible options, as well as alternatives to traditional
             postsecondary pathways.
-          </p>
-        </div>
-      </div>
-      <div style={{ margin: "4em" }}>
-        <h3
-          className="layout-header"
-          style={{ textAlign: "center", color: "#000", marginBottom: "2em" }}
-        >
-          Create your account!{" "}
-        </h3>
-        <div style={{ textAlign: "center" }}>
-          <p>
-            The more we know about you and your needs, the better we can match
-            you with information and services!
-          </p>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-            onClick={() => history.push(`/createaccount`)}
-          >
-            <h4 style={{ marginBottom: "0px !important" }}>
-              <u>GO</u>
-            </h4>
-            <FontAwesomeIcon
-              icon={faArrowRight}
-              style={{
-                fontSize: "1.5em",
-                marginLeft: "10px",
-              }}
-            />
-          </div>
-
-          <p>
-            Want to explore first? <a>Save account for later.</a>
           </p>
         </div>
       </div>
