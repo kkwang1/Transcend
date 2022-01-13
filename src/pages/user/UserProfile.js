@@ -10,7 +10,7 @@ export default function UserProfile() {
     {
       title: "KNOW YOUR RIGHTS",
       text: (
-        <Breadcrumb path="transitionplanning/knowyourrights" disable={true} />
+        <Breadcrumb path="knowyourrights" disable={true} />
       ),
       action: () => {
         return;
@@ -20,7 +20,7 @@ export default function UserProfile() {
       title: "JOB POSTINGS",
       text: (
         <Breadcrumb
-          path="transitionplanning/employment/jobpostings"
+          path="employment/jobpostings"
           disable={true}
         />
       ),
@@ -34,7 +34,7 @@ export default function UserProfile() {
       title: "COLLEGE",
       text: (
         <Breadcrumb
-          path="transitionplanning/education/college"
+          path="education/college"
           disable={true}
         />
       ),
@@ -46,7 +46,7 @@ export default function UserProfile() {
     },
     {
       title: "EDUCATION",
-      text: <Breadcrumb path="transitionplanning/education" disable={true} />,
+      text: <Breadcrumb path="education" disable={true} />,
       action: () =>
         window.open(
           "https://www.pathwaysofpa.com/5-great-companies-that-employ-adults-with-special-needs/",
@@ -61,7 +61,7 @@ export default function UserProfile() {
 
       text: (
         <Breadcrumb
-          path="transitionplanning/employment/jobpostings"
+          path="employment/jobpostings"
           disable={true}
         />
       ),
@@ -92,7 +92,7 @@ export default function UserProfile() {
       title: "SAVED COLLEGE LIST",
       text: (
         <Breadcrumb
-          path="transitionplanning/education/college"
+          path="education/college"
           disable={true}
         />
       ),
