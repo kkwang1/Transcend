@@ -18,7 +18,7 @@ export default function IndependentLiving({ match }) {
       action: () => history.push(`${location.pathname}/livingathome`),
     },
     {
-      title: "ASSITED LIVING",
+      title: "ASSISTED LIVING",
       backgroundColor: "#F1F1F1",
       color: "#1B7B89",
       action: () => history.push(`${location.pathname}/assistedliving`),
