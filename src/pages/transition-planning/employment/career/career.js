@@ -23,8 +23,10 @@ export default function Career({ match }) {
             toolkits can be good starting points.
           </p>
           <div className = "embedded-link">
-            <div className = "side-buttons">
+          <div>
               <SideButtons
+                backgroundColor="#F1F1F1"
+                color="#1B7B89"
                 info={pageInfo}
                 activeIndex={activeIndex}
                 setActiveIndex={setActiveIndex}
