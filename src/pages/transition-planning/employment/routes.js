@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import Employment from ".";
-import Career from "./career";
+import Career from "./career/career";
 import JobPostings from "./jobPostings/jobPostings";
-import VocationalTrainings from "./vocationalTraining";
+import VocationalTrainings from "./vocationalTraining/vocationalTraining";
 
 const route = ({match}) => {
   return (
